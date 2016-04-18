@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget
+    id="com.branchtrack.luc2016"
+    version="0.0.1"
+    xmlns="http://www.w3.org/ns/widgets"
+    xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>HelloCordova</name>
+    <description>
+        Lectora User Conference 2016 Official App
+    </description>
+    <author email="hello@branchtrack.com" href="https://branchtrack.com">
+        BranchTrack.com
+    </author>
+    <content src="index.html" />
+    <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+
+    <preference name="orientation" value="all" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="StatusBarOverlaysWebView" value="false" /> <!-- not supported in PGB, so also implemented via JS-->
+    <preference name="StatusBarBackgroundColor" value="#434244" /> <!-- not supported in PGB, so also implemented via JS-->
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="4000" />
+</widget>
