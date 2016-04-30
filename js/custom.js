@@ -108,8 +108,8 @@ function AdjustScreen(mode) {
  if (!GLOBAL.ios) { //ios scales via viewport, android requires extra scaling of fixed elements
    var element = document.querySelector('#pageDIV');
    var mode = VarCurrentView.getValue();
-   var long = Math.max(window.screen.width, window.screen.height);
-   var short = Math.min(window.screen.width, window.screen.height);
+   var long = Math.max(winW, winH);
+   var short = Math.min(winW, winH);
 
   if (mode.indexOf('Landscape') > -1)  {
       w = long;
