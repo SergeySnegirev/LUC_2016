@@ -1,4 +1,4 @@
-init
+
 
 
 var trivstrYA = 'Your answer: '

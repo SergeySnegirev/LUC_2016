@@ -1,5 +1,5 @@
 TabletResponsive={"1009":{
-"pageLayer":{"w":1009,"h":1510,"bgColor":"#ffffff"}
+"pageLayer":{"w":1009,"h":1057,"bgColor":"#ffffff"}
 ,
 "text992":{"x":423,"y":18,"w":474,"h":34,"txtscale":100}
 ,
@@ -31,11 +31,11 @@ TabletResponsive={"1009":{
 ,
 "image60743":{"x":625,"y":63,"w":383,"h":143,"i":"images/session-hole.png"}
 ,
-"text60744":{"x":718,"y":161,"w":197,"h":95,"txtscale":100}
+"text60744":{"x":718,"y":161,"w":197,"h":79,"txtscale":100}
 ,
-"text60745":{"x":300,"y":88,"w":333,"h":101,"txtscale":100}
+"text60745":{"x":300,"y":88,"w":333,"h":80,"txtscale":100}
 ,
-"text60746":{"x":300,"y":240,"w":671,"h":1270,"txtscale":100}
+"text60746":{"x":300,"y":240,"w":671,"h":817,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/annette-williams-circle.jpg','images/session-hole.png']
 },
 "785":{
-"pageLayer":{"w":785,"h":1497,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1072,"bgColor":"#ffffff"}
 ,
 "text992":{"x":313,"y":11,"w":153,"h":24,"txtscale":100}
 ,
@@ -75,11 +75,11 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image60743":{"x":401,"y":64,"w":383,"h":144,"i":"images/session-hole.png"}
 ,
-"text60744":{"x":450,"y":169,"w":288,"h":95,"txtscale":100}
+"text60744":{"x":450,"y":169,"w":288,"h":64,"txtscale":100}
 ,
-"text60745":{"x":43,"y":101,"w":333,"h":101,"txtscale":100}
+"text60745":{"x":43,"y":101,"w":333,"h":80,"txtscale":100}
 ,
-"text60746":{"x":39,"y":227,"w":708,"h":1270,"txtscale":100}
+"text60746":{"x":39,"y":227,"w":708,"h":817,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1245,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1357,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -41,7 +41,7 @@ PhoneResponsive={"785":{
 ,
 "text62631":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
-"text62632":{"x":40,"y":445,"w":706,"h":800,"txtscale":120}
+"text62632":{"x":40,"y":445,"w":706,"h":912,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/aldebaran_canacasco-150x150-circle.jpg','images/german_gonzalez-150x150-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2482,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1892,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -91,7 +91,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text62631":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text62632":{"x":30,"y":733,"w":420,"h":1749,"txtscale":140}
+"text62632":{"x":30,"y":733,"w":420,"h":1159,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

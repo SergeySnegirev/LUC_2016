@@ -31,7 +31,7 @@ TabletResponsive={"1009":{
 ,
 "text73532":{"x":290,"y":82,"w":380,"h":249,"txtscale":120}
 ,
-"text73531":{"x":709,"y":255,"w":276,"h":155,"txtscale":100}
+"text73531":{"x":709,"y":255,"w":276,"h":102,"txtscale":100}
 ,
 "image73530":{"x":706,"y":89,"w":276,"h":153,"i":"images/branchtrackscreenshot.jpg"}
 ,
@@ -73,7 +73,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text73532":{"x":41,"y":85,"w":357,"h":194,"txtscale":130}
 ,
-"text73531":{"x":407,"y":300,"w":341,"h":128,"txtscale":100}
+"text73531":{"x":407,"y":300,"w":341,"h":105,"txtscale":100}
 ,
 "image73530":{"x":458,"y":80,"w":298,"h":165,"i":"images/branchtrackscreenshot.jpg"}
 ,

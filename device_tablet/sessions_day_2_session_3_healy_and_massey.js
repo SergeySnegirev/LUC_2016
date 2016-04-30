@@ -1,5 +1,5 @@
 TabletResponsive={"1009":{
-"pageLayer":{"w":1009,"h":1871,"bgColor":"#ffffff"}
+"pageLayer":{"w":1009,"h":1255,"bgColor":"#ffffff"}
 ,
 "text992":{"x":423,"y":18,"w":474,"h":34,"txtscale":100}
 ,
@@ -33,15 +33,15 @@ TabletResponsive={"1009":{
 ,
 "image64482":{"x":625,"y":63,"w":383,"h":143,"i":"images/session-hole.png"}
 ,
-"text64483":{"x":718,"y":161,"w":197,"h":95,"txtscale":100}
+"text64483":{"x":718,"y":161,"w":197,"h":79,"txtscale":100}
 ,
 "image64485":{"x":624,"y":213,"w":383,"h":143,"i":"images/session-hole.png"}
 ,
-"text64486":{"x":717,"y":310,"w":197,"h":145,"txtscale":100}
+"text64486":{"x":717,"y":310,"w":197,"h":79,"txtscale":100}
 ,
 "text64487":{"x":300,"y":88,"w":333,"h":110,"txtscale":110}
 ,
-"text64488":{"x":300,"y":363,"w":671,"h":1508,"txtscale":100}
+"text64488":{"x":300,"y":363,"w":671,"h":892,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/lance-healy-circle.jpg','images/lyndsay-massey-circle.jpg','images/session-hole.png']
 },
 "785":{
-"pageLayer":{"w":785,"h":1776,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1304,"bgColor":"#ffffff"}
 ,
 "text992":{"x":313,"y":11,"w":153,"h":24,"txtscale":100}
 ,
@@ -83,7 +83,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image64482":{"x":401,"y":64,"w":383,"h":144,"i":"images/session-hole.png"}
 ,
-"text64483":{"x":452,"y":169,"w":289,"h":73,"txtscale":100}
+"text64483":{"x":452,"y":169,"w":289,"h":64,"txtscale":100}
 ,
 "image64485":{"x":401,"y":236,"w":383,"h":144,"i":"images/session-hole.png"}
 ,
@@ -91,7 +91,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text64487":{"x":43,"y":101,"w":333,"h":110,"txtscale":110}
 ,
-"text64488":{"x":39,"y":412,"w":708,"h":1364,"txtscale":100}
+"text64488":{"x":39,"y":412,"w":708,"h":892,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

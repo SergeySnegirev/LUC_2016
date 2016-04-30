@@ -1,5 +1,5 @@
 TabletResponsive={"1009":{
-"pageLayer":{"w":1009,"h":1845,"bgColor":"#ffffff"}
+"pageLayer":{"w":1009,"h":1323,"bgColor":"#ffffff"}
 ,
 "text992":{"x":423,"y":18,"w":474,"h":34,"txtscale":100}
 ,
@@ -33,9 +33,9 @@ TabletResponsive={"1009":{
 ,
 "text60384":{"x":718,"y":161,"w":197,"h":79,"txtscale":100}
 ,
-"text60385":{"x":300,"y":88,"w":333,"h":101,"txtscale":100}
+"text60385":{"x":300,"y":88,"w":333,"h":80,"txtscale":100}
 ,
-"text60386":{"x":300,"y":240,"w":671,"h":1605,"txtscale":100}
+"text60386":{"x":300,"y":240,"w":671,"h":1083,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/gordon.jpg','images/session-hole.png']
 },
 "785":{
-"pageLayer":{"w":785,"h":1736,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1310,"bgColor":"#ffffff"}
 ,
 "text992":{"x":313,"y":11,"w":153,"h":24,"txtscale":100}
 ,
@@ -77,9 +77,9 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text60384":{"x":450,"y":169,"w":288,"h":61,"txtscale":100}
 ,
-"text60385":{"x":43,"y":101,"w":333,"h":101,"txtscale":100}
+"text60385":{"x":43,"y":101,"w":333,"h":80,"txtscale":100}
 ,
-"text60386":{"x":39,"y":227,"w":708,"h":1509,"txtscale":100}
+"text60386":{"x":39,"y":227,"w":708,"h":1083,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

@@ -1,5 +1,5 @@
 TabletResponsive={"1009":{
-"pageLayer":{"w":1009,"h":1688,"bgColor":"#ffffff"}
+"pageLayer":{"w":1009,"h":1240,"bgColor":"#ffffff"}
 ,
 "text992":{"x":423,"y":18,"w":474,"h":34,"txtscale":100}
 ,
@@ -39,9 +39,9 @@ TabletResponsive={"1009":{
 ,
 "text63408":{"x":718,"y":316,"w":197,"h":79,"txtscale":100}
 ,
-"text63409":{"x":300,"y":88,"w":333,"h":101,"txtscale":100}
+"text63409":{"x":300,"y":88,"w":333,"h":80,"txtscale":100}
 ,
-"text63410":{"x":300,"y":348,"w":671,"h":1340,"txtscale":100}
+"text63410":{"x":300,"y":348,"w":671,"h":892,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/rick-zanotti-circle.jpg','images/page_leslie-circle.jpg','images/session-hole.png']
 },
 "785":{
-"pageLayer":{"w":785,"h":1722,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1274,"bgColor":"#ffffff"}
 ,
 "text992":{"x":313,"y":11,"w":153,"h":24,"txtscale":100}
 ,
@@ -83,15 +83,15 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "image63402":{"x":401,"y":64,"w":383,"h":144,"i":"images/session-hole.png"}
 ,
-"text63403":{"x":450,"y":169,"w":280,"h":73,"txtscale":100}
+"text63403":{"x":450,"y":169,"w":280,"h":61,"txtscale":100}
 ,
 "image63407":{"x":401,"y":218,"w":383,"h":144,"i":"images/session-hole.png"}
 ,
-"text63408":{"x":450,"y":323,"w":280,"h":73,"txtscale":100}
+"text63408":{"x":450,"y":323,"w":280,"h":61,"txtscale":100}
 ,
-"text63409":{"x":43,"y":101,"w":333,"h":101,"txtscale":100}
+"text63409":{"x":43,"y":101,"w":333,"h":80,"txtscale":100}
 ,
-"text63410":{"x":39,"y":382,"w":708,"h":1340,"txtscale":100}
+"text63410":{"x":39,"y":382,"w":708,"h":892,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

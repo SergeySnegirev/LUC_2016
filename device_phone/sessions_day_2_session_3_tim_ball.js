@@ -33,7 +33,7 @@ PhoneResponsive={"785":{
 ,
 "text64458":{"x":391,"y":199,"w":369,"h":73,"txtscale":140}
 ,
-"text64459":{"x":40,"y":114,"w":370,"h":134,"txtscale":140}
+"text64459":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
 "text64460":{"x":40,"y":300,"w":706,"h":630,"txtscale":120}
 ,
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/session-hole.png','images/timball.jpg']
 },
 "480":{
-"pageLayer":{"w":480,"h":1521,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1416,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text64459":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text64460":{"x":30,"y":467,"w":420,"h":1054,"txtscale":140}
+"text64460":{"x":30,"y":467,"w":420,"h":949,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
