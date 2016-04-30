@@ -2,9 +2,9 @@
 Trivantis (http://www.trivantis.com)
 **************************************************/
 
-/*
+/* 
 ** If you want to enable a Debug Window that will show you status
-** and debugging information for your HTML published content,
+** and debugging information for your HTML published content, 
 ** copy the file "trivantisdebug.html" from your Support Files directory
 ** (typically C:\Program Files\Trivantis\(Product Name)\Support Files
 ** and place in the root folder of your published content (next to this file)
@@ -33,7 +33,7 @@ var FILL_PICTURE = 4;
 
 if(typeof String.prototype.trim !== 'function') {
   String.prototype.trim = function() {
-    return this.replace(/^\s+|\s+$/g, '');
+    return this.replace(/^\s+|\s+$/g, ''); 
   }
 }
 
@@ -72,7 +72,7 @@ function findTrivLogMsg( win, bCheckOpener ) {
    if( bCheckOpener && win.opener && win.opener.trivLogMsg ) {
      return findTrivLogMsg( win.opener, false )
    }
-
+   
    while( win ) {
      if( win.parent && win.parent != win && win.parent.trivLogMsg ) win = win.parent;
      else break;
@@ -102,7 +102,7 @@ function ObjLayer(id,pref,frame) {
   this.y = this.ele.offsetTop;
   this.w = this.ele.offsetWidth;
   this.h = this.ele.offsetHeight;
-
+	
   if( this.styObj ) this.styObj.visibility = "hidden"
   this.id = id
   this.unique = 1;
@@ -123,14 +123,14 @@ function ObjLayerMoveTo(x,y) {
 	var origX = this.x;
     this.x = x
     if( this.styObj ) this.styObj.left = this.x + 'px';
-	if(this.reflectDiv)
+	if(this.reflectDiv) 
 	{
 		if(this.theObj)
 		{
 			var xDiff = this.x-origX;
 			this.theObj.reflectedImageX = this.theObj.reflectedImageX + xDiff;
 			this.reflectDiv.style.left = this.theObj.reflectedImageX + 'px';
-		}
+		}			
 	}
   }
   if (y!=null) {
@@ -147,7 +147,7 @@ function ObjLayerMoveTo(x,y) {
 	}
     if( this.styObj ) this.styObj.top = this.y + 'px';
   }
-
+  
   // Fly transitions or other moves off-page can produce a scrollbar.
   // currently objects moved off the page still maintain their view, this
   // causes a scrollbar to be shown on the page, if a user wants the object
@@ -161,7 +161,7 @@ function ObjLayerMoveTo(x,y) {
 	  var pageDiv = document.getElementById('pageDIV');
 	  var pageWidth = Math.max(pageDiv["clientWidth"],pageDiv["offsetWidth"]);
 	  var pageHeight = Math.max(pageDiv["clientHeight"],pageDiv["offsetHeight"]);
-	  this.styObj.display= ( 0 > (this.x+this.w) || pageWidth < this.x || 0 > (this.y+this.h) || pageHeight < this.y ) ? 'none' : '';
+	  this.styObj.display= ( 0 > (this.x+this.w) || pageWidth < this.x || 0 > (this.y+this.h) || pageHeight < this.y ) ? 'none' : '';  
   }
 }
 
@@ -170,7 +170,7 @@ function ObjLayerMoveBy(x,y) {
 }
 
 function ObjLayerClipInit(t,r,b,l) {
-  if (arguments.length==4)
+  if (arguments.length==4) 
 	this.clipTo(t,r,b,l)
   else if(this.ele.offsetWidth <=0 ||  this.ele.offsetHeight<=0 || this.theObj)
   {
@@ -180,7 +180,7 @@ function ObjLayerClipInit(t,r,b,l) {
 		var effectAdjY = 0;
 		var effectAdjW = (typeof(this.ele.offsetWidth) == 'undefined' || this.ele.offsetWidth <=0)?this.theObj.w:this.ele.offsetWidth;
 		var effectAdjH = (typeof(this.ele.offsetHeight) == 'undefined' || this.ele.offsetHeight<=0)?this.theObj.h:this.ele.offsetHeight;;
-
+		
 		if(this.theObj.name.indexOf("text") > -1) //TXT Obj Adj
 		{
 			var xOffset = 0;
@@ -207,7 +207,7 @@ function ObjLayerClipInit(t,r,b,l) {
 				var xTextOffset = this.theObj.textShadowDepth * Math.cos(textRadians);
 				//Multiply by -1 because a negative offset means this shadow is in the positive y-direction on the screen
 				var yTextOffset = -1 * this.theObj.textShadowDepth * Math.sin(textRadians);
-
+				
 				if(xOffset !=0) //Has other effect
 				{
 					if(xOffset>0)
@@ -262,7 +262,7 @@ function ObjLayerClipInit(t,r,b,l) {
 			effectAdjX = ((xOffset<0)?xOffset:0);
 			effectAdjY = ((yOffset<0)?yOffset:0);
 			effectAdjW += wOffset;
-			effectAdjH += hOffset;
+			effectAdjH += hOffset;	
 		}
 		else //OtherObjAdjust
 		{
@@ -288,12 +288,12 @@ function ObjLayerClipInit(t,r,b,l) {
 			{
 				//BTN Adjustments
 				effectAdjW += 5;
-				effectAdjH += 2;
+				effectAdjH += 2;	
 			}
 			effectAdjX = ((xOffset<0)?xOffset:0);
 			effectAdjY = ((yOffset<0)?yOffset:0);
 			effectAdjW += wOffset;
-			effectAdjH += hOffset;
+			effectAdjH += hOffset;	
 		}
 		this.clipTo(effectAdjY,effectAdjW,effectAdjH,effectAdjX)
 	}
@@ -310,21 +310,21 @@ function ObjLayerClipTo(t,r,b,l) {
 function ObjLayerShowAudio(xPos){
 	if(xPos && this.styObj){
 		this.styObj.left = xPos.toString() + "px";
-		this.styObj.visibility = "visible";  //echo LD-975: Move the audio object WAY off of the page if it's initially hidden. Always keep the flash window visible.
+		this.styObj.visibility = "visible";  //echo LD-975: Move the audio object WAY off of the page if it's initially hidden. Always keep the flash window visible. 
 											 //JB the audio can't be played in IE if it is not visible, and customers do this all the time.
 	}
 }
 
 function ObjLayerHideAudio(){
-  if( this.styObj ){
+  if( this.styObj ){ 
 	this.styObj.left = "10000px";
-	this.styObj.visibility = "visible";  //echo LD-975: Move the audio object WAY off of the page if it's initially hidden. Always keep the flash window visible.
+	this.styObj.visibility = "visible";  //echo LD-975: Move the audio object WAY off of the page if it's initially hidden. Always keep the flash window visible. 
 										 //JB the audio can't be played in IE if it is not visible, and customers do this all the time.
   }
 }
 
 function ObjLayerShow() {
-  if( this.styObj )
+  if( this.styObj ) 
   {
 	this.styObj.visibility = "inherit";
 	if(this.theObj && parseFloat(this.styObj.opacity) != parseFloat(this.theObj.opacity/100.0))
@@ -333,10 +333,10 @@ function ObjLayerShow() {
 			this.styObj.opacity = this.theObj.opacity/100.0;
 	}
   }
-  if(this.reflectDiv)
+  if(this.reflectDiv) 
   {
-	this.reflectDiv.style.visibility = "inherit";
-
+	this.reflectDiv.style.visibility = "inherit";  
+	
 	if(this.eTran ==-1)
 	{
 		//echo bug 21701
@@ -356,7 +356,7 @@ function ObjLayerActionGoTo( destURL, destFrame, subFrame, bFeed ) {
   var bFeedback = bFeed != null ? bFeed : true
   if( destFrame ) {
     if( destFrame == "opener" ) targWind = parent.opener;
-    else if( destFrame == "_top" ) targWind = eval( "parent" )
+    else if( destFrame == "_top" ) targWind = eval( "parent" ) 
     else if(destFrame == "NewWindow" ) targWind = open( destURL, 'NewWindow' )
     else {
       var parWind = eval( "parent" )
@@ -385,13 +385,13 @@ function ObjLayerActionGoTo( destURL, destFrame, subFrame, bFeed ) {
           targWind.trivExitPage( destURL, bFeedback )
           return
         }
-      }catch(e){}
+      }catch(e){}      
     }
   }
   if( !targWind ) targWind = window
   try
   {
-    if( !targWind.closed && __Triv_GoToNextPage__ != destURL)
+    if( !targWind.closed && __Triv_GoToNextPage__ != destURL) 
 	{
 		targWind.location.href = destURL;
 		if( is.awesomium ) __Triv_GoToNextPage__ = destURL;
@@ -399,7 +399,7 @@ function ObjLayerActionGoTo( destURL, destFrame, subFrame, bFeed ) {
 	}
   }catch(e){
 	__Triv_GoToNextPage__ = "";
-  }
+  }      
 }
 
 function ObjLayerActionGoToNewWindow( destURL, name, props ) {
@@ -416,9 +416,9 @@ function GetNewWindXAndYPos( props ) {
   var wndW = GetMiddleString( props, countOfW + idxW, ',' )
   var countOfH = 'height='.length
   var idxH = props.indexOf('height=');
-  var wndH = GetMiddleString( props, countOfH + idxH, ',' )
+  var wndH = GetMiddleString( props, countOfH + idxH, ',' )  
   var wndX = (screen.width - wndW) / 2;
-  var wndY = (screen.height - wndH) / 2;
+  var wndY = (screen.height - wndH) / 2;	
   return ',left=' + wndX + ',top=' + wndY;
 }
 
@@ -426,7 +426,7 @@ function GetMiddleString( str, startIndex, endChar ) {
   var midStr = '';
   for (strIndex = startIndex; str.charAt(strIndex) != endChar; strIndex++) {
     midStr += str.charAt(strIndex);
-  }
+  }  
   return midStr;
 }
 
@@ -545,7 +545,7 @@ function ObjLayerSlideEnd() {
   {
 	if( this.tTrans == 1 ) //LD-2088/LD-1043: if we are transitioning out, hide the object.
 		this.hide();
-
+	
 	this.x = this.orgPos[0];
 	this.ele.style.left = this.x+"px";
 	this.y = this.orgPos[1];
@@ -588,10 +588,10 @@ function ObjLayerWrite(html) {
 function BrowserProps() {
   var name = navigator.appName
   var ua = navigator.userAgent.toLowerCase();
-
+  
   if (name=="Netscape") name = "ns"
   else if (name=="Microsoft Internet Explorer") name = "ie"
-
+  
   this.v = parseInt(navigator.appVersion,10)
   this.op = ua.indexOf("opera")!=-1
   this.ns = ((name=="ns" && this.v>=4)||this.op)
@@ -602,7 +602,7 @@ function BrowserProps() {
   this.ie6 = (this.ie && navigator.appVersion.indexOf('MSIE 6')>0)
   if( this.ie ) this.v = parseInt( navigator.appVersion.substr( navigator.appVersion.indexOf('MSIE') + 5),10);
   this.quirksMode = (this.ie && document.documentMode == 5);
-  this.ie8 = (this.ie && (document.documentMode == 8 || document.documentMode == 7 || document.documentMode == 6 || document.documentMode == 5));	//echo LD-774 : This is a bit of a hack but any document modes less than 8 will run through the same logic as IE8.
+  this.ie8 = (this.ie && (document.documentMode == 8 || document.documentMode == 7 || document.documentMode == 6 || document.documentMode == 5));	//echo LD-774 : This is a bit of a hack but any document modes less than 8 will run through the same logic as IE8. 
   this.ie9 = (this.ie && document.documentMode == 9);
   this.ie9Native = (this.ie && navigator.userAgent.indexOf("MSIE 9.0") != -1 && navigator.userAgent.indexOf("Trident/5.0") != -1);
   this.ie10 = (this.ie && document.documentMode == 10);
@@ -612,7 +612,7 @@ function BrowserProps() {
   this.ieMac = (this.ie && navigator.platform.indexOf("Mac") >= 0 )
   this.min = (this.ns||this.ie)
   this.Mac = (navigator.platform.indexOf("Mac") >= 0)
-  this.activeX = ( this.ie ) ? true : false;
+  this.activeX = ( this.ie ) ? true : false; 
   this.wmpVersion = 6; // default version number we only support 7 and up
   if( ua.indexOf("iphone")!=-1 || ua.indexOf("ipod")!=-1 || ua.indexOf("ipad")!=-1 ) this.iOS = 1;
   else this.iOS = 0;
@@ -637,15 +637,15 @@ function BrowserProps() {
   //Barona Bug 21788 had to properly check IE11 for ActiveX
   if (this.ie8 || this.ie9) this.supportActiveX= window.ActiveXObject;
   else this.supportActiveX = (Object.getOwnPropertyDescriptor && Object.getOwnPropertyDescriptor(window, "ActiveXObject")) || ("ActiveXObject" in window);
-
+  
   this.vml = IsVmlCheck(this.ie8 || this.ie9);
   this.svg = IsSvgCheck() && !this.vml;
-
+  
   //echo LD-768 : Direct-X filters are disabled by default in IE10 and IE11 so they will not render legacy filters if we're running in a document mode of 8 or 9.
   this.DXFilterSupported = !(this.ie &&
 							 (document.documentMode == 5 || document.documentMode == 6 || document.documentMode == 7 || document.documentMode == 8 || document.documentMode == 9) &&
 							 (navigator.userAgent.indexOf("Trident/6.0") != -1 || navigator.userAgent.indexOf("Trident/7.0") != -1));
-
+  
   var player = null;
   this.isMobile = {
     Android: function() {
@@ -677,21 +677,21 @@ function BrowserProps() {
     }
 };
 
-  try
+  try 
   {
     if(window.ActiveXObject)
       player = new ActiveXObject("WMPlayer.OCX.7");
     else if (window.GeckoActiveXObject)
       player = new GeckoActiveXObject("WMPlayer.OCX.7");
     else
-      player = navigator.mimeTypes["application/x-mplayer2"].enabledPlugin;
+      player = navigator.mimeTypes["application/x-mplayer2"].enabledPlugin;		
   }
   catch(e)
   {
     // Handle error only if title has wmp-- no WMP control
-
+ 
   }
-
+  
   if( player && player.versionInfo ) {
     this.wmpVersion = player.versionInfo.slice(0,player.versionInfo.indexOf('.'));
   }
@@ -700,13 +700,13 @@ function BrowserProps() {
 	 */
 	this.useHTML5Video = function()
 	{
-		return ( !this.flashVersion(9,0,0) && supports_h264_baseline_video() );
+		return ( !this.flashVersion(9,0,0) && supports_h264_baseline_video() ); 
 	}
 	this.useHTML5Audio = function()
 	{
-		return ( !this.flashVersion(9,0,0) && !!document.createElement('audio').canPlayType );
+		return ( !this.flashVersion(9,0,0) && !!document.createElement('audio').canPlayType ); 
 	}
-
+	
 	/*
 	 * Flash detection
 	 */
@@ -714,7 +714,7 @@ function BrowserProps() {
 	// When called with reqMajorVer, reqMinorVer, reqRevision returns t if that version or greater is available
 	this.flashVersion = function (reqMajorVer, reqMinorVer, reqRevision)
 	{
-		if (flashVer == -1 )
+		if (flashVer == -1 ) 
 		{
 			var nav = navigator;
 
@@ -779,7 +779,7 @@ function BrowserProps() {
 				}
 			}
 		}
-
+		
 		if (flashVer == -1 ) {
 			return false;
 		} else if (flashVer != 0) {
@@ -810,7 +810,7 @@ function BrowserProps() {
 			return false;
 		}
 	};
-
+	
 	//Combining the two checks for HTML5
 	this.useHTML5Media = (this.useHTML5Audio() || this.useHTML5Video());
 }
@@ -834,19 +834,19 @@ function getPhoneType(){
 function getScreenWidth()
 {
 	if(is.isMobile.any()){
-		if(is.isMobile.anyPhone() && getOrientation() == "landscape")
+		if(is.isMobile.anyPhone() && getOrientation() == "landscape") 
 			return screen.height;
-		else
+		else 
 			return screen.width;
 	}
 	if (document.compatMode=='CSS1Compat')
 	{
-		if(document.body && window )
+		if(document.body && window )		
 			return  window.innerWidth||document.body.parentNode.clientWidth||document.documentElement.clientWidth||document.body.clientWidth||0;
 		else
 			return screen.width;
 	}
-	else
+	else 
 	{
 		if(document.body)
 			return document.body.clientWidth;
@@ -857,19 +857,19 @@ function getScreenWidth()
 function getScreenHeight()
 {
 	if(is.isMobile.any()){
-		if(is.isMobile.anyPhone() && getOrientation() == "landscape")
+		if(is.isMobile.anyPhone() && getOrientation() == "landscape") 
 			return screen.width;
-		else
+		else 
 			return screen.height;
 	}
-	if (document.compatMode=='CSS1Compat')
+	if (document.compatMode=='CSS1Compat') 
 	{
 		if(document.body)
 			return document.body.parentNode.clientHeight;
 		else
 			return screen.height;
 	}
-	else
+	else 
 		return document.body.clientHeight;
 }
 
@@ -886,23 +886,23 @@ function detect()
 		{
 			return false;
 		}
-
+	 
 	}
-
+  
   is.clientProp.device = getDevice();
   if( is.isMobile.anyPhone())
   {
     if(getOrientation() == "portrait")
-	{
+	{	
 		if(window && window.TrivCurrRespView)TrivCurrRespView.set( "PhonePortrait" );
-
+		
 		is.clientProp.width = "480";
 		is.clientProp.orientation = getOrientation();
 	}
-    else
+    else 
 	{
 		if(window && window.TrivCurrRespView)TrivCurrRespView.set( "PhoneLandscape" );
-
+		
 		is.clientProp.width = "785";
 		is.clientProp.orientation = getOrientation();
 	}
@@ -912,20 +912,20 @@ function detect()
     if(getOrientation() == "portrait")
 	{
 		if(window && window.TrivCurrRespView)TrivCurrRespView.set( "TabletPortrait" );
-
+		
 		is.clientProp.width = "785";
 		is.clientProp.orientation = getOrientation();
 	}
     else
 	{
 		if(window && window.TrivCurrRespView)TrivCurrRespView.set( "TabletLandscape" );
-
+		
 		is.clientProp.width = "1009";
 		is.clientProp.orientation = getOrientation();
 	}
   }
   else
-  {
+  {		
 		is.clientProp.orientation = getOrientation();
 	    if(getScreenWidth() <= 785)
 		{
@@ -933,26 +933,26 @@ function detect()
 		   {
 			   is.clientProp.device = "Phone";
 			   is.clientProp.width = "785";
-
+			   
 			   if(window && window.TrivCurrRespView)TrivCurrRespView.set( "PhoneLandscape" );
 		   }
 		   else if(getScreenWidth()  > 480 )
 		   {
-
+				
 				is.clientProp.device = "Tablet";
 				is.clientProp.width = "785";
-
+				
 				if(window && window.TrivCurrRespView)TrivCurrRespView.set( "TabletPortrait" );
-		   }
+		   } 
 		   else if (getScreenWidth()  <= 480 )
 		   {
 			   is.clientProp.device = "Phone";
 			   is.clientProp.width = "480";
-
-			   if(window && window.TrivCurrRespView)TrivCurrRespView.set( "PhonePortrait" );
+			   
+			   if(window && window.TrivCurrRespView)TrivCurrRespView.set( "PhonePortrait" );	  
 		   }
-		   else
-		   {
+		   else 
+		   {			
 				is.clientProp.device = "Desktop";
 				is.clientProp.width ="1009";
 				if(window && window.TrivCurrRespView)TrivCurrRespView.set( "Desktop" );
@@ -960,22 +960,22 @@ function detect()
 		}
 		else if(getScreenWidth()  <= 1009 && getScreenWidth() > 785)
 		{
-
+			
 		   if(getOrientation() == "landscape")
 		   {
 			  is.clientProp.device = "Tablet";
 			  is.clientProp.width ="1009";
-
+			  
 			  if(window && window.TrivCurrRespView)TrivCurrRespView.set( "TabletLandscape" );
 		   }
 		   else
 		   {
 			  is.clientProp.device = "Tablet";
 			  is.clientProp.width ="785";
-
+			  
 			  if(window && window.TrivCurrRespView)TrivCurrRespView.set( "TabletPortrait" );
 		   }
-
+			
 		}
 		else
 		{
@@ -983,16 +983,16 @@ function detect()
 			  is.clientProp.width ="1009";
 			if(window && window.TrivCurrRespView)TrivCurrRespView.set( "Desktop" );
 		}
-
-
+		
+		
 		var desktopWidth =  getDesktopWidthFromJSON();
-		if( is.clientProp.device != "Desktop" &&
+		if( is.clientProp.device != "Desktop" && 
 			desktopWidth < is.clientProp.width )
 		{
 			is.clientProp.device = "Desktop";
 		    is.clientProp.width ="1009";
 			if(window && window.TrivCurrRespView)TrivCurrRespView.set( "Desktop" );
-		}
+		}		
   }
   return true;
 }
@@ -1008,14 +1008,14 @@ try{
 function getDesktopWidthFromJSON()
 {
 	if(is.ie8) return 1009;
-
+	
 	if (!window.responsiveDataLoopCount )
 		window.responsiveDataLoopCount=1;
 	else
 		window.responsiveDataLoopCount++;
-
+	 
 	 if ( window.responsiveDataLoopCount == 100 )
-		alert("Responsive Data will not load");
+		alert("Responsive Data will not load");		 
 	 else if(!is.jsonData)
 	 {
 		var strExec = "getDesktopWidthFromJSON()";
@@ -1027,7 +1027,7 @@ function getDesktopWidthFromJSON()
 	var obj;
 	window.responsiveDataLoopCount=1;
 	if(respValues)
-	{
+	{	
 		for(var key in respValues)
 			newValues = respValues[key];
 	}
@@ -1044,21 +1044,21 @@ function rebuildLayout()
 {
 	if(is.ie8)
 		return;
-
+	
 	//Check if the array exists
 	if(window.bTrivResponsive)
 	{
     	RestoreStyles();
-
+        
 		for (var index = 0; index < arObjs.length; index++)
 		{
 			arObjs[index].loadProps();
 			arObjs[index].respChanges();
 		}
-
+		
 		writeStyleSheets( arObjs );
 		UpdateObjLayerValues();
-
+		
 		adjustResponsivePage();
 	}
 }
@@ -1073,7 +1073,7 @@ function changeSize()
   {
 	setTimeout(function(){changeSize();},100);
   }
-
+	  
   if(previousDevice == is.clientProp.device && is.clientProp.device == "Desktop" )
 	  return;
   if( previousDevice != is.clientProp.device || previousOrientation != is.clientProp.orientation )
@@ -1081,7 +1081,7 @@ function changeSize()
 	rebuildLayout();
 	try{ OnDeviceRotate(); }catch(e){ }
   }
-
+  
 }
 
 function setDisplayType(display, width)
@@ -1095,7 +1095,7 @@ function loadResponsiveData()
 {
 	if(is.awesomium && window.bTrivRunView)
 		return;
-
+	
 	detect();
 	var json;
 	var phonejson;
@@ -1106,7 +1106,7 @@ function loadResponsiveData()
 		pthName = "index";
 	else
 		pthName = pthName.substring(0,pthName.lastIndexOf("."));
-
+	
 	if(getDevice() == "Desktop")
 	{
 			fileToLoad = "device_desktop/"+pthName+".js";
@@ -1117,7 +1117,7 @@ function loadResponsiveData()
 			json.onreadystatechange = !is.ie?function(){saveResponsiveData("Desktop", eval(jsonObj));}:'';
 			json.onload = function(){saveResponsiveData("Desktop", eval(jsonObj));};
 			document.getElementsByTagName('head')[0].appendChild(json);
-
+			
 			fileToLoad = "device_phone/"+pthName+".js";
 			phonejson = document.createElement("script");
 			phonejson.type = "text/javascript";
@@ -1126,7 +1126,7 @@ function loadResponsiveData()
 			phonejson.onreadystatechange = !is.ie?function(){saveResponsiveData("Phone", eval(jsonPhoneObj));}:'';
 			phonejson.onload = function(){saveResponsiveData("Phone", eval(jsonPhoneObj));};
 			document.getElementsByTagName('head')[0].appendChild(phonejson);
-
+			
 			fileToLoad = "device_tablet/"+pthName+".js";
 			tabletjson = document.createElement("script");
 			tabletjson.type = "text/javascript";
@@ -1177,11 +1177,12 @@ function adjustResponsivePage()
 		if(obj)
 		{
 			var newViewPort = "width="+obj.w;
+						
 			//For the case where we may have more than one viewport
 			var currWindow = window;
 			var titleManagerIndexWindow = (currWindow && currWindow.parent && currWindow.parent.bIsTitleManagerIndexFile) ? currWindow.parent : null;
 			while( currWindow )
-			{
+			{			
 				var allViewPorts = currWindow.document.getElementsByName('viewport');
 				for (var index = 0; index < allViewPorts.length; index++)
 					allViewPorts[index].setAttribute('content',newViewPort);
@@ -1190,7 +1191,7 @@ function adjustResponsivePage()
 				currWindow = titleManagerIndexWindow;
 				titleManagerIndexWindow = null; //stop looping after this.
 			}
-
+			
 			var styleTags = document.getElementsByTagName('head')[0].getElementsByTagName('style');
 			var styleTag = null;
 
@@ -1205,7 +1206,7 @@ function adjustResponsivePage()
 			{
 				ModifyBodyCSSForResponsive(styleTag, obj);
 			}
-
+			
 			if(pageLayer)
 			{
 				pageLayer.ele.style.width = obj.w+'px';
@@ -1241,9 +1242,9 @@ function adjustResponsivePage()
 						pageLayer.ele.style.backgroundImage = 'url()';
 						pageLayer.ele.style.backgroundRepeat = '';
 					}
-					else
+					else 
 						pageLayer.ele.style.backgroundRepeat = obj.bgRepeat;
-
+					
 				}
 				else
 				{
@@ -1264,12 +1265,12 @@ function buildCSS(id,left,top,width,height,visible,zorder,color,other,sizeUnit) 
   var str = (left!=null && top!=null)? '#'+id+' {position:absolute;left:'+left+'px;top:'+top+'px;' : ((width!=null && height!=null) ? '#'+id+' {position:relative;' : '#'+id+' {position:fixed;width:100%;height:100%;' )
   if( arguments.length<10 || sizeUnit==null || typeof(sizeUnit)!='string'  )
 	  sizeUnit = 'px';
-
+  
   if (arguments.length>=4 && width!=null)
 	  str += 'width:'+width+sizeUnit+';'
   if (arguments.length>=5 && height!=null) {
     str += 'height:'+height+sizeUnit+';'
-    if ( (arguments.length<9 || other==null || other.indexOf('clip')==-1 ) && sizeUnit!='%')
+    if ( (arguments.length<9 || other==null || other.indexOf('clip')==-1 ) && sizeUnit!='%') 
 		str += 'clip:rect(0px '+width+sizeUnit+' '+height+sizeUnit+' 0px);'
   }
   if (arguments.length>=6 && visible!=null) str += 'visibility:'+ ( (visible)? 'inherit' : 'hidden' ) +';'
@@ -1282,7 +1283,7 @@ function buildCSS(id,left,top,width,height,visible,zorder,color,other,sizeUnit) 
 
 function addRotateCSS(angle, hasShadow, width, height, xPos, yPos, shadowDirection, shadowDepth, shadowBlurRadius, verticalFlip, horizontalFlip, boundsRectX, boundsRectY, adornerWidth, adornerHeight){
 	var radians = angle * (Math.PI / 180.0);
-
+	
 	//if the image has a shadow, the point of rotation needs to be adjusted
 	var shadowRadians = 0.0;
 	var yOffset = 0;
@@ -1300,10 +1301,10 @@ function addRotateCSS(angle, hasShadow, width, height, xPos, yPos, shadowDirecti
 		shadowDepth = 0;
 		shadowBlurRadius = 0;
 	}
-
+	
 	var deltaCenterX = 0;
 	var deltaCenterY = 0;
-
+	
 	if(adornerWidth == 0 || adornerHeight == 0)
 	{
 		deltaCenterX = width / 2.0;
@@ -1314,27 +1315,27 @@ function addRotateCSS(angle, hasShadow, width, height, xPos, yPos, shadowDirecti
 		deltaCenterX = (adornerWidth / 2) - boundsRectX;
 		deltaCenterY = (adornerHeight / 2) - boundsRectY;
 	}
-
+	
 	var rotateAttribute = '';
-
+	
 	if( is.chrome || is.safari)
 	{
 		if(xOffset < 0) deltaCenterX = deltaCenterX - (xOffset - shadowBlurRadius);
 		if(yOffset < 0) deltaCenterY = deltaCenterY - (yOffset - shadowBlurRadius);
 		rotateAttribute += '-webkit-transform-origin: ' + deltaCenterX + 'px ' + deltaCenterY + 'px;';
-
+		
 		rotateAttribute += '-webkit-transform:rotate(' + angle + 'deg)';
-
+		
 		if(verticalFlip == 1)
 		{
 			rotateAttribute += 'scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			rotateAttribute += 'scaleX(-1)';
 		}
-
+		
 		rotateAttribute += ';';
 	}
 	else if( is.firefox )
@@ -1342,46 +1343,46 @@ function addRotateCSS(angle, hasShadow, width, height, xPos, yPos, shadowDirecti
 		if(xOffset < 0) deltaCenterX = deltaCenterX - (xOffset - shadowBlurRadius);
 		if(yOffset < 0) deltaCenterY = deltaCenterY - (yOffset - shadowBlurRadius);
 		rotateAttribute += '-moz-transform-origin: ' + deltaCenterX + 'px ' + deltaCenterY + 'px;';
-
+		
 		rotateAttribute += '-moz-transform:rotate(' + angle + 'deg)';
-
+		
 		if(verticalFlip == 1)
 		{
 			rotateAttribute += 'scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			rotateAttribute += 'scaleX(-1)';
 		}
-
+		
 		rotateAttribute += ';';
 	}
 	else if( is.ie8 || is.ie9)
-	{
+	{		
 		//Image rotation for IE8 and 9 is done inside of ObjImageBuild because of VML notation
 	}
-	else
+	else 
 	{
 		if(xOffset < 0) deltaCenterX = deltaCenterX - (xOffset - shadowBlurRadius);
 		if(yOffset < 0) deltaCenterY = deltaCenterY - (yOffset - shadowBlurRadius);
 		rotateAttribute += 'transform-origin: ' + deltaCenterX + 'px ' + deltaCenterY + 'px;';
-
+		
 		rotateAttribute += 'transform:rotate(' + angle + 'deg)';
-
+		
 		if(verticalFlip == 1)
 		{
 			rotateAttribute += 'scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			rotateAttribute += 'scaleX(-1)';
 		}
-
+		
 		rotateAttribute += ';';
 	}
-
+	
 	return rotateAttribute;
 }
 
@@ -1404,7 +1405,7 @@ function addSvgShadowFilter(name,width, height, direction, depth, opacity, red, 
 
 	xOffset = xOffset.toFixed(5);
 	yOffset = yOffset.toFixed(5);
-
+	
 	var svgFilter = '<svg width="' + (Math.abs(1*width) + Math.abs(1*xOffset)) + 'px" height="' + (Math.abs(1*height) + Math.abs(1*yOffset)) + 'px">\n';
 	svgFilter += '<defs>\n';
 	var stdBlurRadius = blurRadius/1.8;
@@ -1423,7 +1424,7 @@ function addSvgShadowFilter(name,width, height, direction, depth, opacity, red, 
 			svgFilter += 'y = "' + yDisplacementPercentage + '%" '
 		}
 		else svgFilter += 'y = "0" '
-
+		
 		svgFilter += 'width="'+ 100 * (Math.abs(xOffset) + width + 2*blurRadius) / width +'%" height="'+ 100 * (Math.abs(yOffset) + height + 2*blurRadius) / height +'%">\n';
 	}
 	else
@@ -1432,7 +1433,7 @@ function addSvgShadowFilter(name,width, height, direction, depth, opacity, red, 
 		var h = 200 + 200*(depth/100);
 		svgFilter += '<filter id = "' + name +'Shadow" x = "0" y = "0" width="'+w+'%" height="'+h+'%">\n';
 	}
-
+	
 		svgFilter += '<feColorMatrix result = "colorResult" in = "SourceAlpha" type = "matrix" values = "0 0 0 ' + (red / 255.0).toFixed(6) + ' 0 0 0 0 ' + (green / 255.0).toFixed(6) + ' 0 0 0 0 ' + (blue / 255.0).toFixed(6) + ' 0 0 0 0 '+opacity+' 0"/>\n';
 	svgFilter += '<feOffset result = "offsetResult" in = "colorResult" dx = "' + xOffset + '" dy = "' + yOffset + '" />\n';
 	svgFilter += '<feGaussianBlur result = "blurResult" in = "offsetResult" stdDeviation = "'+stdBlurRadius+'" />\n';							//stdDeviation is the blurRadius
@@ -1440,18 +1441,18 @@ function addSvgShadowFilter(name,width, height, direction, depth, opacity, red, 
 	svgFilter += '</filter>\n';
 	svgFilter += '</defs>\n';
 	svgFilter += '</svg>';
-
+	
 	return svgFilter;
 }
 
-function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offset, fadeRate, visible,
-					   verticalFlip, horizontalFlip, boundsRectX, boundsRectY, adornerWidth, adornerHeight,
+function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offset, fadeRate, visible, 
+					   verticalFlip, horizontalFlip, boundsRectX, boundsRectY, adornerWidth, adornerHeight, 
 					   zOrd, ie8DivX, ie8DivY, ie8DivWidth, ie8DivHeight, ie8ReflectionImgX, ie8ReflectionImgY){
 	var reflection = '';
-
+	
 	var bIsButton = name.indexOf("button") != -1 ? true : false;
 	var bIsImage = name.indexOf("image") != -1 ? true : false;
-
+	
 	if(is.awesomium || is.ie8 || is.ie9)
 	{
 		if(visible ==0)
@@ -1461,12 +1462,12 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 			topLeftY = -height;
 		}
 	}
-
+	
 	reflection += '<div id="'+name+'ReflectionDiv" style="visibility:'+((visible)?'inherit':'hidden')+';z-index:'+zOrd+';';
-
+	
 	var deltaCenterX = 0;
 	var deltaCenterY = 0;
-
+	
 	if(adornerWidth == 0 || adornerHeight == 0)
 	{
 		deltaCenterX = width / 2.0;
@@ -1477,27 +1478,27 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 		deltaCenterX = (adornerWidth / 2.0) - boundsRectX;
 		deltaCenterY = (adornerHeight / 2.0) - boundsRectY;
 	}
-
+	
 	if(is.awesomium)
 		if(angle == 0)
 			angle = 360;
-
+	
 	if(is.chrome || is.safari)
 	{
 		if(!is.awesomium)
 			reflection += '-webkit-transform-origin:'+ deltaCenterX+'px '+deltaCenterY+'px;';
-
+		
 		reflection += '-webkit-transform:rotateX(180deg)';
-
+		
 		if(angle > 0)
 			reflection += ' rotateZ(' + angle + 'deg)';
-
+		
 		if(verticalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleY(1)';
 			if(bIsImage) reflection += ' scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleX(1)';
@@ -1511,16 +1512,16 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 	else if(is.firefox)
 	{
 		reflection += '-moz-transform-origin:'+deltaCenterX+'px '+deltaCenterY+'px; -moz-transform:rotateX(180deg)';
-
+		
 		if(angle > 0)
 			reflection += ' rotateZ(' + angle + 'deg)';
-
+			
 		if(verticalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleY(1)';
 			if(bIsImage) reflection += ' scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleX(1)';
@@ -1530,36 +1531,36 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 	else
 	{
 		reflection += 'transform-origin:'+deltaCenterX+'px '+deltaCenterY+'px; transform:rotateX(180deg)';
-
+		
 		if(angle > 0)
 			reflection += ' rotateZ(' + angle + 'deg)';
-
+		
 		if(verticalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleY(1)';
 			if(bIsImage) reflection += ' scaleY(-1)';
 		}
-
+		
 		if(horizontalFlip == 1)
 		{
 			if(bIsButton) reflection += ' scaleX(1)';
 			if(bIsImage) reflection += ' scaleX(-1)';
 		}
 	}
-
+	
 	if(!(is.ie8 || is.ie9))
 		reflection += '; opacity: ' + (fOpacity/100.0);
-
+		
 	if(is.ie8 || is.ie9)
 		reflection += '; position:absolute; top:' + ie8DivY + 'px; left:' + ie8DivX + 'px; width:' + ie8DivWidth + 'px; height:' + ie8DivHeight + 'px;">\n';
 	else
 		reflection += '; position:absolute; top:' + topLeftY + 'px; left:' + topLeftX + 'px; width:' + width + 'px; height:' + height + 'px;">\n';
-
+	
 	if(!is.ie8 && !is.ie9)
 	{
 		reflection += '<svg focusable="false" style="overflow:visible;width:'+width+'px;height:'+height+'px;"  >\n';
 		reflection += '<defs>\n';
-
+		
 		if(is.awesomium)
 		{
 			var radians = (Math.PI / 180.0);
@@ -1568,10 +1569,10 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 
 			var startVectX = (0.5 + (0.5 * sinAngle)).toFixed(2);
 			var startVectY = (0.5 - (0.5 * cosAngle)).toFixed(2);
-			var endVectX = (0.5 - (0.5 * sinAngle)).toFixed(2);
+			var endVectX = (0.5 - (0.5 * sinAngle)).toFixed(2); 
 			var endVectY = (0.5 + (0.5 * cosAngle)).toFixed(2);
-
-			reflection += '<linearGradient id="' + name + 'AlphaGradient" x1="' + startVectX + '" y1="' + startVectY + '" x2="' + endVectX + '" y2="' + endVectY + '">\n';
+			
+			reflection += '<linearGradient id="' + name + 'AlphaGradient" x1="' + startVectX + '" y1="' + startVectY + '" x2="' + endVectX + '" y2="' + endVectY + '">\n';	
 		}
 		else
 		{
@@ -1580,17 +1581,17 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 				radians = (1 * angle) * (Math.PI / 180.0);
 			else
 				radians = (-1 * angle) * (Math.PI / 180.0);
-
+				
 			var cosAngle = Math.cos(radians);
 			var sinAngle = Math.sin(radians);
-
+			
 			var startVectX = (0.5 + (0.5 * sinAngle)).toFixed(2);
 			var startVectY = (0.5 - (0.5 * cosAngle)).toFixed(2);
-			var endVectX = (0.5 - (0.5 * sinAngle)).toFixed(2);
+			var endVectX = (0.5 - (0.5 * sinAngle)).toFixed(2); 
 			var endVectY = (0.5 + (0.5 * cosAngle)).toFixed(2);
-
+			
 			//echo bug 21516 : Buttons are published out flipped so they don't need the javascript to do it for them.
-			if(verticalFlip == 1 && horizontalFlip == 0 && bIsImage)
+			if(verticalFlip == 1 && horizontalFlip == 0 && bIsImage) 
 			{
 				reflection += '<linearGradient id="' + name + 'AlphaGradient" x1="' + startVectX + '" y1="' + startVectY + '" x2="' + endVectX  + '" y2="' + endVectY + '">\n';
 			}
@@ -1607,7 +1608,7 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 				reflection += '<linearGradient id="' + name + 'AlphaGradient" x1="' + endVectX + '" y1="' + endVectY + '" x2="' + startVectX + '" y2="' + startVectY + '">\n';
 			}
 		}
-
+			
 		reflection += '<stop offset="10%" stop-color="white" stop-opacity="0.5"/>\n';
 		reflection += '<stop offset="' + (offset * 100) + '%" stop-color="white" stop-opacity="0"/>\n';
 		reflection += '</linearGradient>\n';
@@ -1620,29 +1621,29 @@ function addReflection(name, src, topLeftX, topLeftY, width, height, angle, offs
 	}
 	else
 	{
-		if(verticalFlip == 0 && horizontalFlip == 0)
+		if(verticalFlip == 0 && horizontalFlip == 0) 
 		{
 			reflection += '<v:image id="'+name+'Reflection" src="'+ src +'" style="flip:y; filter: progid:DXImageTransform.Microsoft.Alpha(startX='+((width*100)/(2*width))+', startY=0, finishX='+((width*100)/(2*width))+', finishY='+offset*100+', style=1, finishOpacity=0,opacity=55);position:absolute;left:'+((topLeftX - (ie8ReflectionImgX - topLeftX)) - ie8DivX)+'px;top:'+((topLeftY - (topLeftY - ie8ReflectionImgY)) - ie8DivY)+'px;width:'+width+'px;height:'+height+'px;rotation:'+angle+';" alt=""/>\n';
 		}
-
+	
 		if(horizontalFlip == 1 && verticalFlip == 0)
 		{
 			reflection += '<v:image id="'+name+'Reflection" src="'+ src +'" style="flip:x; filter: progid:DXImageTransform.Microsoft.Alpha(startX='+((width*100)/(2*width))+', startY=0, finishX='+((width*100)/(2*width))+', finishY='+offset*100+', style=1, finishOpacity=0,opacity=55);position:absolute;left:'+((topLeftX - (ie8ReflectionImgX - topLeftX)) - ie8DivX)+'px;top:'+((topLeftY - (topLeftY - ie8ReflectionImgY)) - ie8DivY)+'px;width:'+width+'px;height:'+height+'px;rotation:'+(180-angle)+';" alt=""/>\n';
 		}
-
+		
 		if(horizontalFlip == 0 && verticalFlip == 1)
 		{
 			reflection += '<v:image id="'+name+'Reflection" src="'+ src +'" style="flip:y; filter: progid:DXImageTransform.Microsoft.Alpha(startX='+((width*100)/(2*width))+', startY=0, finishX='+((width*100)/(2*width))+', finishY='+offset*100+', style=1, finishOpacity=0,opacity=55);position:absolute;left:'+((topLeftX - (ie8ReflectionImgX - topLeftX)) - ie8DivX)+'px;top:'+((topLeftY - (topLeftY - ie8ReflectionImgY)) - ie8DivY)+'px;width:'+width+'px;height:'+height+'px;rotation:'+ (360-angle)+';" alt=""/>\n';
 		}
-
+		
 		if(horizontalFlip == 1 && verticalFlip == 1)
 		{
 			reflection += '<v:image id="'+name+'Reflection" src="'+ src +'" style="flip:y; filter: progid:DXImageTransform.Microsoft.Alpha(startX='+((width*100)/(2*width))+', startY=0, finishX='+((width*100)/(2*width))+', finishY='+offset*100+', style=1, finishOpacity=0,opacity=55);position:absolute;left:'+((topLeftX - (ie8ReflectionImgX - topLeftX)) - ie8DivX)+'px;top:'+((topLeftY - (topLeftY - ie8ReflectionImgY)) - ie8DivY)+'px;width:'+width+'px;height:'+height+'px;rotation:'+(360-angle)+';" alt=""/>\n';
 		}
 	}
-
+	
 	reflection += '</div>\n';
-
+	
 	return reflection;
 }
 
@@ -1657,12 +1658,12 @@ function writeStyleSheets(arrOfObjs) {
 		strCSS += arrOfObjs[i].textDivCSS+"\n";
 	  if( arrOfObjs[i].spanDivCSS )
 		strCSS += arrOfObjs[i].spanDivCSS+"\n";
-
+	
 	  if( arrOfObjs[i].arrCSSStyles )
 	  {
 		  for( var j=0; j< arrOfObjs[i].arrCSSStyles.length; j++ )
 			strCSS += ModifyCSSBulk( arrOfObjs[i].arrCSSStyles[j], arrOfObjs[i], true )+"\n";
-	  }
+	  } 
   }
   var styleElem = document.getElementById("TrivDynStyleSheet")
   if( !styleElem )
@@ -1684,7 +1685,7 @@ function preload() {
 	  objPreload = arguments[0];
   else
 	  objPreload = arguments;
-
+  
   for (var i = 0; i < objPreload.length; i++) {
     ar[i] = new Image();
     ar[i].src = objPreload[i];
@@ -1694,7 +1695,7 @@ function preload() {
 function getHTTP(dest, method, parms, errOk)
 {
     var httpReq;
-    if( method == 'GET' ) {
+    if( method == 'GET' ) { 
         if( parms ) {
           if( dest.indexOf('?' ) > 0 )
             dest += '&';
@@ -1704,13 +1705,13 @@ function getHTTP(dest, method, parms, errOk)
           parms = null;
         }
     }
-
+    
     var msg = 'Issuing ' + method + ' to ' + dest;
     if( parms ) msg += ' for [' + parms + ']';
     trivLogMsg( msg, 8 );
-
+    
     var requestSent = 0;
-    try {
+    try { 
         // branch for native XMLHttpRequest object
         if (window.XMLHttpRequest) {
             httpReq = new XMLHttpRequest();
@@ -1719,15 +1720,15 @@ function getHTTP(dest, method, parms, errOk)
             if( method == 'POST' ) {
               httpReq.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=utf-8');
             }
-            httpReq.send(parms);
+            httpReq.send(parms); 
             requestSent = 1;
-        }
+        } 
     }
     catch(e){
       if( typeof(errOk) != "undefined" && errOk != null && e.code == errOk )
         requestSent = 1;
     }
-
+    
     // branch for IE/Windows ActiveX version
     if (!requestSent && window.ActiveXObject) {
         httpReq = new ActiveXObject("Microsoft.XMLHTTP");
@@ -1928,7 +1929,7 @@ function getNVStr(nl,tag){
 }
 
 function getTextData(filename, textblockname){
-	if( trivDynXMLfilePath.length > 4 )
+	if( trivDynXMLfilePath.length > 4 ) 
 		filename = trivDynXMLfilePath;
 	var nl = createXMLHTTPObject(filename);
 	var arTB = nl.getElementsByTagName('textblock');
@@ -1992,30 +1993,30 @@ function trivTimerLoop( timerVar, durInSec, onDone, updatefunc, propsStr, bRecur
 			}
 		}
 	}
-
+	
 	if( ( startTime == 0 || startTime > now  )&& !paused)
 	{
-		//this is a fresh timer:
+		//this is a fresh timer: 
 		startTime = now;
 		timerVar.set( startTime );
-	}
-
+	}	
+	
 	var props = eval(propsStr);
 	var strRemain = getRemainingTime(now, startTime, durInSec*1000, props.bShowHours, props.bShowMin, props.bShowSec, props.countdown );
-
+	
 	if( strRemain == null && !paused)
 	{
 		timerVar.set( "pause:-999999999999999" ); //negative remaining time, this will signify timer completed.
-		eval( onDone );
+		eval( onDone ); 
 	}
-	else
+	else 
 	{
 		if( strRemain == null )
 			strRemain = buildTimeString( (props.countdown)?0:(durInSec*1000), props.bShowHours, props.bShowMin, props.bShowSec );
 		var updFunc = eval(updatefunc);
 		updFunc( strRemain );
 	}
-
+	
 	var strExec = "trivTimerLoop(" + timerVar.name + "," + durInSec + ",'" + onDone +"','" + updatefunc + "', '" + propsStr + "', true )";
 	setTimeout( strExec, 500 );
 }
@@ -2023,9 +2024,9 @@ function trivTimerLoop( timerVar, durInSec, onDone, updatefunc, propsStr, bRecur
 function buildTimeString(lRemain, showHours, showMins, showSecs )
 {
 	var strRemain = '';
-
+	
     lRemain = lRemain/1000;
-
+	
     var temp = parseInt(lRemain/3600);
     lRemain -= temp * 3600;
     if ( showHours )
@@ -2034,7 +2035,7 @@ function buildTimeString(lRemain, showHours, showMins, showSecs )
 	}
     else
 		strRemain += '  ';
-
+		
     temp = parseInt(lRemain/60);
     lRemain -= temp * 60;
     if ( showMins )
@@ -2054,14 +2055,14 @@ function buildTimeString(lRemain, showHours, showMins, showSecs )
 	return strRemain;
 }
 
-function getRemainingTime( now, lStartTime, lDuration, showHours, showMins, showSecs, countDown )
-{
+function getRemainingTime( now, lStartTime, lDuration, showHours, showMins, showSecs, countDown ) 
+{ 
   lStartTime = parseInt(lStartTime/1000)*1000
   var lRemain = 0;
   var timeSoFar = 0;
   var lCurr = 0;
   var now = parseInt((new Date().getTime()+500)/1000)*1000;
-
+  
   if( lStartTime > now )
 	return null;
 
@@ -2077,7 +2078,7 @@ function getRemainingTime( now, lStartTime, lDuration, showHours, showMins, show
 		return null;
 	lRemain = timeSoFar;
   }
-
+  
   if( countDown && lRemain > 0 || !countDown && timeSoFar < lDuration)
     return buildTimeString( lRemain, showHours, showMins, showSecs, countDown );
   else
@@ -2100,9 +2101,9 @@ function addClickMap(objWidth, objHeight, xOffset, yOffset, thisObj)
 	var svgImageTag = '';
 	var mapOffsetX = 0;
 	var mapOffsetY = 0;
-
+	
 	if(xOffset < 0 || yOffset < 0)
-	{
+	{		
 		if(xOffset < 0)
 			mapOffsetX = Math.abs(xOffset) + thisObj.outerShadowBlurRadius;
 
@@ -2110,9 +2111,9 @@ function addClickMap(objWidth, objHeight, xOffset, yOffset, thisObj)
 			mapOffsetY = Math.abs(yOffset) + thisObj.outerShadowBlurRadius;
 
 	}
-
+	
 	var str = ''
-
+	
 	str += '<div style="left:'+mapOffsetX+'px; top:'+mapOffsetY+'px; position:absolute; z-index:1;">\n'
 	str += '<svg id="'+thisObj.name+'SVG" focusable="false" role="img" aria-label=" " width="'+objWidth+'px" height="'+objHeight+'px"'
 	str += '>\n'
@@ -2123,7 +2124,7 @@ function addClickMap(objWidth, objHeight, xOffset, yOffset, thisObj)
 	str += '</g>\n'
 	str += '</svg>\n'
 	str += '</div>\n'
-
+	
 	return str;
 }
 
@@ -2136,7 +2137,7 @@ function addImageMap(obj)
     if( obj.hasOnUp && is.iOS ) strMap += ' href="javascript:' + this.name + '.up()"'
 	strMap += 'alt="'+ obj.altName +'">';		//echo bug 19523: Jaws is reading the alt tag for images with actions here
 	strMap += '</map>\n';
-
+	
 	return strMap;
 }
 
@@ -2146,17 +2147,17 @@ function IsPointInPolygon(p, arrPoints)
     var i = 1;
     var j = 0;
     var c = false;
-
+	
 	for( ; i<num; i++ )
 	{
 		var pi = arrPoints[i];
 		var pj = arrPoints[j];
-
+		
         if(  (( pi.Y > p.Y) != (pj.Y > p.Y)) && (p.X < (pj.X - pi.X) * (p.Y - pi.Y) / (pj.Y - pi.Y) + pi.X) )
             c = !c;
         j = i;
 	}
-
+	
     return c;
 }
 
@@ -2233,7 +2234,7 @@ function AdjustClickPointsForAct(thisObj, bForResponsive)
 			}
 			thisObj.str_ImageMapCoords = mapStr;
 		}
-
+		
 		thisObj.maph = thisObj.h;
 		thisObj.mapw = thisObj.w;
 		return true;
@@ -2307,7 +2308,7 @@ function ModifyCSSForResponsive(styleTag, thisObj, scope)
     var bFound = false;
     var strNums = "0123456789";
 	var scopeStopIndex = -1;
-
+	
 	var tempObj = {xOffset:0, yOffset:0, width: thisObj.w, height: thisObj.h, xOuterOffset:0, yOuterOffset:0, x:thisObj.x, y:thisObj.y, xAdj:0, yAdj:0, deltaX:0, deltaY:0};
 	CorrectSizePosForEffects(thisObj, tempObj);
     while( objNamePos!=-1 && !bFound )
@@ -2324,7 +2325,7 @@ function ModifyCSSForResponsive(styleTag, thisObj, scope)
         var bPrefix = false;
         var strPrefix = "#";
         var strObjTag = thisObj.name;
-
+    
         if( styleTag.innerHTML.charAt(objNamePos-1) == "." )
         {
             bPrefix = true;
@@ -2358,7 +2359,7 @@ function ModifyCSSForResponsive(styleTag, thisObj, scope)
             originalStr = strPrefix+strObjTag+"{"+originalStr+"}";
             newCSS = strPrefix+strObjTag+"{"+newCSS+"}";
             styleTag.innerHTML = styleTag.innerHTML.replace(originalStr, newCSS);
-
+            
             bFound = false;
             while( objNamePos!=-1 && !bFound )
             {
@@ -2366,7 +2367,7 @@ function ModifyCSSForResponsive(styleTag, thisObj, scope)
                 if( objNamePos!=-1 && strNums.indexOf( styleTag.innerHTML.charAt( objNamePos+thisObj.name.length ) ) == -1 )
                     bFound = true;
             }
-
+			
 			if(scope)
 			{
 				scopeStopIndex = styleTag.innerHTML.indexOf(scope);
@@ -2385,7 +2386,7 @@ function ModifyCSSForResponsive(styleTag, thisObj, scope)
 function ApplyCSSResponsiveChanges(strAttrib, thisObj, tempObj, bOnlyDoTextScaling)
 {
 	var newAttrib = strAttrib;
-
+	
 	if( bOnlyDoTextScaling )
 	{
         if( (typeof(thisObj.txtscale) != 'undefined') && thisObj.txtscale != 100 && (strAttrib.indexOf("font-size") > -1) )
@@ -2398,18 +2399,18 @@ function ApplyCSSResponsiveChanges(strAttrib, thisObj, tempObj, bOnlyDoTextScali
                 iPos += 1;
             }
             var iSize = parseInt(strSize);
-			//echo LD-1947 : Convert the text size back to pt format and then calculate the scaled size the same way we do in the c++. Then convert the scaled pt size to px.
+			//echo LD-1947 : Convert the text size back to pt format and then calculate the scaled size the same way we do in the c++. Then convert the scaled pt size to px. 
 			var iPtSize = Math.floor( (((iSize*0.75) * thisObj.txtscale)+50)/100 );
 			var iFSize = Math.round( iPtSize/0.75 );
             newAttrib = "font-size:"+iFSize+"px;";
         }
         else
             newAttrib = newAttrib+";";
-
+		
 		return newAttrib;
 	}
-
-
+	
+	
 	if(strAttrib.indexOf("left") > -1 && !(strAttrib.indexOf("left") > 0))
 	{
 		newAttrib = "left:"+tempObj.x+"px;";
@@ -2430,7 +2431,7 @@ function ApplyCSSResponsiveChanges(strAttrib, thisObj, tempObj, bOnlyDoTextScali
 	{
 		//echo LD-2322: The clipRect needs to be big enough for the iFrame border, which defaults to 2px each side.
 		if(thisObj.name.indexOf("toc") > -1 && thisObj.useIFrame)
-			newAttrib = "clip: rect("+tempObj.yAdj+"px,"+(parseInt(tempObj.width)+4)+"px,"+(parseInt(tempObj.height)+4)+"px,"+tempObj.xAdj+"px);";
+			newAttrib = "clip: rect("+tempObj.yAdj+"px,"+(parseInt(tempObj.width)+4)+"px,"+(parseInt(tempObj.height)+4)+"px,"+tempObj.xAdj+"px);"; 
 		else
 			newAttrib = "clip: rect("+tempObj.yAdj+"px,"+tempObj.width+"px,"+tempObj.height+"px,"+tempObj.xAdj+"px);";
 	}
@@ -2531,13 +2532,13 @@ function ModifyStyleForResponsiveBulk(styleTag, thisObj, strSel, strNewDecl)
 			styleTag = styleTag.replace(origRule, newRule);
 		}
 	}
-
+	
 	return styleTag;
 }
 
 function ModifyCSSBulk( strCSS, thisObj, bOnlyDoTextScaling )
 {
-
+	
 	var arrCSSSplit = strCSS.split('}');
 	for( var i=0; i<arrCSSSplit.length; i++ )
 	{
@@ -2549,7 +2550,7 @@ function ModifyCSSBulk( strCSS, thisObj, bOnlyDoTextScaling )
 		var newCSS = "";
 		var tempObj = {xOffset:0, yOffset:0, width: thisObj.w, height: thisObj.h, xOuterOffset:0, yOuterOffset:0, x:thisObj.x, y:thisObj.y, xAdj:0, yAdj:0, deltaX:0, deltaY:0};
 		CorrectSizePosForEffects(thisObj, tempObj);
-
+						
 		while (tokenZ.length)
 		{
 			var attrib = tokenZ.shift();
@@ -2561,13 +2562,13 @@ function ModifyCSSBulk( strCSS, thisObj, bOnlyDoTextScaling )
 		}
 		arrCSSSplit[i] = arrCSSSplit[i].replace(originalStr, newCSS);
 	}
-
+	
 	var retCSS = arrCSSSplit.join('}');
 	return retCSS;
 }
 
 function FindAndModifyObjCSSBulk( thisObj, stylemods )
-{
+{	
 	if( thisObj.css )
 	{
 	  thisObj.css = ModifyCSSBulk( thisObj.css, thisObj, false )
@@ -2607,7 +2608,7 @@ function FindAndModifyObjCSSBulk( thisObj, stylemods )
 			thisObj.arrCSSStyles[j] = ModifyStyleForResponsiveBulk(thisObj.arrCSSStyles[j], thisObj, stylemods[i].sel, stylemods[i].decl);
 	    }
 	  }
-	}
+	} 
 }
 
 function FindAndModifyObjCSS(thisObj,stylemods)
@@ -2630,7 +2631,7 @@ function FindAndModifyObjCSS(thisObj,stylemods)
 				}
 			}
 		}
-	}
+	}	
 }
 
 function AdjustAttributesForEffects(thisObj, objAttribs)
@@ -2638,7 +2639,7 @@ function AdjustAttributesForEffects(thisObj, objAttribs)
 	var attribs = objAttribs;
 	if(typeof(attribs) == "undefined")
 		attribs = {xOffset:0, yOffset:0, width: thisObj.w, height: thisObj.h, xOuterOffset:0, yOuterOffset:0};
-
+	
 	var heightRatio = (attribs.height/thisObj.oh);
 	var widthRatio = (attribs.width/thisObj.ow);
 	thisObj.w = attribs.width;
@@ -2658,7 +2659,7 @@ function AdjustAttributesForEffects(thisObj, objAttribs)
 			if(parseFloat(mainDiv.style.left))
 				x_Pos = parseFloat(mainDiv.style.left);
 		}
-
+		
 		reflectDiff = thisObj.reflectionPosDiffY *heightRatio;
 		thisObj.reflectedImageY = y_Pos + reflectDiff;
 		thisObj.reflectedImageX = x_Pos;
@@ -2668,15 +2669,15 @@ function AdjustAttributesForEffects(thisObj, objAttribs)
 	}
 	if(typeof(thisObj.hasOuterShadow) != "undefined" && thisObj.hasOuterShadow)
 	{
-
+			
 			var hOffset = 0;
 			var wOffset = 0;
-
-
+			
+			
 			var outerRadians = (thisObj.outerShadowDirection) * (Math.PI / 180.0);
 			thisObj.outerShadowDepth = Math.sqrt(Math.pow((thisObj.originalOuterShadowDepth * Math.cos(outerRadians)) *heightRatio,2) + Math.pow((-1 * thisObj.originalOuterShadowDepth * Math.sin(outerRadians)) *widthRatio,2));
-
-
+			
+			
 			var xOuterOffset = thisObj.outerShadowDepth * Math.cos(outerRadians);
 			//Multiply by -1 because a negative offset means this shadow is in the positive y-direction on the screen
 			var yOuterOffset = -1 * thisObj.outerShadowDepth * Math.sin(outerRadians);
@@ -2687,10 +2688,10 @@ function AdjustAttributesForEffects(thisObj, objAttribs)
 			attribs.yOffset += (((attribs.yOffset<0)?-2:2)*thisObj.outerShadowBlurRadius);
 			hOffset = Math.abs(attribs.yOffset);
 			wOffset = Math.abs(attribs.xOffset);
-
+			
 			attribs.width+=wOffset;
 			attribs.height+=hOffset;
-
+			
 			attribs.xOuterOffset = xOuterOffset;
 			attribs.yOuterOffset = yOuterOffset;
 	}
@@ -2710,7 +2711,7 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 	if(typeof(thisObj.hasOuterShadow) != "undefined")
 	{
 		AdjustAttributesForEffects(thisObj, objToCorrect);
-
+	  
 	    if(is.vml)
 	    {
 		  var adjustedXPos = thisObj.ie8DivX;
@@ -2723,22 +2724,22 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 		  var adjustedXPos = thisObj.x;
 		  var adjustedYPos = thisObj.y;
 		  var adjustedWidth = thisObj.w;
-		  var adjustedHeight = thisObj.h;
+		  var adjustedHeight = thisObj.h;  
 	    }
-
+		
 		var borderWeight = 0;
 		if(typeof(thisObj.borderWeight) != "undefined")
 			borderWeight = thisObj.borderWeight;
-
+		  
 		if(thisObj.hasOuterShadow)
 		{
 			if(is.vml)
-			{
+			{	
 				if(thisObj.vf == 1)
 					objToCorrect.yOuterOffset *= -1;
 				if(thisObj.hf == 1)
 					objToCorrect.xOuterOffset *= -1;
-
+				
 				if(objToCorrect.xOuterOffset < 0 || objToCorrect.yOuterOffset < 0)
 				{
 					if(objToCorrect.xOuterOffset < 0 && objToCorrect.yOuterOffset >= 0)
@@ -2766,10 +2767,10 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 				objToCorrect.height = (adjustedHeight + (2*borderWeight) + thisObj.outerShadowBlurRadius + (1 * Math.abs(objToCorrect.yOuterOffset)));
 			}
 			else
-			{
+			{		
 				adjustedWidth = thisObj.w + (1 * Math.abs(objToCorrect.xOuterOffset)) + (2 * borderWeight) + thisObj.outerShadowBlurRadius;
-				adjustedHeight = thisObj.h + (1 * Math.abs(objToCorrect.yOuterOffset)) + (2 * borderWeight) + thisObj.outerShadowBlurRadius;
-
+				adjustedHeight = thisObj.h + (1 * Math.abs(objToCorrect.yOuterOffset)) + (2 * borderWeight) + thisObj.outerShadowBlurRadius; 
+					
 				if(objToCorrect.xOuterOffset < 0 || objToCorrect.yOuterOffset < 0)
 				{
 					if(objToCorrect.xOuterOffset < 0 && objToCorrect.yOuterOffset >= 0)
@@ -2778,7 +2779,7 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 						objToCorrect.xAdj = (objToCorrect.xOuterOffset - thisObj.outerShadowBlurRadius);
 					}
 					else if(objToCorrect.xOuterOffset >= 0 && objToCorrect.yOuterOffset < 0)
-					{
+					{	
 						adjustedYPos += (objToCorrect.yOuterOffset - thisObj.outerShadowBlurRadius);
 						objToCorrect.yAdj = (objToCorrect.yOuterOffset - thisObj.outerShadowBlurRadius);
 					}
@@ -2800,12 +2801,12 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 					objToCorrect.height = adjustedHeight + thisObj.outerShadowBlurRadius;
 				}
 			}
-		}
+		}	
 	}
 	if(typeof(thisObj.r) != "undefined")
 	{
 		var radians = thisObj.r * (Math.PI / 180.0);
-
+	
 		//if the image has a shadow, the point of rotation needs to be adjusted
 		var yOffset = 0;
 		var xOffset = 0;
@@ -2814,28 +2815,28 @@ function CorrectSizePosForEffects(thisObj, objToCorrect)
 			xOffset = objToCorrect.xOuterOffset;
 			yOffset = objToCorrect.yOuterOffset;
 		}
-
+		
 		var deltaCenterX = 0;
 		var deltaCenterY = 0;
-
+		
 		deltaCenterX = thisObj.w / 2.0;
 		deltaCenterY = thisObj.h / 2.0;
-
-		if(xOffset < 0)
+		
+		if(xOffset < 0) 
 			deltaCenterX = deltaCenterX - (xOffset - thisObj.outerShadowBlurRadius);
-		if(yOffset < 0)
+		if(yOffset < 0) 
 			deltaCenterY = deltaCenterY - (yOffset - thisObj.outerShadowBlurRadius);
-
+		
 		objToCorrect.deltaX = deltaCenterX;
 		objToCorrect.deltaY = deltaCenterY;
 	}
-
+	
 	if(typeof(ObjButton) != "undefined" && thisObj.constructor == ObjButton)
 	{
 		if(!thisObj.name.indexOf("button")>-1)
 			objToCorrect.width +=3
 	}
-
+	
 	if(typeof(ObjInline) != "undefined")
 	{
 		if(IsRSSFeed(thisObj))
@@ -2852,9 +2853,9 @@ function ModifySVGShadow(thisObj, objAttribs)
 	var height = 0;
 	var xDisplacementPercentage = 0;
 	var yDisplacementPercentage = 0;
-
+	
 	var svgTag = document.getElementById(thisObj.name+"Shadow");
-
+	
 	if(objAttribs.xOffset <= 0 || objAttribs.yOffset <= 0)
 	{
 		if(objAttribs.xOffset <= 0)
@@ -2873,12 +2874,12 @@ function ModifySVGShadow(thisObj, objAttribs)
 		width = 200 + 200 * (thisObj.originalOuterShadowDepth/100);
 		height = 200 + 200 * (thisObj.originalOuterShadowDepth/100);
 	}
-
+	
 	svgTag.height.baseVal.valueInSpecifiedUnits = height;
 	svgTag.width.baseVal.valueInSpecifiedUnits = width;
 	svgTag.x.baseVal.valueInSpecifiedUnits = xDisplacementPercentage;
 	svgTag.y.baseVal.valueInSpecifiedUnits = yDisplacementPercentage;
-
+	
 	var feOffset = null;
 	for (var index = 0; index< svgTag.childNodes.length; index++)
 	{
@@ -2903,7 +2904,7 @@ function ModifyReflection(thisObj)
 	var reflecMask = reflecDiv.getElementsByTagName('rect')[0];
 	var deltaCenterX = 0;
 	var deltaCenterY = 0;
-
+	
 	if(thisObj.wrkAdornerWidth == 0 || thisObj.wrkAdornerHeight == 0)
 	{
 		deltaCenterX = thisObj.reflectedImageWidth / 2.0;
@@ -2914,7 +2915,7 @@ function ModifyReflection(thisObj)
 		deltaCenterX = (thisObj.wrkAdornerWidth / 2.0) - thisObj.boundsRectX;
 		deltaCenterY = (thisObj.wrkAdornerHeight / 2.0) - thisObj.boundsRectY;
 	}
-
+	
 	if(reflecDiv)
 	{
 		reflecDiv.style.top = thisObj.reflectedImageY+'px';
@@ -2924,14 +2925,14 @@ function ModifyReflection(thisObj)
 		if(!is.awesomium)
 			reflecDiv.style.transformOrigin = deltaCenterX+'px '+deltaCenterY+'px 0px';
 	}
-
+	
 	if(reflecSVG)
 	{
 		reflecSVG.style.width = thisObj.reflectedImageWidth+'px';
 		reflecSVG.style.height = thisObj.reflectedImageHeight+'px';
 	}
-
-
+	
+	
 	if(reflecImg)
 	{
 		reflecImg.width.baseVal.valueInSpecifiedUnits = thisObj.reflectedImageWidth;
@@ -2953,7 +2954,7 @@ function ModifyReflection(thisObj)
 			page.appendChild(divRebuild);
 		}
 	}
-
+	
 }
 
 function ModifyImageTag(thisObj, objAttribs, bResp)
@@ -2972,18 +2973,18 @@ function ModifyImageTag(thisObj, objAttribs, bResp)
 			{
 				svgTag.width.baseVal.valueInSpecifiedUnits = objAttribs.width;
 				svgTag.height.baseVal.valueInSpecifiedUnits = objAttribs.height;
-
+				
 				if(imageTag)
 				{
 					imageTag.width.baseVal.valueInSpecifiedUnits = thisObj.w;
 					imageTag.height.baseVal.valueInSpecifiedUnits = thisObj.h;
 				}
-			}
+			}			
 		}
 	}
-
-
-
+	
+	
+	
 	var objMap = document.getElementById(thisObj.name+"MapArea");
 	if(objMap)
 	{
@@ -3001,9 +3002,9 @@ function ModifyImageTag(thisObj, objAttribs, bResp)
 			}
 		}
 		else
-			objMap.coords = thisObj.str_ImageMapCoords;
+			objMap.coords = thisObj.str_ImageMapCoords;  
 	 }
-
+	  
 	}
 	if(typeof(bResp) == "undefined")
 		FindAndModifyObjCSS(thisObj);
@@ -3021,10 +3022,10 @@ function ModifyTextEffect(thisObj)
 				return;
 			borderTag.width.baseVal.valueInSpecifiedUnits = thisObj.w;
 			borderTag.height.baseVal.valueInSpecifiedUnits = thisObj.h;
-
+			
 			var pIh = (thisObj.h/thisObj.oh);
 			var pIw = (thisObj.w/thisObj.ow);
-
+			
 			var borderArray = [thisObj.borderLeft, thisObj.borderTop, thisObj.borderBottom, thisObj.borderRight];
 			var adjustedBorder = [];
 			//Adjust the coordinates of the border
@@ -3076,7 +3077,7 @@ function ModifyTextEffect(thisObj)
 					polyTag.setAttribute("points", adjustedBorder[index]);
 				}
 			}
-
+			
 			var txtDiv = document.getElementById(thisObj.name+"div");
 			txtDiv.style.width = (thisObj.w - (parseFloat(txtDiv.style.left)*2))+"px";
 			txtDiv.style.height = (thisObj.h - (parseFloat(txtDiv.style.top)*2))+"px";
@@ -3091,7 +3092,7 @@ function ModifyTextEffect(thisObj)
 			}
 		}
 	}
-
+	
 	if((typeof(thisObj.hasOuterShadow) != "undefined" && thisObj.hasOuterShadow) ||
 	   (typeof(thisObj.hasTextShadow) != "undefined" && thisObj.hasTextShadow))
 	{
@@ -3109,18 +3110,18 @@ function UpdateObjLayerValues(thisObj)
 	if(thisObj)
 	{
 		if(thisObj.objLyr)
-		{
+		{		
 			var objDiv = document.getElementById(thisObj.name);
-
+			
 			objDiv.style.clip = "";
 			objDiv.style.left = "";
 			objDiv.style.top = "";
-
+			
 			thisObj.objLyr.x = objDiv.offsetLeft;
 			thisObj.objLyr.y = objDiv.offsetTop;
 			thisObj.objLyr.w = objDiv.offsetWidth;
 			thisObj.objLyr.h = objDiv.offsetHeight;
-
+			
 			thisObj.objLyr.hasMoved = false; //LD-2124
 		}
 	}
@@ -3155,25 +3156,25 @@ function IsSvgCheck()
 {
 	var result = (document.createElementNS != undefined &&
 				  document.createElementNS("http://www.w3.org/2000/svg", "path") &&
-				  document.createElement("BUTTON").addEventListener != undefined);
-
+				  document.createElement("BUTTON").addEventListener != undefined); 
+				
 	return result;
 }
 
 function GetIdFromSvgSrc(src){
 	var strId;
-
+	
 	var startPos = src.indexOf("id=\"") + 4;
 	var endPos = src.indexOf("\"", startPos);
-
-	strId = src.slice(startPos, endPos);
-
+	
+	strId = src.slice(startPos, endPos); 
+	
 	return strId;
 }
 
 function UseHtmlImgTag(obj){
 	if( obj.bEmbeddedIE8IE9Img || !(obj.hasOuterShadow || obj.hasReflection || obj.r>0 || obj.vf == 1 || obj.hf == 1) )return true;
-
+		
 	return false;
 }
 
@@ -3194,7 +3195,7 @@ function CanScale()
 	return true;
 }
 //For YouTube API
-function onYouTubeIframeAPIReady()
+function onYouTubeIframeAPIReady() 
 {
 	is.YTScriptLoaded = true;
 }
@@ -3204,7 +3205,7 @@ function AddFileToHTML(file, type, callBack)
 {
 	var tag = null;
 	var tagChecker = '';
-
+	
 	if(type == "script")
 	{
 		//Ensure we only add once
@@ -3218,14 +3219,14 @@ function AddFileToHTML(file, type, callBack)
 			{
 				if(!is.ie)
 					tag.onreadystatechange = function(){callBack;};
-
+				
 				tag.onload = function(){callback;};
 			}
 
 			document.getElementsByTagName('head')[0].appendChild(tag);
-		}
+		}			
 	}
-
+	
 	if(type == "css")
 	{
 		//Ensure we only add once
@@ -3240,22 +3241,22 @@ function AddFileToHTML(file, type, callBack)
 			{
 				if(!is.ie)
 					tag.onreadystatechange = function(){callBack;};
-
+				
 				tag.onload = function(){callback;};
 			}
 
 			document.getElementsByTagName('head')[0].appendChild(tag);
-		}
-	}
-
+		}			
+	}		 
+	
 }
 
 //echo LD-768 : Putting all degradation rules for IE into this function
 //echo bug 21691 : Graceful Degradation
 function ObjDegradeEffects(thisObj)
 {
-
-	//echo LD-838 : We use a css rotation for IE9 and a direct-x filter for rotation in IE8.
+	
+	//echo LD-838 : We use a css rotation for IE9 and a direct-x filter for rotation in IE8. 
 	//              So the check for is.DXFilterSupported will not tell us if an IE browser in compatibility mode supports the way we do rotation.
 	if(thisObj.name.indexOf("audio") > -1)
 		thisObj.bCanRotate = false;
@@ -3263,12 +3264,12 @@ function ObjDegradeEffects(thisObj)
 		thisObj.bCanRotate = false;
 	else
 		thisObj.bCanRotate = true;
-
+	
 	if(is.vml)
 	{
 		if(!is.DXFilterSupported){
 			thisObj.hasOuterShadow = false;
-			thisObj.hasReflection = false;
+			thisObj.hasReflection = false;		
 		}
 		else if(thisObj.opacity < 100){
 			thisObj.hasOuterShadow = false;

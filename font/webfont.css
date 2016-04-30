@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'AvenirNext LT Pro Cn';
+    src: url('AvenirNextLTPro-Cn.woff') format('woff'),
+         url('AvenirNextLTPro-Cn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext LT Pro MediumCn';
+    src: url('AvenirNextLTPro-BoldCn.woff') format('woff'),
+         url('AvenirNextLTPro-BoldCn.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('fontawesome-webfont.woff') format('woff'),
+         url('fontawesome-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}

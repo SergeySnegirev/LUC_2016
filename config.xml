@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget
-    id="com.branchtrack.luc2016"
-    version="0.0.1"
+<widget id="com.branchtrack.luc2016"
+    version="0.9"
     xmlns="http://www.w3.org/ns/widgets"
+    xmlns:gap="http://phonegap.com/ns/1.0"
     xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>HelloCordova</name>
+
+
+    <name>LUC 2016</name>
     <description>
         Lectora User Conference 2016 Official App
     </description>
@@ -13,16 +15,25 @@
     </author>
     <content src="index.html" />
     <plugin name="cordova-plugin-whitelist" version="1" />
+    <access origin="tel:*" launch-external="yes" />
+    <access origin="geo:*" launch-external="yes" />
+    <access origin="http://*" launch-external="yes" />
+    <access origin="https://*" launch-external="yes" />
     <access origin="*" />
+
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+
+    <gap:plugin name="org.apache.cordova.statusbar" />
+
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
+
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
@@ -30,9 +41,60 @@
 
     <preference name="orientation" value="all" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="StatusBarOverlaysWebView" value="false" /> <!-- not supported in PGB, so also implemented via JS-->
-    <preference name="StatusBarBackgroundColor" value="#434244" /> <!-- not supported in PGB, so also implemented via JS-->
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#434244" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="4000" />
+    <preference name="FadeSplashScreen" value="false"/>
+    <preference name="EnableViewportScale" value="true"/>
+    <preference name="splash-screen-duration" value="4000" />
+
+    <platform name="ios">
+        <splash src="res/splash/ios/Default~iphone.png" width="320" height="480"/>
+        <splash src="res/splash/ios/Default@2x~iphone.png" width="640" height="960"/>
+        <splash src="res/splash/ios/Default-Portrait~ipad.png" width="768" height="1024"/>
+        <splash src="res/splash/ios/Default-Portrait@2x~ipad.png" width="1536" height="2048"/>
+        <splash src="res/splash/ios/Default-568h@2x~iphone.png" width="640" height="1136"/>
+        <splash src="res/splash/ios/Default-667h.png" width="750" height="1334"/>
+        <splash src="res/splash/ios/Default-736h.png" width="1242" height="2208"/>
+
+        <splash src="res/splash/ios/Default-Landscape~ipad.png" width="1024" height="768"/>
+        <splash src="res/splash/ios/Default-Landscape@2x~ipad.png" width="2048" height="1536"/>
+        <splash src="res/splash/ios/Default-Landscape-736h.png" width="2208" height="1242"/>
+
+        <icon src="res/icon/ios/icon-60@3x.png"        width="180" height="180"/>
+        <icon src="res/icon/ios/icon-60@2x.png"        width="120" height="120"/>
+        <icon src="res/icon/ios/icon-60.png"           width="60" height="60" />
+        <icon src="res/icon/ios/icon-76@2x.png"        width="152" height="152" />
+        <icon src="res/icon/ios/icon-76.png"           width="76" height="76" />
+        <icon src="res/icon/ios/icon-72@2x.png"        width="144" height="144" />
+        <icon src="res/icon/ios/icon-72.png"           width="72" height="72" />
+        <icon src="res/icon/ios/icon-Small-40@2x.png"  width="80" height="80" />
+        <icon src="res/icon/ios/icon-Small-40.png"     width="40" height="40" />
+        <icon src="res/icon/ios/icon-Small-50.png"     width="50" height="50" />
+        <icon src="res/icon/ios/icon-Small-50@2x.png"  width="100" height="100" />
+        <icon src="res/icon/ios/icon-Small.png"        width="29" height="29" />
+        <icon src="res/icon/ios/icon-Small@2x.png"     width="58" height="58" />
+        <icon src="res/icon/ios/icon.png"              width="57" height="57" />
+        <icon src="res/icon/ios/icon@2x.png"           width="114" height="114" />
+    </platform>
+
+    <platform name="android">
+        <splash src="res/splash/android/splash-land-hdpi.9.png" density="land-hdpi"/>
+        <splash src="res/splash/android/splash-land-ldpi.png" density="land-ldpi"/>
+        <splash src="res/splash/android/splash-land-mdpi.png" density="land-mdpi"/>
+        <splash src="res/splash/android/splash-land-xhdpi.9.png" density="land-xhdpi"/>
+
+        <splash src="res/splash/android/splash-port-hdpi.9.png" density="port-hdpi"/>
+        <splash src="res/splash/android/splash-port-ldpi.png" density="port-ldpi"/>
+        <splash src="res/splash/android/splash-port-mdpi.png" density="port-mdpi"/>
+        <splash src="res/splash/android/splash-port-xhdpi.9.png" density="port-xhdpi"/>
+
+        <icon src="res/icon/android/icon-36-ldpi.png"  density="ldpi"  />
+        <icon src="res/icon/android/icon-48-mdpi.png"  density="mdpi"  />
+        <icon src="res/icon/android/icon-72-hdpi.png"  density="hdpi"  />
+        <icon src="res/icon/android/icon-96-xhdpi.png" density="xhdpi" />
+    </platform>
+
 </widget>

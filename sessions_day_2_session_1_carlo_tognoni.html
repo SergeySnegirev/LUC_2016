@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+init
+
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1024" />
+<title>Day 2 Session 1 - CARLO TOGNONI</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" href="font/webfont.css">
+<link rel="stylesheet" type="text/css" href="js/custom.css">
+<script src=js/jquery-2.2.3.min.js></script>
+<script src="cordova.js"></script>
+<script src=js/fastclick.js></script>
+<script src=js/custom.js></script>
+
+<link rel="stylesheet" href="trivantis.css" type="text/css" />
+<style type="text/css">
+</style>
+
+<!--[if lt IE 7]>
+<style type="text/css">
+    #image6922 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image6922 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/luc16logo.png',sizingMethod='scale'); }
+    #image62556 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image62556 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/session-hole.png',sizingMethod='scale'); }
+</style>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script>
+document.namespaces.add('v', 'urn:schemas-microsoft-com:vml', "#default#VML")
+</script>
+<![endif]-->
+
+<script src="trivantis.js"></script>
+<script src="trivantis-timedate.js"></script>
+<script src="trivantis-cookie.js"></script>
+<script src="trivantis-button.js"></script>
+<script src="trivantis-image.js"></script>
+<script src="trivantis-inline.js"></script>
+<script src="trivantis-text.js"></script>
+<script src="trivantis-pagetracking.js"></script>
+<script src="hammer.js"></script>
+<script>
+
+<!--
+
+var hmr = null;
+function initGEV(){
+   hmr = new Hammer(document.getElementById('pageDIV'));
+}
+
+trivWeb20Popups = true;
+
+var arObjs = [];
+
+var bTrivResponsive = true;
+
+setTimeout(function(){loadResponsiveData();},100);
+if( !is.min )
+  document.write( 'Your browser does not support dynamic html. Please download a current version of either <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a> or <a href="http://www.mozilla.com/en-US/firefox/">Mozilla Firefox </a> and try visiting our site again.  Thank You.<br /><br />' )
+
+var pageLayer = null
+var winW = screen.width
+var winH = screen.height
+var transformScale = 1
+
+function findWH(){	//echo LD-769
+	if (is.ie) {
+   winW = Math.max(Math.max(document.body.scrollWidth, document.documentElement.scrollWidth)-16,
+					  Math.max(document.body.offsetWidth, document.documentElement.offsetWidth)-16,
+					  Math.max(document.body.clientWidth, document.documentElement.clientWidth)-16 );
+   winH = Math.max(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)-16,
+					  Math.max(document.body.offsetHeight, document.documentElement.offsetHeight)-16,
+					  Math.max(document.body.clientHeight, document.documentElement.clientHeight)-16 );
+	}
+	else
+	{
+   winW =  document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth;
+   if(is.iOS && (navigator.userAgent.indexOf('CellCast-iPad') != -1 || navigator.userAgent.indexOf('CellCast-iPhone') != -1) )
+		 winW =  getScreenWidth();
+   winH =  document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight;
+	}
+}
+
+function ReFlow() {
+  findWH()
+  if (pageLayer)
+  {
+    var left = (winW > pageLayer.ele.clientWidth) ? (winW-pageLayer.ele.clientWidth)/2 : 0
+    transformScale = (winW > pageLayer.ele.clientWidth) ? 1 : (winW/pageLayer.ele.clientWidth)
+    if(is.iOS && isInIframe( window , 0))
+    {
+			left = 0
+			transformScale = (getScreenWidth() > pageLayer.ele.clientWidth) ? 1 : (getScreenWidth()/pageLayer.ele.clientWidth)
+    }
+    pageLayer.moveTo( left, 0 );
+    pageLayer.hasMoved = true;
+    pageLayer.newX = left;
+    pageLayer.newY = 0;
+    if(CanScale())
+       pageLayer.styObj.transform =  'scale('+ transformScale +')';
+    else
+       transformScale = 1;
+    pageLayer.styObj.transformOrigin =  '0 0';
+  }
+}
+
+
+VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
+TrivCurrRespView = VarCurrentView;
+if(is.awesomium);
+  TrivCurrRespView.set('PhoneLandscape');
+Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
+
+onload = responsiveInit
+detect();
+if( is.webkit && !is.iOSSafari )
+  onbeforeunload = finish
+else
+  onunload = finish
+
+function responsiveInit() {
+  if(is.jsonData == null && !is.ie8){
+    setTimeout(function(){responsiveInit();},500);
+  }
+  else{
+    pageLayer = new ObjLayer('pageDIV');
+    SaveStyles();
+    init();
+  }
+}
+
+function init() {
+  findWH()
+  if( is.min ){
+    trivPageTracking.InitPageTracking();
+    setTimeout( "preload(GetDevicePreload())",0)
+    detect();
+    pageLayer.show();
+    text992.init()
+    button8353.init()
+    button8514.init()
+    button8693.init()
+    button8776.init()
+    button73255.init()
+    button7705.init()
+    image2047.init()
+    image1972.init()
+    image6922.init()
+    text6601.init()
+    text50274.init()
+    image62510.init()
+    image62556.init()
+    text62557.init()
+    text62558.init()
+    text62559.init()
+    text992.activate()
+    button8353.activate()
+    button8514.activate()
+    button8693.activate()
+    button8776.activate()
+    button73255.activate()
+    button7705.activate()
+    image2047.activate()
+    image1972.activate()
+    image6922.activate()
+    text6601.activate()
+    text50274.activate()
+    image62510.activate()
+    image62556.activate()
+    text62557.activate()
+    text62558.activate()
+    text62559.activate()
+    rebuildLayout();
+    ReFlow();
+    window.scrollTo(0, 1);
+    action1681(  );
+
+    if ( trivPageTracking.GetRangeStatus(62492) == 'notstarted' ) trivPageTracking.SetRangeStatus(62492,2);
+    if( location.hash )
+    {
+      var newHash
+      if( location.hash.charAt(0) == '#' )
+        newHash = location.hash.slice( 1 )
+      else
+        newHash = location.hash
+      location.hash = newHash
+    }
+    setTimeout( 'trivUpdateTOC( 1 )', 100 )
+  }
+  try {initGEV();} catch(e){}
+}
+
+var trivGoToPage = null
+var trivCompleteCnt = 1;
+var hasProcessedExitActions = false;
+var trivActFBCnt = 0;
+var currFeedbackIdx = 0;
+var trivPageExited = false;
+
+function finish() {
+}
+
+function trivOnFocus() {
+    if( trivPageExited ) return
+}
+
+function checkLeavePage() {
+    if( trivPageExited ) return
+    if( trivActFBCnt == 0 )
+    {
+        currFeedbackIdx++;
+        if( currFeedbackIdx > -1)
+        {
+            trivLeavePage();
+          return;
+        }
+        else if( !checkQuestions( true ))
+          return;
+    }
+    setTimeout( 'checkLeavePage()', 100)
+}
+
+function trivExitPage( newPage, bFeedback ) {
+    if( newPage.indexOf( "ObjLayerAction" ) >= 0 || newPage.indexOf( "javascript:app." ) >= 0 || newPage.indexOf( ".action" ) >= 0 || newPage.indexOf( "history.back()" ) >= 0) trivGoToPage = newPage
+    else trivGoToPage = 'ObjLayerActionGoTo("' + newPage + '")'
+    if( !hasProcessedExitActions ) {
+        findWH()
+        hasProcessedExitActions = true
+        setTimeout( 'checkLeavePage()', 100)
+    }
+}
+
+function trivLeavePage() {
+    trivCompleteCnt--
+    if( trivCompleteCnt <= 0 ) {
+        hasProcessedExitActions = false
+        if( trivGoToPage != null )
+        {
+			eval( trivGoToPage )
+			trivGoToPage = null;
+			if( window.closed ) trivPageExited = true;
+        }
+    }
+}
+
+function trivPrevPage() {
+    trivExitPage( 'sessions_day_2_session_1_domenic_caloia.html', true )
+}
+
+function trivNextPage() {
+    trivExitPage( 'sessions_day_2_session_1_ac_and_gg.html', true )
+}
+
+function trivUpdateTOC( bRecurse ) {
+    var i
+}
+
+function trivUpdateEntry() {
+}
+
+function trivResetEntry(entFld) {
+}
+
+function OnDeviceRotate() {
+action1017();action1963();
+}
+
+function action1681(fn){
+    AdjustScreen('init');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action990(fn){
+    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action1017(fn){
+    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function text992actionShow() {
+  setTimeout("if(!text992.isVisible()) { text992.objLyr.moveTo(text992.x, text992.y);text992.onShow();action990(); }", 1 )
+}
+
+function action20620(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8358(fn){
+    trivExitPage('index.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8353onUp() {
+  action20620();action8358();
+}
+
+function action20673(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8515(fn){
+    trivExitPage('speakers.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8514onUp() {
+  action20673();action8515();
+}
+
+function action20739(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8694(fn){
+    trivExitPage('trivantis_team.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8693onUp() {
+  action20739();action8694();
+}
+
+function action20772(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8777(fn){
+    trivExitPage('venue.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8776onUp() {
+  action20772();action8777();
+}
+
+function action73256(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action73257(fn){
+    trivExitPage('venue.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button73255onUp() {
+  action73256();action73257();
+}
+
+function action8341else(fn){
+    animateMenu('out');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8341(fn){
+    if(Var_menuState.equals('off'))
+    {animateMenu('in');
+    }else{ action8341else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8340else(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8340(fn){
+    if(Var_menuState.contains('off'))
+    {Var_menuState.set('on');
+    }else{ action8340else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button7705onUp() {
+  action8341();action8340();
+}
+
+function action1963(fn){
+    AdjustScreen('rotate');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+if( is.min ){
+text992 = new ObjText('text992',null,429,18,481,34,1,28,null,'div')
+text992.initSLine(0)
+text992.initRotateAngle(0,0,0)
+text992.initHasOuterShadow(0)
+text992.initHasTextShadow(0)
+text992.initHasBorder(0)
+text992.initHasOutline(0)
+text992.addIe8Attr(429, 18, 481, 34, 0, 0)
+text992.addOpacity(100)
+text992.actionShow = text992actionShow
+text992.arrCSSStyles = new Array();
+text992.arrCSSStyles.push('span.text992Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text992.build()
+
+button8353 = new ObjButton('button8353', null,-4,63,267,48,1,29,'div','topfixed menu',1,'')
+button8353.setFillStyle(1)
+button8353.initRotateAngle(0,0,0,-2,-2,263,44)
+button8353.initHasShadow(0)
+button8353.initHasReflection(0)
+button8353.setImages('images/transbtn.gif', '', '','');
+button8353.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8353.addIe8Attr(-2, 63, 267, 48, -3, 0)
+button8353.addOpacity(0)
+button8353.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8353.onUp = button8353onUp
+button8353.hasOnUp = true
+button8353.capture=4
+button8353.build()
+
+button8514 = new ObjButton('button8514', null,-4,110,267,48,1,30,'div','topfixed menu',1,'')
+button8514.setFillStyle(1)
+button8514.initRotateAngle(0,0,0,-2,-2,263,44)
+button8514.initHasShadow(0)
+button8514.initHasReflection(0)
+button8514.setImages('images/transbtn.gif', '', '','');
+button8514.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8514.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button8514.addOpacity(0)
+button8514.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8514.onUp = button8514onUp
+button8514.hasOnUp = true
+button8514.capture=4
+button8514.build()
+
+button8693 = new ObjButton('button8693', null,-10,161,267,48,1,31,'div','topfixed menu',1,'')
+button8693.setFillStyle(1)
+button8693.initRotateAngle(0,0,0,-2,-2,263,44)
+button8693.initHasShadow(0)
+button8693.initHasReflection(0)
+button8693.setImages('images/transbtn.gif', '', '','');
+button8693.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8693.addIe8Attr(-8, 161, 267, 48, -3, 0)
+button8693.addOpacity(0)
+button8693.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8693.onUp = button8693onUp
+button8693.hasOnUp = true
+button8693.capture=4
+button8693.build()
+
+button8776 = new ObjButton('button8776', null,-4,206,267,48,1,32,'div','topfixed menu',1,'')
+button8776.setFillStyle(1)
+button8776.initRotateAngle(0,0,0,-2,-2,263,44)
+button8776.initHasShadow(0)
+button8776.initHasReflection(0)
+button8776.setImages('images/transbtn.gif', '', '','');
+button8776.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8776.addIe8Attr(-2, 206, 267, 48, -3, 0)
+button8776.addOpacity(0)
+button8776.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8776.onUp = button8776onUp
+button8776.hasOnUp = true
+button8776.capture=4
+button8776.build()
+
+button73255 = new ObjButton('button73255', null,-10,260,267,90,1,33,'div','topfixed menu',1,'')
+button73255.setFillStyle(1)
+button73255.initRotateAngle(0,0,0,-2,-2,263,86)
+button73255.initHasShadow(0)
+button73255.initHasReflection(0)
+button73255.setImages('images/transbtn.gif', '', '','');
+button73255.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button73255.addIe8Attr(-8, 260, 267, 90, -3, 0)
+button73255.addOpacity(0)
+button73255.initImageMap('23,2,244,2,248,2,252,4,256,6,259,8,261,11,263,15,265,19,265,23,265,67,265,71,263,75,261,79,259,82,256,84,252,86,248,88,244,88,23,88,19,88,15,86,11,85,8,82,6,79,4,75,2,71,2,67,2,23,2,19,4,15,6,11,8,8,11,6,15,4,19,2,23,2','M 23 2 L 244 2 L 248 2 L 252 4 L 256 6 L 259 8 L 261 11 L 263 15 L 265 19 L 265 23 L 265 67 L 265 71 L 263 75 L 261 79 L 259 82 L 256 84 L 252 86 L 248 88 L 244 88 L 23 88 L 19 88 L 15 86 L 11 85 L 8 82 L 6 79 L 4 75 L 2 71 L 2 67 L 2 23 L 2 19 L 4 15 L 6 11 L 8 8 L 11 6 L 15 4 L 19 2 L 23 2 z')
+button73255.onUp = button73255onUp
+button73255.hasOnUp = true
+button73255.capture=4
+button73255.build()
+
+button7705 = new ObjButton('button7705', null,-155,-2,132,44,1,34,'div','topfixed keepontransition',1,'')
+button7705.setFillStyle(1)
+button7705.initRotateAngle(0,0,0,-2,-2,128,40)
+button7705.initHasShadow(0)
+button7705.initHasReflection(0)
+button7705.setImages('images/transbtn.gif', '', '','');
+button7705.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button7705.addIe8Attr(-153, -2, 132, 44, -3, -1)
+button7705.addOpacity(0)
+button7705.initImageMap('12,2,120,2,124,3,127,5,129,8,130,12,130,32,129,36,127,39,124,41,120,42,12,42,8,41,5,39,3,36,2,32,2,12,3,8,5,5,8,3,12,2','M 12 2 L 120 2 L 124 3 L 127 5 L 129 8 L 130 12 L 130 32 L 129 36 L 127 39 L 124 41 L 120 42 L 12 42 L 8 41 L 5 39 L 3 36 L 2 32 L 2 12 L 3 8 L 5 5 L 8 3 L 12 2 z')
+button7705.onUp = button7705onUp
+button7705.hasOnUp = true
+button7705.capture=4
+button7705.build()
+
+image2047 = new ObjImage('image2047','images/menu-bg.jpg',null,0,64,263,733,1,8,'div',null,'topfixed menu')
+image2047.initRotateAngle(0,0,0,0,0,0,0)
+image2047.initHasShadow(0)
+image2047.initHasReflection(0)
+image2047.addIe8Attr(0, 64, 263, 733, 0, 0)
+image2047.initImageMap(1,'0,0,263,0,263,733,0,733,0,0','M 0 0 L 263 0 L 263 733 L 0 733 L 0 0 z')
+image2047.addBorder(0)
+image2047.addOpacity(100)
+image2047.build()
+
+image1972 = new ObjImage('image1972','images/menu-top-tablet.jpg',null,0,0,1024,64,1,9,'div',null,'topfixed')
+image1972.initRotateAngle(0,0,0,0,0,0,0)
+image1972.initHasShadow(0)
+image1972.initHasReflection(0)
+image1972.addIe8Attr(0, 0, 1024, 64, 0, 0)
+image1972.initImageMap(1,'0,0,1024,0,1024,64,0,64,0,0','M 0 0 L 1024 0 L 1024 64 L 0 64 L 0 0 z')
+image1972.addBorder(0)
+image1972.addOpacity(100)
+image1972.build()
+
+image6922 = new ObjImage('image6922','images/luc16logo.png',null,927,18,88,24,1,10,'div',null,'topfixed')
+image6922.initRotateAngle(0,0,0,0,0,0,0)
+image6922.initHasShadow(0)
+image6922.initHasReflection(0)
+image6922.addIe8Attr(927, 18, 88, 24, 0, 0)
+image6922.initImageMap(1,'0,0,88,0,88,24,0,24,0,0','M 0 0 L 88 0 L 88 24 L 0 24 L 0 0 z')
+image6922.addBorder(0)
+image6922.addOpacity(100)
+image6922.build()
+
+text6601 = new ObjText('text6601',null,-65,12,25,25,1,11,null,'div','topfixed keepontransition')
+text6601.initSLine(0)
+text6601.initRotateAngle(0,0,0)
+text6601.initHasOuterShadow(0)
+text6601.initHasTextShadow(0)
+text6601.initHasBorder(0)
+text6601.initHasOutline(0)
+text6601.addIe8Attr(-65, 12, 25, 25, 0, 0)
+text6601.addOpacity(100)
+text6601.arrCSSStyles = new Array();
+text6601.arrCSSStyles.push('span.text6601Font1 { font-size:24px; font-family:"FontAwesome"; color:#ffffff;}');
+text6601.build()
+
+text50274 = new ObjText('text50274',null,553,20,173,40,1,12,null,'div','topfixed keepontransition')
+text50274.initSLine(0)
+text50274.initRotateAngle(0,0,0)
+text50274.initHasOuterShadow(0)
+text50274.initHasTextShadow(0)
+text50274.initHasBorder(0)
+text50274.initHasOutline(0)
+text50274.addIe8Attr(553, 20, 173, 40, 0, 0)
+text50274.addOpacity(100)
+text50274.arrCSSStyles = new Array();
+text50274.arrCSSStyles.push('span.text50274Font1 { font-size:24px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#ffffff;}');
+text50274.arrCSSStyles.push('span.text50274Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text50274.build()
+
+image62510 = new ObjImage('image62510','images/carlo-tognoni-circle.jpg',null,281,77,150,150,1,13,'div',null)
+image62510.initRotateAngle(0,0,0,0,0,0,0)
+image62510.initHasShadow(0)
+image62510.initHasReflection(0)
+image62510.addIe8Attr(281, 77, 150, 150, 0, 0)
+image62510.initImageMap(1,'0,0,150,0,150,150,0,150,0,0','M 0 0 L 150 0 L 150 150 L 0 150 L 0 0 z')
+image62510.addBorder(0)
+image62510.addOpacity(100)
+image62510.build()
+
+image62556 = new ObjImage('image62556','images/session-hole.png',null,313,97,640,239,1,14,'div',null)
+image62556.initRotateAngle(0,0,0,0,0,0,0)
+image62556.initHasShadow(0)
+image62556.initHasReflection(0)
+image62556.addIe8Attr(313, 97, 640, 239, 0, 0)
+image62556.initImageMap(1,'0,0,640,0,640,239,0,239,0,0','M 0 0 L 640 0 L 640 239 L 0 239 L 0 0 z')
+image62556.addBorder(0)
+image62556.addOpacity(100)
+image62556.build()
+
+text62557 = new ObjText('text62557',null,185,299,200,80,1,15,null,'div')
+text62557.initSLine(0)
+text62557.initRotateAngle(0,0,0)
+text62557.initHasOuterShadow(0)
+text62557.initHasTextShadow(0)
+text62557.initHasBorder(0)
+text62557.initHasOutline(0)
+text62557.addIe8Attr(185, 299, 200, 80, 0, 0)
+text62557.addOpacity(100)
+text62557.arrCSSStyles = new Array();
+text62557.arrCSSStyles.push('span.text62557Font1 { font-size:16px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text62557.arrCSSStyles.push('span.text62557Font2 { font-size:13px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text62557.build()
+
+text62558 = new ObjText('text62558',null,337,220,277,65,1,16,'#fdc70c','div','three-line-fix')
+text62558.initSLine(0)
+text62558.initRotateAngle(0,0,0)
+text62558.initHasOuterShadow(0)
+text62558.initHasTextShadow(0)
+text62558.initHasBorder(0)
+text62558.initHasOutline(0)
+text62558.addIe8Attr(337, 220, 277, 65, 0, 0)
+text62558.addOpacity(100)
+text62558.arrCSSStyles = new Array();
+text62558.arrCSSStyles.push('span.text62558Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#ffffff;}');
+text62558.arrCSSStyles.push('span.text62558Font2 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text62558.arrCSSStyles.push('span.text62558Font3 { font-size:19px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text62558.build()
+
+text62559 = new ObjText('text62559',null,185,218,200,80,1,17,null,'div')
+text62559.initSLine(0)
+text62559.initRotateAngle(0,0,0)
+text62559.initHasOuterShadow(0)
+text62559.initHasTextShadow(0)
+text62559.initHasBorder(0)
+text62559.initHasOutline(0)
+text62559.addIe8Attr(185, 218, 200, 80, 0, 0)
+text62559.addOpacity(100)
+text62559.arrCSSStyles = new Array();
+text62559.arrCSSStyles.push('span.text62559Font1 { font-size:16px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000; font-weight:bold;}');
+text62559.arrCSSStyles.push('span.text62559Font2 { font-size:16px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text62559.build()
+
+arObjs.push(text992);
+arObjs.push(button8353);
+arObjs.push(button8514);
+arObjs.push(button8693);
+arObjs.push(button8776);
+arObjs.push(button73255);
+arObjs.push(button7705);
+arObjs.push(image2047);
+arObjs.push(image1972);
+arObjs.push(image6922);
+arObjs.push(text6601);
+arObjs.push(text50274);
+arObjs.push(image62510);
+arObjs.push(image62556);
+arObjs.push(text62557);
+arObjs.push(text62558);
+arObjs.push(text62559);
+
+
+writeStyleSheets(arObjs);}
+// -->
+
+</script>
+</head>
+
+<body onfocus="trivOnFocus()" onResize="ReFlow()">
+
+<script>
+if( is.min ){
+    findWH()
+    var left = (winW > 1024) ? (winW-1024)/2 : 0
+    document.write('<style type="text/css">#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:1024px; height:768px; clip:rect(0px 1024px 768px 0px); overflow:hidden;' )
+    document.write('} </style>')
+    document.write('<DIV style="visibility:hidden;" id=\"pageDIV\">')
+}
+</script>
+
+<div id="text992"><a id="text992anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text992Font1"  >device mode?
+</span ></p >
+</div>
+
+<script>
+if( is.min ){
+    document.write(button8353.div)
+    document.write(button8514.div)
+    document.write(button8693.div)
+    document.write(button8776.div)
+    document.write(button73255.div)
+    document.write(button7705.div)
+    document.write(image2047.div)
+    document.write(image1972.div)
+    document.write(image6922.div)
+}
+</script>
+
+<div id="text6601" class="topfixed keepontransition"><a id="text6601anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text6601Font1"  >
+</span ></p >
+</div>
+
+<div id="text50274" class="topfixed keepontransition"><a id="text50274anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text50274Font1"  >SESSION</span ><span class="text50274Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<script>
+if( is.min ){
+    document.write(image62510.div)
+    document.write(image62556.div)
+}
+</script>
+
+<div id="text62557"><a id="text62557anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text62557Font1"  >CARLO TOGNONI
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text62557Font2"  >CEO<br />CT2 SRL</span ><span class="text62557Font1" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text62558" class="three-line-fix"><a id="text62558anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text62558Font1"  >10:30-11:45 AM</span ><span class="text62558Font2" style="background-color:transparent" >
+</span ></p >
+<p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text62558Font3"  >Control Your Energy With Lectora - <br />Games in a Learning Environment
+</span ></p >
+</div>
+
+<div id="text62559"><a id="text62559anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font1"  >Session Objectives:<br /></span ><span class="text62559Font2" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.&nbsp;&nbsp;&nbsp;&nbsp;Create a complex navigation scenario using Lectora&nbsp;&nbsp;
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.&nbsp;&nbsp;&nbsp;&nbsp;Integrate HTML5 games in Lectora&nbsp;&nbsp;&nbsp;
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.&nbsp;&nbsp;&nbsp;&nbsp;Read and write data to a server database using PHP and JavaScript&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font1"  >Description:<br /></span ><span class="text62559Font2" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >This session presents an edutainment application made in Lectora that integrates a number of Web technologies, including:
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;external libraries, such as GreenSock animations
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;server integration: data is stored and read to a MySQL database on a server
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Javascript integrated in Lectora to make data available to Lectora variables
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HTML5 custom made objects that graphically display Lectora variable values
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;customized eLearning Brothers HTML5 games, where the graphics were entirely rebuilt
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arcade-style games made with Construct2 by Scirra in HTML5 integrated into Lectora, with variable values passing
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >See why Lectora's flexibility, power, and openness cannot be matched by competitor's products.
+</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font1"  >Presenter Bio:<br /></span ><span class="text62559Font2" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text62559Font2"  >Carlo Tognoni graduated in Solid State Physics at the University of Milano with full honours in 1984. After working in the industry as researcher and marketing manager, he started his own business in 1990, founding CT2, a company focused on innovative ways of delivering knowledge and training. Carlo Tognoni acts as a consultant for companies in Italy and abroad on eLearning issues and museum exhibits. He has been appointed contract professor at the University of Piemonte Orientale for teaching "Multimedia systems" and designed and taught a master on Instructional Design at Istituto Europeo di Design. CT2 resells Trivantis products in Italy. He is member of Society Italiana di Fisica, European Society of Physics, Science for Fun.
+</span ></p >
+</div>
+
+
+<script>
+if( is.min ){
+    document.write("</DIV>")
+}
+</script>
+
+</body>
+</html>
