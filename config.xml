@@ -14,7 +14,10 @@
         BranchTrack.com
     </author>
     <content src="index.html" />
-    <plugin name="cordova-plugin-whitelist" version="1" />
+    <plugin name="cordova-plugin-whitelist"/>
+    <plugin name="org.apache.cordova.statusbar" />
+    <plugin name="org.apache.cordova.splashscreen" />
+
     <access origin="tel:*" launch-external="yes" />
     <access origin="geo:*" launch-external="yes" />
     <access origin="http://*" launch-external="yes" />
@@ -27,8 +30,6 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-
-    <gap:plugin name="org.apache.cordova.statusbar" />
 
     <platform name="android">
         <allow-intent href="market:*" />
