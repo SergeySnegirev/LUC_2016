@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1001,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1228,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -17,7 +17,7 @@ PhoneResponsive={"785":{
 ,
 "":{"x":8,"y":141,"w":230,"h":153}
 ,
-"image2047":{"x":-327,"y":90,"w":327,"h":911,"i":"images/menu-bg.jpg"}
+"image2047":{"x":-327,"y":90,"w":327,"h":1138,"i":"images/menu-bg.jpg"}
 ,
 "image1972":{"x":-330,"y":0,"w":1440,"h":90,"i":"images/menu-top-tablet.jpg"}
 ,
@@ -41,7 +41,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/branchtrackscreenshot.jpg','images/branchtrack-new-logo.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":1215,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1492,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -59,7 +59,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "":{"x":5,"y":184,"w":141,"h":94}
 ,
-"image2047":{"x":-400,"y":100,"w":400,"h":1115,"i":"images/menu-bg.jpg"}
+"image2047":{"x":-400,"y":100,"w":400,"h":1392,"i":"images/menu-bg.jpg"}
 ,
 "image1972":{"x":0,"y":0,"w":2048,"h":100,"i":"images/menu-top-tablet.jpg"}
 ,
@@ -73,7 +73,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text73532":{"x":23,"y":251,"w":431,"h":247,"txtscale":140}
 ,
-"text73531":{"x":96,"y":676,"w":346,"h":105,"txtscale":130}
+"text73531":{"x":96,"y":676,"w":346,"h":120,"txtscale":130}
 ,
 "image73530":{"x":26,"y":418,"w":426,"h":236,"i":"images/branchtrackscreenshot.jpg"}
 ,

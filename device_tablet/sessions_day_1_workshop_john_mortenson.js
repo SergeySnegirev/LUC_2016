@@ -17,7 +17,7 @@ TabletResponsive={"1009":{
 ,
 "":{"x":10,"y":181,"w":296,"h":197}
 ,
-"image2047":{"x":0,"y":63,"w":259,"h":722,"i":"images/menu-bg.jpg"}
+"image2047":{"x":0,"y":63,"w":259,"h":907,"i":"images/menu-bg.jpg"}
 ,
 "image1972":{"x":0,"y":0,"w":1009,"h":63,"i":"images/menu-top-tablet.jpg"}
 ,
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/john-mortenson-circle.jpg','images/session-hole.png']
 },
 "785":{
-"pageLayer":{"w":785,"h":1072,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1326,"bgColor":"#ffffff"}
 ,
 "text992":{"x":313,"y":11,"w":153,"h":24,"txtscale":100}
 ,
@@ -61,7 +61,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "":{"x":8,"y":184,"w":230,"h":153}
 ,
-"image2047":{"x":-363,"y":63,"w":362,"h":1009,"i":"images/menu-bg.jpg"}
+"image2047":{"x":-363,"y":63,"w":363,"h":1263,"i":"images/menu-bg.jpg"}
 ,
 "image1972":{"x":0,"y":0,"w":1024,"h":64,"i":"images/menu-top-tablet.jpg"}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text60530":{"x":43,"y":101,"w":333,"h":99,"txtscale":100}
 ,
-"text60531":{"x":39,"y":227,"w":708,"h":760,"txtscale":100}
+"text60531":{"x":39,"y":227,"w":708,"h":670,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
