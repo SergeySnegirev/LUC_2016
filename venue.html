@@ -110,7 +110,7 @@ function ReFlow() {
 VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
 TrivCurrRespView = VarCurrentView;
 if(is.awesomium);
-  TrivCurrRespView.set('PhonePortrait');
+  TrivCurrRespView.set('TabletPortrait');
 VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'luc2016rcd' )
 VarCurrentPageName.set( 'VENUE' )
 Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
@@ -245,7 +245,7 @@ function trivLeavePage() {
 }
 
 function trivPrevPage() {
-    trivExitPage( 'quiz.html', true )
+    trivExitPage( 'trivantis_team.html', true )
 }
 
 function trivNextPage() {
@@ -293,7 +293,7 @@ function action72388else(fn){
 }
 
 function action72388(fn){
-    if(VarCurrentView.equals('TabletPortrait'))
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
     {text6601.actionHide();
     }else{ action72388else();}
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -307,7 +307,7 @@ function action72387else(fn){
 }
 
 function action72387(fn){
-    if(VarCurrentView.equals('TabletPortrait'))
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
     {button7705.actionHide();
     }else{ action72387else();}
     if(fn && typeof(fn) == 'string' ) eval(fn);

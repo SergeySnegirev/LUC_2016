@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":2617,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1440,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -35,7 +35,7 @@ PhoneResponsive={"785":{
 ,
 "text62164":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
-"text62165":{"x":40,"y":300,"w":706,"h":2317,"txtscale":120}
+"text62165":{"x":40,"y":300,"w":706,"h":1140,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/christine-scott.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":3035,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1778,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text62164":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text62165":{"x":30,"y":467,"w":420,"h":2568,"txtscale":140}
+"text62165":{"x":30,"y":467,"w":420,"h":1311,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

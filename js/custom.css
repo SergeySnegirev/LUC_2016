@@ -24,3 +24,15 @@ body {
 .breakout p:first-of-type {
   margin-top: 10px !important;
 }
+
+/* fade in out animations for fader css3 */
+.btvisible {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 600ms linear;
+}
+.bthidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 400ms, opacity 400ms linear;
+}

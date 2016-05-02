@@ -97,9 +97,21 @@ function AdjustScreen(mode) {
       width: '100%',
       zIndex: '9999'
     });
-    $('.topfixed, .menu, .fader').appendTo('#topfixed-wrapper');
-    $('.menu, .fader, .button, .keepontransition').css('z-index', '3000');
+    $('.topfixed, .menu').appendTo('#topfixed-wrapper');
+    $('.menu, .button, .keepontransition').css('z-index', '3000');
     $('div#topfixed-wrapper > div[id^="button"]').css('z-index','9999');
+
+    //create fader programmatically
+    $('<div id="fader" class="bthidden">').insertAfter('#pageDIV').css({
+      position: 'fixed',
+      clip: 'inherit',
+      top: '0px',
+      left: '0px',
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      zIndex: '9999'
+    });
   }
   if (mode == 'rotate' && Var_menuState.getValue() == 'on') {
     animateMenu('static');
@@ -210,6 +222,7 @@ function animateMenu(dir) {
         transform: 'translate3d(+'+w+'px,0,0)',
         transitionDuration: dur
       });
+      $('#fader').addClass('btvisible').removeClass('bthidden');
       break;
     case 'out':
       $('body').off('touchmove.animate');
@@ -222,6 +235,7 @@ function animateMenu(dir) {
         transform: 'translate3d(-'+w+'px,0,0)',
         transitionDuration: dur
       });
+      $('#fader').addClass('bthidden').removeClass('btvisible');
       break;
     case 'static':
       var dur = '0ms';

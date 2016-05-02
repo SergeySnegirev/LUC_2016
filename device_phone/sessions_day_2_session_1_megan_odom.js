@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1975,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":1228,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -35,7 +35,7 @@ PhoneResponsive={"785":{
 ,
 "text62380":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
-"text62381":{"x":40,"y":300,"w":706,"h":1675,"txtscale":120}
+"text62381":{"x":40,"y":300,"w":706,"h":836,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/megan-odom-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2617,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1622,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text62380":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text62381":{"x":30,"y":467,"w":420,"h":2150,"txtscale":140}
+"text62381":{"x":30,"y":467,"w":420,"h":1155,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
