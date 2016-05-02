@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/aldebaran_canacasco-150x150-circle.jpg','images/german_gonzalez-150x150-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2771,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1892,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -91,7 +91,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text62631":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text62632":{"x":30,"y":733,"w":420,"h":2038,"txtscale":140}
+"text62632":{"x":30,"y":733,"w":420,"h":1159,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

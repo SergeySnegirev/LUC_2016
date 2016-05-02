@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/gordon.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2561,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":1778,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text60385":{"x":30,"y":120,"w":420,"h":123,"txtscale":140}
 ,
-"text60386":{"x":30,"y":467,"w":420,"h":2094,"txtscale":140}
+"text60386":{"x":30,"y":467,"w":420,"h":1311,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
