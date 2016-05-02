@@ -35,7 +35,7 @@ PhoneResponsive={"785":{
 ,
 "text59698":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
-"text59699":{"x":40,"y":300,"w":706,"h":630,"txtscale":120}
+"text59699":{"x":40,"y":300,"w":706,"h":642,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

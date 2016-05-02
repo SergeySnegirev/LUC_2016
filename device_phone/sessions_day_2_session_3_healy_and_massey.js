@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1339,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":2456,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -39,9 +39,9 @@ PhoneResponsive={"785":{
 ,
 "text64486":{"x":391,"y":379,"w":369,"h":73,"txtscale":140}
 ,
-"text64487":{"x":40,"y":114,"w":370,"h":110,"txtscale":110}
+"text64487":{"x":40,"y":114,"w":370,"h":117,"txtscale":110}
 ,
-"text64488":{"x":40,"y":447,"w":706,"h":892,"txtscale":120}
+"text64488":{"x":40,"y":447,"w":706,"h":2009,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/lance-healy-circle.jpg','images/lyndsay-massey-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2399,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":3153,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -91,7 +91,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text64487":{"x":30,"y":120,"w":420,"h":134,"txtscale":140}
 ,
-"text64488":{"x":30,"y":670,"w":420,"h":1729,"txtscale":140}
+"text64488":{"x":30,"y":670,"w":420,"h":2483,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1228,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":2059,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -33,9 +33,9 @@ PhoneResponsive={"785":{
 ,
 "text60529":{"x":391,"y":199,"w":369,"h":73,"txtscale":140}
 ,
-"text60530":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
+"text60530":{"x":40,"y":114,"w":370,"h":134,"txtscale":140}
 ,
-"text60531":{"x":40,"y":300,"w":706,"h":760,"txtscale":120}
+"text60531":{"x":40,"y":300,"w":706,"h":1759,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -43,7 +43,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/john-mortenson-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":1652,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":2535,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -79,7 +79,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text60530":{"x":30,"y":120,"w":420,"h":157,"txtscale":140}
 ,
-"text60531":{"x":30,"y":497,"w":420,"h":1155,"txtscale":140}
+"text60531":{"x":30,"y":497,"w":420,"h":2038,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

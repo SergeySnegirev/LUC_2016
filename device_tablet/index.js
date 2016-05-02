@@ -57,7 +57,7 @@ TabletResponsive={"1009":{
 ,
 "text3685":{"x":332,"y":765,"w":273,"h":70,"txtscale":100}
 ,
-"text3710":{"x":332,"y":845,"w":273,"h":115,"txtscale":100}
+"text3710":{"x":332,"y":845,"w":273,"h":116,"txtscale":100}
 ,
 "text3955":{"x":332,"y":970,"w":273,"h":60,"txtscale":100}
 ,
@@ -91,7 +91,7 @@ TabletResponsive={"1009":{
 ,
 "text4429":{"x":684,"y":145,"w":273,"h":70,"txtscale":100}
 ,
-"text4428":{"x":684,"y":220,"w":273,"h":85,"txtscale":100}
+"text4428":{"x":684,"y":220,"w":273,"h":86,"txtscale":100}
 ,
 "text4427":{"x":684,"y":315,"w":273,"h":70,"txtscale":100}
 ,
@@ -107,7 +107,7 @@ TabletResponsive={"1009":{
 ,
 "text4421":{"x":684,"y":765,"w":273,"h":70,"txtscale":100}
 ,
-"text4420":{"x":684,"y":845,"w":273,"h":115,"txtscale":100}
+"text4420":{"x":684,"y":845,"w":273,"h":116,"txtscale":100}
 ,
 "text4419":{"x":684,"y":970,"w":273,"h":60,"txtscale":100}
 ,
@@ -183,7 +183,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text2206":{"x":60,"y":145,"w":280,"h":70,"txtscale":100}
 ,
-"text3107":{"x":60,"y":225,"w":280,"h":80,"txtscale":100}
+"text3107":{"x":60,"y":225,"w":280,"h":81,"txtscale":100}
 ,
 "text3116":{"x":60,"y":315,"w":280,"h":70,"txtscale":100}
 ,

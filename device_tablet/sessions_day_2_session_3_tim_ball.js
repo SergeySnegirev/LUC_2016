@@ -35,7 +35,7 @@ TabletResponsive={"1009":{
 ,
 "text64459":{"x":300,"y":88,"w":333,"h":92,"txtscale":100}
 ,
-"text64460":{"x":300,"y":240,"w":671,"h":456,"txtscale":100}
+"text64460":{"x":300,"y":240,"w":671,"h":416,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

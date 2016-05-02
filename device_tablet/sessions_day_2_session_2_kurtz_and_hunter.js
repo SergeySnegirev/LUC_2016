@@ -1,5 +1,5 @@
 TabletResponsive={"1009":{
-"pageLayer":{"w":1009,"h":1576,"bgColor":"#ffffff"}
+"pageLayer":{"w":1009,"h":1006,"bgColor":"#ffffff"}
 ,
 "text992":{"x":423,"y":18,"w":474,"h":34,"txtscale":100}
 ,
@@ -41,7 +41,7 @@ TabletResponsive={"1009":{
 ,
 "text63711":{"x":300,"y":88,"w":333,"h":80,"txtscale":100}
 ,
-"text63712":{"x":300,"y":361,"w":671,"h":1215,"txtscale":100}
+"text63712":{"x":300,"y":361,"w":671,"h":645,"txtscale":100}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}

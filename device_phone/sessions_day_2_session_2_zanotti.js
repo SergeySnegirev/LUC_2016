@@ -1,5 +1,5 @@
 PhoneResponsive={"785":{
-"pageLayer":{"w":785,"h":1328,"bgColor":"#ffffff"}
+"pageLayer":{"w":785,"h":2138,"bgColor":"#ffffff"}
 ,
 "text992":{"x":329,"y":14,"w":369,"h":26,"txtscale":100}
 ,
@@ -41,7 +41,7 @@ PhoneResponsive={"785":{
 ,
 "text63409":{"x":40,"y":114,"w":370,"h":110,"txtscale":140}
 ,
-"text63410":{"x":40,"y":436,"w":706,"h":892,"txtscale":120}
+"text63410":{"x":40,"y":436,"w":706,"h":1702,"txtscale":120}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
@@ -49,7 +49,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,"preload":['images/menu-top-tablet.jpg','images/menu-bg.jpg','images/luc16logo.png','images/rick-zanotti-circle.jpg','images/page_leslie-circle.jpg','images/session-hole.png']
 },
 "480":{
-"pageLayer":{"w":480,"h":2399,"bgColor":"#ffffff"}
+"pageLayer":{"w":480,"h":2734,"bgColor":"#ffffff"}
 ,
 "text992":{"x":191,"y":11,"w":94,"h":36,"txtscale":100}
 ,
@@ -91,7 +91,7 @@ try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)
 ,
 "text63409":{"x":30,"y":120,"w":420,"h":124,"txtscale":140}
 ,
-"text63410":{"x":30,"y":670,"w":420,"h":1729,"txtscale":140}
+"text63410":{"x":30,"y":670,"w":420,"h":2064,"txtscale":140}
 ,
 "RCDResetQuestion":function(){
 try{if(window.dragMgr)window.dragMgr.clearDropZones();}catch(e){if(e&&e.message)console.log(e.message);}
