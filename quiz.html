@@ -16,7 +16,10 @@
 <script src=js/custom.js></script>
 
 <link rel="stylesheet" href="trivantis.css" type="text/css" />
+<link rel="stylesheet" href="dialog.css" type="text/css" />
 <style type="text/css">
+  .custEle { position: absolute; left: -2000px; }
+  .custRadio { padding-left: 28px; background-image: url(images/unchecked.png); background-repeat: no-repeat; cursor: pointer; display: inline; position: absolute; height: 28px;}
 </style>
 
 <!--[if lt IE 7]>
@@ -40,6 +43,9 @@ document.namespaces.add('v', 'urn:schemas-microsoft-com:vml', "#default#VML")
 <script src="trivantis-inline.js"></script>
 <script src="trivantis-text.js"></script>
 <script src="trivantis-pagetracking.js"></script>
+<script src="trivantis-strings.js" charset="UTF-8" ></script>
+<script src="trivantis-titlemgr.js"></script>
+<script src="trivantis-dialog.js"></script>
 <script src="hammer.js"></script>
 <script>
 
@@ -104,16 +110,27 @@ function ReFlow() {
        transformScale = 1;
     pageLayer.styObj.transformOrigin =  '0 0';
   }
+  Offset_qu103363()
+  Offset_qu106988()
+  Offset_qu107444()
+  Offset_qu107433()
+  Offset_qu107646()
 }
 
 
 VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
 TrivCurrRespView = VarCurrentView;
 if(is.awesomium);
-  TrivCurrRespView.set('TabletPortrait');
+  TrivCurrRespView.set('PhonePortrait');
 VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'luc2016rcd' )
 VarCurrentPageName.set( 'QUIZ' )
 Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
+VarQuestion_0001 = new Variable( 'VarQuestion_0001', '', 0, 0, null, null, 'luc2016rcd', false )
+VarQuestion_0002 = new Variable( 'VarQuestion_0002', '', 0, 0, null, null, 'luc2016rcd', false )
+VarQuestion_0003 = new Variable( 'VarQuestion_0003', '', 0, 0, null, null, 'luc2016rcd', false )
+VarQuestion_0004 = new Variable( 'VarQuestion_0004', '', 0, 0, null, null, 'luc2016rcd', false )
+VarQuestion_0005 = new Variable( 'VarQuestion_0005', '', 0, 0, null, null, 'luc2016rcd', false )
+VarEntry_0001 = new Variable( 'VarEntry_0001', '', 0, 0, null, null, 'luc2016rcd', false )
 
 onload = responsiveInit
 detect();
@@ -140,9 +157,9 @@ function init() {
     setTimeout( "preload(GetDevicePreload())",0)
     detect();
     pageLayer.show();
-    text992.init()
     button8353.init()
     button8514.init()
+    button104132.init()
     button8693.init()
     button8776.init()
     button73255.init()
@@ -152,9 +169,67 @@ function init() {
     image6922.init()
     text6601.init()
     text7096.init()
-    text992.activate()
+    text108344.init()
+    text108776.init()
+    text109178.init()
+    og110037.init()
+    text109817.init()
+    text109872.init()
+    form109837.init()
+    entry109839.init()
+    qu103363.init()
+    text103365.init()
+    text103366.init()
+    radio103367.init()
+    text103368.init()
+    radio103369.init()
+    text103370.init()
+    radio103371.init()
+    text106149.init()
+    radio106150.init()
+    qu106988.init()
+    text106989.init()
+    text106990.init()
+    radio106991.init()
+    text106992.init()
+    radio106993.init()
+    text106994.init()
+    radio106995.init()
+    text106996.init()
+    radio106997.init()
+    qu107444.init()
+    text107445.init()
+    text107446.init()
+    radio107447.init()
+    text107448.init()
+    radio107449.init()
+    text107450.init()
+    radio107451.init()
+    text107452.init()
+    radio107453.init()
+    qu107433.init()
+    text107434.init()
+    text107435.init()
+    radio107436.init()
+    text107437.init()
+    radio107438.init()
+    text107439.init()
+    radio107440.init()
+    text107441.init()
+    radio107442.init()
+    qu107646.init()
+    text107647.init()
+    text107648.init()
+    radio107649.init()
+    text107650.init()
+    radio107651.init()
+    text107652.init()
+    radio107653.init()
+    text107654.init()
+    radio107655.init()
     button8353.activate()
     button8514.activate()
+    button104132.activate()
     button8693.activate()
     button8776.activate()
     button73255.activate()
@@ -164,10 +239,78 @@ function init() {
     image6922.activate()
     text6601.activate()
     text7096.activate()
+    text108344.activate()
+    text108776.activate()
+    text109178.activate()
+    og110037.activate()
+    text109817.activate()
+    text109872.activate()
+    form109837.activate()
+    entry109839.activate()
+    qu103363.activate()
+    text103365.activate()
+    text103366.activate()
+    radio103367.activate()
+    text103368.activate()
+    radio103369.activate()
+    text103370.activate()
+    radio103371.activate()
+    text106149.activate()
+    radio106150.activate()
+    qu106988.activate()
+    text106989.activate()
+    text106990.activate()
+    radio106991.activate()
+    text106992.activate()
+    radio106993.activate()
+    text106994.activate()
+    radio106995.activate()
+    text106996.activate()
+    radio106997.activate()
+    qu107444.activate()
+    text107445.activate()
+    text107446.activate()
+    radio107447.activate()
+    text107448.activate()
+    radio107449.activate()
+    text107450.activate()
+    radio107451.activate()
+    text107452.activate()
+    radio107453.activate()
+    qu107433.activate()
+    text107434.activate()
+    text107435.activate()
+    radio107436.activate()
+    text107437.activate()
+    radio107438.activate()
+    text107439.activate()
+    radio107440.activate()
+    text107441.activate()
+    radio107442.activate()
+    qu107646.activate()
+    text107647.activate()
+    text107648.activate()
+    radio107649.activate()
+    text107650.activate()
+    radio107651.activate()
+    text107652.activate()
+    radio107653.activate()
+    text107654.activate()
+    radio107655.activate()
     rebuildLayout();
     ReFlow();
     window.scrollTo(0, 1);
     action1681(  );
+    action107427(  );
+    action107425(  );
+    action107424(  );
+    var valVarEntry_0001 = VarEntry_0001.getValue()
+    if(valVarEntry_0001!='~~~null~~~')entry109839.objLyr.doc.forms["entry109839form"]["Entry_1"].value=valVarEntry_0001
+    Update_qu103363()
+    Update_qu106988()
+    Update_qu107444()
+    Update_qu107433()
+    Update_qu107646()
 
     if ( trivPageTracking.GetRangeStatus(7084) == 'notstarted' ) trivPageTracking.SetRangeStatus(7084,2);
     if( location.hash )
@@ -203,7 +346,7 @@ function checkLeavePage() {
     if( trivActFBCnt == 0 )
     {
         currFeedbackIdx++;
-        if( currFeedbackIdx > -1)
+        if( currFeedbackIdx > 4)
         {
             trivLeavePage();
           return;
@@ -219,6 +362,8 @@ function trivExitPage( newPage, bFeedback ) {
     else trivGoToPage = 'ObjLayerActionGoTo("' + newPage + '")'
     if( !hasProcessedExitActions ) {
         findWH()
+        if( !checkQuestions( bFeedback ))
+          return
         hasProcessedExitActions = true
         setTimeout( 'checkLeavePage()', 100)
     }
@@ -242,7 +387,7 @@ function trivPrevPage() {
 }
 
 function trivNextPage() {
-    trivExitPage( 'sessions_keynote.html', true )
+    trivExitPage( 'quiz_rules.html', true )
 }
 
 function trivUpdateTOC( bRecurse ) {
@@ -250,13 +395,51 @@ function trivUpdateTOC( bRecurse ) {
 }
 
 function trivUpdateEntry() {
+  entry109839.objLyr.doc.forms["entry109839form"]["Entry_1"].blur();
 }
 
 function trivResetEntry(entFld) {
+  if ( entFld == null || entFld == entry109839 ) entry109839.objLyr.doc.forms["entry109839form"]["Entry_1"].value='';
+}
+
+function checkQuestions( bFeedback, bForce, bNotLeavingPage ) {
+  var onAfterFBAction = ( bNotLeavingPage ? (function(){trivActFBCnt--;}) : (function(){trivActFBCnt--;window.checkLeavePage();}) );
+  if( !bFeedback ) currFeedbackIdx = 5;
+
+  return 1
 }
 
 function OnDeviceRotate() {
-action1017();action1963();
+action1963();action107426();
+}
+
+function setRadio(lid,rid){
+    var lbl = document.getElementById(lid);
+    var rad = document.getElementById(rid);
+    if(lbl&&rad){
+        if(rad.checked) lbl.style.backgroundImage = 'url(images/checked.png)';
+        else lbl.style.backgroundImage = 'url(images/unchecked.png)';
+    }
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079(fn){
+    if(VarCurrentView.contains('xyz'))
+    {
+    }else{ action100079else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action1681(fn){
@@ -265,20 +448,46 @@ function action1681(fn){
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action990(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
+function action107427else(fn){
+
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function action1017(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
+function action107427(fn){
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
+    {animateMenu('static');
+    }else{ action107427else();}
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-function text992actionShow() {
-  setTimeout("if(!text992.isVisible()) { text992.objLyr.moveTo(text992.x, text992.y);text992.onShow();action990(); }", 1 )
+function action107425else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action107425(fn){
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
+    {text6601.actionHide();
+    }else{ action107425else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action107424else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action107424(fn){
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
+    {button7705.actionHide();
+    }else{ action107424else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action20620(fn){
@@ -291,6 +500,10 @@ function action8358(fn){
     trivExitPage('index.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8353onOver() {
+  action100079();
 }
 
 function button8353onUp() {
@@ -311,6 +524,22 @@ function action8515(fn){
 
 function button8514onUp() {
   action20673();action8515();
+}
+
+function action104133(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action104134(fn){
+    ObjLayerActionGoTo('#top');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button104132onUp() {
+  action104133();action104134();
 }
 
 function action20739(fn){
@@ -352,7 +581,7 @@ function action73256(fn){
 }
 
 function action73257(fn){
-    trivExitPage('venue.html',true);
+    trivExitPage('sponsors.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -403,28 +632,217 @@ function text7096actionShow() {
   setTimeout("if(!text7096.isVisible()) { text7096.objLyr.moveTo(text7096.x, text7096.y);text7096.onShow();action7138(); }", 1 )
 }
 
+function action108384(fn){
+    if( text108344.eatOnUp==true ){
+        text108344.eatOnUp=false;
+        return;
+    }
+    trivExitPage('quiz_rules.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function text108344onUp() {
+  action108384();
+}
+
+function action109167else(fn){
+    text109178.actionShow();
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action109167(fn){
+    if( text108776.eatOnUp==true ){
+        text108776.eatOnUp=false;
+        return;
+    }
+    if(VarQuestion_0001.isCorr('\u0046\u004C\u004F\u0052\u0049\u0044\u0041')&&VarQuestion_0002.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0003.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0004.isCorr('\u004C\u0045\u0043\u0054\u004F\u0052\u0041\u0020\u0031\u0036')&&VarQuestion_0005.isCorr('\u0043\u004F\u0055\u0052\u0053\u0045\u004D\u0049\u004C\u004C\u0020\u0041\u0044\u0056\u0041\u004E\u0043\u0045\u0044\u0020\u0052\u0045\u0050\u004F\u0052\u0054\u0053'))
+    {og110037.actionShow();
+    }else{ action109167else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action110128else(fn){
+    text109178.actionShow();
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action110128(fn){
+    if( text108776.eatOnUp==true ){
+        text108776.eatOnUp=false;
+        return;
+    }
+    if(VarQuestion_0001.isCorr('\u0046\u004C\u004F\u0052\u0049\u0044\u0041')&&VarQuestion_0002.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0003.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0004.isCorr('\u004C\u0045\u0043\u0054\u004F\u0052\u0041\u0020\u0031\u0036')&&VarQuestion_0005.isCorr('\u0043\u004F\u0055\u0052\u0053\u0045\u004D\u0049\u004C\u004C\u0020\u0041\u0044\u0056\u0041\u004E\u0043\u0045\u0044\u0020\u0052\u0045\u0050\u004F\u0052\u0054\u0053'))
+    {text108776.actionHide();
+    }else{ action110128else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action110153else(fn){
+    text109178.actionShow();
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action110153(fn){
+    if( text108776.eatOnUp==true ){
+        text108776.eatOnUp=false;
+        return;
+    }
+    if(VarQuestion_0001.isCorr('\u0046\u004C\u004F\u0052\u0049\u0044\u0041')&&VarQuestion_0002.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0003.isCorr('\u0041\u004C\u004C\u0020\u004F\u0046\u0020\u0054\u0048\u0045\u0020\u0041\u0042\u004F\u0056\u0045')&&VarQuestion_0004.isCorr('\u004C\u0045\u0043\u0054\u004F\u0052\u0041\u0020\u0031\u0036')&&VarQuestion_0005.isCorr('\u0043\u004F\u0055\u0052\u0053\u0045\u004D\u0049\u004C\u004C\u0020\u0041\u0044\u0056\u0041\u004E\u0043\u0045\u0044\u0020\u0052\u0045\u0050\u004F\u0052\u0054\u0053'))
+    {text109178.actionHide();
+    }else{ action110153else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function text108776onUp() {
+  action109167();action110128();action110153();
+}
+
+function action109873(fn){
+    if( text109872.eatOnUp==true ){
+        text109872.eatOnUp=false;
+        return;
+    }
+    Process_form109837();
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function text109872onUp() {
+  action109873();
+}
+
+function Offset_qu103363(bDevRotate) {
+}
+
+function Update_qu103363() {
+  var val = VarQuestion_0001.getValue()
+  radio103367.objLyr.doc.getElementById("radio103367id").checked=(val=='OHIO')
+  setRadio('label103367id2','radio103367id');
+  radio103369.objLyr.doc.getElementById("radio103369id").checked=(val=='FLORIDA')
+  setRadio('label103369id2','radio103369id');
+  radio103371.objLyr.doc.getElementById("radio103371id").checked=(val=='CALIFORNIA')
+  setRadio('label103371id2','radio103371id');
+  radio106150.objLyr.doc.getElementById("radio106150id").checked=(val=='TENNESSEE')
+  setRadio('label106150id2','radio106150id');
+   qu103363.hasBeenProcessed=false;
+}
+
+function Offset_qu106988(bDevRotate) {
+}
+
+function Update_qu106988() {
+  var val = VarQuestion_0002.getValue()
+  radio106991.objLyr.doc.getElementById("radio106991id").checked=(val=='LECTORA INSPIRE / LECTORA ONLINE')
+  setRadio('label106991id2','radio106991id');
+  radio106993.objLyr.doc.getElementById("radio106993id").checked=(val=='ADOBE CAPTIVATE ')
+  setRadio('label106993id2','radio106993id');
+  radio106995.objLyr.doc.getElementById("radio106995id").checked=(val=='ARTICULATE STORYLINE')
+  setRadio('label106995id2','radio106995id');
+  radio106997.objLyr.doc.getElementById("radio106997id").checked=(val=='ALL OF THE ABOVE')
+  setRadio('label106997id2','radio106997id');
+   qu106988.hasBeenProcessed=false;
+}
+
+function Offset_qu107444(bDevRotate) {
+}
+
+function Update_qu107444() {
+  var val = VarQuestion_0004.getValue()
+  radio107447.objLyr.doc.getElementById("radio107447id").checked=(val=='COURSEMILL MOBILE')
+  setRadio('label107447id2','radio107447id');
+  radio107449.objLyr.doc.getElementById("radio107449id").checked=(val=='LECTORA 16')
+  setRadio('label107449id2','radio107449id');
+  radio107451.objLyr.doc.getElementById("radio107451id").checked=(val=='LECTORA ONLINE')
+  setRadio('label107451id2','radio107451id');
+  radio107453.objLyr.doc.getElementById("radio107453id").checked=(val=='BRANCHTRACK')
+  setRadio('label107453id2','radio107453id');
+   qu107444.hasBeenProcessed=false;
+}
+
+function Offset_qu107433(bDevRotate) {
+}
+
+function Update_qu107433() {
+  var val = VarQuestion_0003.getValue()
+  radio107436.objLyr.doc.getElementById("radio107436id").checked=(val=='FOUNDER OF BRANCHTRACK.COM')
+  setRadio('label107436id2','radio107436id');
+  radio107438.objLyr.doc.getElementById("radio107438id").checked=(val=='E-LEARNING TECHNOLOGIST')
+  setRadio('label107438id2','radio107438id');
+  radio107440.objLyr.doc.getElementById("radio107440id").checked=(val=='AVID LECTORA COMMUNITY USER')
+  setRadio('label107440id2','radio107440id');
+  radio107442.objLyr.doc.getElementById("radio107442id").checked=(val=='ALL OF THE ABOVE')
+  setRadio('label107442id2','radio107442id');
+   qu107433.hasBeenProcessed=false;
+}
+
+function Offset_qu107646(bDevRotate) {
+}
+
+function Update_qu107646() {
+  var val = VarQuestion_0005.getValue()
+  radio107649.objLyr.doc.getElementById("radio107649id").checked=(val=='LECTORA ONLINE')
+  setRadio('label107649id2','radio107649id');
+  radio107651.objLyr.doc.getElementById("radio107651id").checked=(val=='REVIEWLINK')
+  setRadio('label107651id2','radio107651id');
+  radio107653.objLyr.doc.getElementById("radio107653id").checked=(val=='COURSEMILL ADVANCED REPORTS')
+  setRadio('label107653id2','radio107653id');
+  radio107655.objLyr.doc.getElementById("radio107655id").checked=(val=='LECTORA PUBLISHER')
+  setRadio('label107655id2','radio107655id');
+   qu107646.hasBeenProcessed=false;
+}
+
+function Process_form109837() {
+    var params = "";
+    var varVal = "";
+    if(VarCurrentView.f > 0) VarCurrentView.uDT(); else VarCurrentView.getValue();
+    if(VarCurrentPageName.f > 0) VarCurrentPageName.uDT(); else VarCurrentPageName.getValue();
+    if(Var_menuState.f > 0) Var_menuState.uDT(); else Var_menuState.getValue();
+    if(VarQuestion_0001.f > 0) VarQuestion_0001.uDT(); else VarQuestion_0001.getValue();
+    if(VarQuestion_0002.f > 0) VarQuestion_0002.uDT(); else VarQuestion_0002.getValue();
+    if(VarQuestion_0003.f > 0) VarQuestion_0003.uDT(); else VarQuestion_0003.getValue();
+    if(VarQuestion_0004.f > 0) VarQuestion_0004.uDT(); else VarQuestion_0004.getValue();
+    if(VarQuestion_0005.f > 0) VarQuestion_0005.uDT(); else VarQuestion_0005.getValue();
+    if(VarEntry_0001.f > 0) VarEntry_0001.uDT(); else VarEntry_0001.getValue();
+    entry109839.objLyr.doc.forms["entry109839form"]["Entry_1"].blur()
+    varVal = VarEntry_0001.getValue(); if( varVal=='~~~null~~~') varVal = '';
+    params =  'entry_1000000='+encodeURI(varVal);
+    var httpReq = getHTTP( 'https://docs.google.com/forms/d/1vH_FW_zSVz03Ea8kczltlVzSD-X9qVqxmu9Zi1yF7F4/formResponse', 'POST', params, is.ie ? DOMException.NETWORK_ERR : null );
+    if (httpReq) {
+      if( httpReq.status != 200 && httpReq.status != 0 && httpReq.statusText.length > 0 )
+        trivAlert( '109837', 'LUC2016RCD', httpReq.statusText );
+      else if( httpReq.status == 200 || httpReq.status == 0 ) trivAlert( '109837', 'LUC2016RCD', 'Your information has been successfully submitted.' );
+    }
+}
+
 function action1963(fn){
     AdjustScreen('rotate');
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
 
-if( is.min ){
-text992 = new ObjText('text992',null,429,18,481,34,1,23,null,'div')
-text992.initSLine(0)
-text992.initRotateAngle(0,0,0)
-text992.initHasOuterShadow(0)
-text992.initHasTextShadow(0)
-text992.initHasBorder(0)
-text992.initHasOutline(0)
-text992.addIe8Attr(429, 18, 481, 34, 0, 0)
-text992.addOpacity(100)
-text992.actionShow = text992actionShow
-text992.arrCSSStyles = new Array();
-text992.arrCSSStyles.push('span.text992Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text992.build()
+function action107426else(fn){
 
-button8353 = new ObjButton('button8353', null,-4,63,267,48,1,24,'div','topfixed menu',1,'')
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action107426(fn){
+    if(VarCurrentView.equals('TabletPortrait')||VarCurrentView.equals('TabletLandscape'))
+    {animateMenu('static');
+    }else{ action107426else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+if( is.min ){
+button8353 = new ObjButton('button8353', null,-4,63,267,48,1,81,'div','topfixed menu',1,'')
 button8353.setFillStyle(1)
 button8353.initRotateAngle(0,0,0,-2,-2,263,44)
 button8353.initHasShadow(0)
@@ -434,12 +852,13 @@ button8353.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
 button8353.addIe8Attr(-2, 63, 267, 48, -3, 0)
 button8353.addOpacity(0)
 button8353.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8353.onOver = button8353onOver
 button8353.onUp = button8353onUp
 button8353.hasOnUp = true
-button8353.capture=4
+button8353.capture=5
 button8353.build()
 
-button8514 = new ObjButton('button8514', null,-4,110,267,48,1,25,'div','topfixed menu',1,'')
+button8514 = new ObjButton('button8514', null,-4,110,267,48,1,82,'div','topfixed menu',1,'')
 button8514.setFillStyle(1)
 button8514.initRotateAngle(0,0,0,-2,-2,263,44)
 button8514.initHasShadow(0)
@@ -454,7 +873,22 @@ button8514.hasOnUp = true
 button8514.capture=4
 button8514.build()
 
-button8693 = new ObjButton('button8693', null,-10,161,267,48,1,26,'div','topfixed menu',1,'')
+button104132 = new ObjButton('button104132', null,-4,110,267,48,1,83,'div','topfixed menu',1,'')
+button104132.setFillStyle(1)
+button104132.initRotateAngle(0,0,0,-2,-2,263,44)
+button104132.initHasShadow(0)
+button104132.initHasReflection(0)
+button104132.setImages('images/transbtn.gif', '', '','');
+button104132.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button104132.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button104132.addOpacity(0)
+button104132.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button104132.onUp = button104132onUp
+button104132.hasOnUp = true
+button104132.capture=4
+button104132.build()
+
+button8693 = new ObjButton('button8693', null,-10,161,267,48,1,84,'div','topfixed menu',1,'')
 button8693.setFillStyle(1)
 button8693.initRotateAngle(0,0,0,-2,-2,263,44)
 button8693.initHasShadow(0)
@@ -469,7 +903,7 @@ button8693.hasOnUp = true
 button8693.capture=4
 button8693.build()
 
-button8776 = new ObjButton('button8776', null,-4,206,267,48,1,27,'div','topfixed menu',1,'')
+button8776 = new ObjButton('button8776', null,-4,206,267,48,1,85,'div','topfixed menu',1,'')
 button8776.setFillStyle(1)
 button8776.initRotateAngle(0,0,0,-2,-2,263,44)
 button8776.initHasShadow(0)
@@ -484,7 +918,7 @@ button8776.hasOnUp = true
 button8776.capture=4
 button8776.build()
 
-button73255 = new ObjButton('button73255', null,-10,260,267,90,1,28,'div','topfixed menu',1,'')
+button73255 = new ObjButton('button73255', null,-10,260,267,90,1,86,'div','topfixed menu',1,'')
 button73255.setFillStyle(1)
 button73255.initRotateAngle(0,0,0,-2,-2,263,86)
 button73255.initHasShadow(0)
@@ -499,7 +933,7 @@ button73255.hasOnUp = true
 button73255.capture=4
 button73255.build()
 
-button7705 = new ObjButton('button7705', null,-155,-2,132,44,1,29,'div','topfixed keepontransition',1,'')
+button7705 = new ObjButton('button7705', null,-155,-2,132,44,1,87,'div','topfixed keepontransition',1,'')
 button7705.setFillStyle(1)
 button7705.initRotateAngle(0,0,0,-2,-2,128,40)
 button7705.initHasShadow(0)
@@ -572,9 +1006,623 @@ text7096.arrCSSStyles.push('span.text7096Font1 { font-size:24px; font-family:"Av
 text7096.arrCSSStyles.push('span.text7096Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
 text7096.build()
 
-arObjs.push(text992);
+text108344 = new ObjText('text108344',null,404,335,200,80,1,13,null,'div')
+text108344.initSLine(0)
+text108344.initRotateAngle(0,0,0)
+text108344.initHasOuterShadow(0)
+text108344.initHasTextShadow(0)
+text108344.initHasBorder(0)
+text108344.initHasOutline(0)
+text108344.addIe8Attr(404, 335, 200, 80, 0, 0)
+text108344.addOpacity(100)
+text108344.onUp = text108344onUp
+text108344.hasOnUp = true
+text108344.capture=4
+text108344.arrCSSStyles = new Array();
+text108344.arrCSSStyles.push('span.text108344Font1 { font-size:16px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#333333;}');
+text108344.build()
+
+text108776 = new ObjText('text108776',null,404,335,200,80,1,14,'#eaad1f','div','yellowbutton')
+text108776.initSLine(0)
+text108776.initRotateAngle(0,0,0)
+text108776.initHasOuterShadow(0)
+text108776.initHasTextShadow(0)
+text108776.initHasBorder(0)
+text108776.initHasOutline(0)
+text108776.addIe8Attr(404, 335, 200, 80, 0, 0)
+text108776.addOpacity(100)
+text108776.onUp = text108776onUp
+text108776.hasOnUp = true
+text108776.capture=4
+text108776.arrCSSStyles = new Array();
+text108776.arrCSSStyles.push('span.text108776Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#ffffff;}');
+text108776.arrCSSStyles.push('span.text108776Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text108776.build()
+
+text109178 = new ObjText('text109178',null,404,335,200,80,0,15,null,'div')
+text109178.initSLine(0)
+text109178.initRotateAngle(0,0,0)
+text109178.initHasOuterShadow(0)
+text109178.initHasTextShadow(0)
+text109178.initHasBorder(0)
+text109178.initHasOutline(0)
+text109178.addIe8Attr(404, 335, 200, 80, 0, 0)
+text109178.addOpacity(100)
+text109178.arrCSSStyles = new Array();
+text109178.arrCSSStyles.push('span.text109178Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#010101;}');
+text109178.arrCSSStyles.push('span.text109178Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text109178.build()
+
+og110037 = new ObjInline('og110037',null,0,0,-1,-1,1,0)
+og110037.isGrp = true
+og110037.addChild('text109817')
+og110037.addChild('text109872')
+og110037.addChild('form109837')
+og110037.build()
+
+text109817 = new ObjText('text109817',null,404,335,200,80,0,16,null,'div')
+text109817.initSLine(0)
+text109817.initRotateAngle(0,0,0)
+text109817.initHasOuterShadow(0)
+text109817.initHasTextShadow(0)
+text109817.initHasBorder(0)
+text109817.initHasOutline(0)
+text109817.addIe8Attr(404, 335, 200, 80, 0, 0)
+text109817.addOpacity(100)
+text109817.arrCSSStyles = new Array();
+text109817.arrCSSStyles.push('span.text109817Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#010101;}');
+text109817.arrCSSStyles.push('span.text109817Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text109817.build()
+
+text109872 = new ObjText('text109872',null,404,335,200,80,0,17,'#eaad1f','div','yellowbutton')
+text109872.initSLine(0)
+text109872.initRotateAngle(0,0,0)
+text109872.initHasOuterShadow(0)
+text109872.initHasTextShadow(0)
+text109872.initHasBorder(0)
+text109872.initHasOutline(0)
+text109872.addIe8Attr(404, 335, 200, 80, 0, 0)
+text109872.addOpacity(100)
+text109872.onUp = text109872onUp
+text109872.hasOnUp = true
+text109872.capture=4
+text109872.arrCSSStyles = new Array();
+text109872.arrCSSStyles.push('span.text109872Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#ffffff;}');
+text109872.arrCSSStyles.push('span.text109872Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text109872.build()
+
+form109837 = new ObjInline('form109837',null,0,0,-1,-1,1,0)
+form109837.isGrp = true
+form109837.addChild('entry109839')
+form109837.build()
+
+entry109839 = new ObjInline('entry109839',null,(is.ie?429:429),(is.ie?1251:1250),null,null,0,18)
+entry109839.arrCSSStyles = new Array();
+entry109839.arrCSSStyles.push('input.entry109839 { font-size:16px; font-family:"Arial", sans-serif; color:#000000; width:420px; height:39px; }');
+entry109839.build()
+
+qu103363 = new ObjInline('qu103363',null,60,180,431,304,1,0)
+qu103363.isGrp = true
+qu103363.addChild('text103365')
+qu103363.addChild('text103366')
+qu103363.addChild('radio103367')
+qu103363.addChild('text103368')
+qu103363.addChild('radio103369')
+qu103363.addChild('text103370')
+qu103363.addChild('radio103371')
+qu103363.addChild('text106149')
+qu103363.addChild('radio106150')
+qu103363.ansVar=VarQuestion_0001;
+qu103363.build()
+
+text103365 = new ObjText('text103365',null,140,200,744,37,1,19,null,'div')
+text103365.initSLine(0)
+text103365.initRotateAngle(0,0,0)
+text103365.initHasOuterShadow(0)
+text103365.initHasTextShadow(0)
+text103365.initHasBorder(0)
+text103365.initHasOutline(0)
+text103365.addIe8Attr(140, 200, 744, 37, 0, 0)
+text103365.addOpacity(100)
+text103365.arrCSSStyles = new Array();
+text103365.arrCSSStyles.push('span.text103365Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text103365.build()
+
+text103366 = new ObjText('text103366',null,167,245,717,37,1,20,null,'div')
+text103366.initSLine(1)
+text103366.initRotateAngle(0,0,0)
+text103366.initHasOuterShadow(0)
+text103366.initHasTextShadow(0)
+text103366.initHasBorder(0)
+text103366.initHasOutline(0)
+text103366.addIe8Attr(167, 245, 717, 37, 0, 0)
+text103366.addOpacity(100)
+text103366.arrCSSStyles = new Array();
+text103366.arrCSSStyles.push('span.text103366Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text103366.arrCSSStyles.push('span.text103366Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text103366.build()
+
+radio103367 = new ObjInline('radio103367',null,(is.ie?138:137),(is.ie?245:244),null,null,1,21)
+radio103367.arrCSSStyles = new Array();
+radio103367.arrCSSStyles.push('');
+radio103367.build()
+
+text103368 = new ObjText('text103368',null,167,290,717,37,1,22,null,'div')
+text103368.initSLine(1)
+text103368.initRotateAngle(0,0,0)
+text103368.initHasOuterShadow(0)
+text103368.initHasTextShadow(0)
+text103368.initHasBorder(0)
+text103368.initHasOutline(0)
+text103368.addIe8Attr(167, 290, 717, 37, 0, 0)
+text103368.addOpacity(100)
+text103368.arrCSSStyles = new Array();
+text103368.arrCSSStyles.push('span.text103368Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text103368.arrCSSStyles.push('span.text103368Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text103368.build()
+
+radio103369 = new ObjInline('radio103369',null,(is.ie?138:137),(is.ie?290:289),null,null,1,23)
+radio103369.arrCSSStyles = new Array();
+radio103369.arrCSSStyles.push('');
+radio103369.build()
+
+text103370 = new ObjText('text103370',null,167,335,717,37,1,24,null,'div')
+text103370.initSLine(1)
+text103370.initRotateAngle(0,0,0)
+text103370.initHasOuterShadow(0)
+text103370.initHasTextShadow(0)
+text103370.initHasBorder(0)
+text103370.initHasOutline(0)
+text103370.addIe8Attr(167, 335, 717, 37, 0, 0)
+text103370.addOpacity(100)
+text103370.arrCSSStyles = new Array();
+text103370.arrCSSStyles.push('span.text103370Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text103370.arrCSSStyles.push('span.text103370Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text103370.build()
+
+radio103371 = new ObjInline('radio103371',null,(is.ie?138:137),(is.ie?335:334),null,null,1,25)
+radio103371.arrCSSStyles = new Array();
+radio103371.arrCSSStyles.push('');
+radio103371.build()
+
+text106149 = new ObjText('text106149',null,167,380,717,37,1,26,null,'div')
+text106149.initSLine(1)
+text106149.initRotateAngle(0,0,0)
+text106149.initHasOuterShadow(0)
+text106149.initHasTextShadow(0)
+text106149.initHasBorder(0)
+text106149.initHasOutline(0)
+text106149.addIe8Attr(167, 380, 717, 37, 0, 0)
+text106149.addOpacity(100)
+text106149.arrCSSStyles = new Array();
+text106149.arrCSSStyles.push('span.text106149Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text106149.build()
+
+radio106150 = new ObjInline('radio106150',null,(is.ie?138:137),(is.ie?380:379),null,null,1,27)
+radio106150.arrCSSStyles = new Array();
+radio106150.arrCSSStyles.push('');
+radio106150.build()
+
+qu106988 = new ObjInline('qu106988',null,60,490,431,304,1,0)
+qu106988.isGrp = true
+qu106988.addChild('text106989')
+qu106988.addChild('text106990')
+qu106988.addChild('radio106991')
+qu106988.addChild('text106992')
+qu106988.addChild('radio106993')
+qu106988.addChild('text106994')
+qu106988.addChild('radio106995')
+qu106988.addChild('text106996')
+qu106988.addChild('radio106997')
+qu106988.ansVar=VarQuestion_0002;
+qu106988.build()
+
+text106989 = new ObjText('text106989',null,140,200,744,37,1,28,null,'div')
+text106989.initSLine(0)
+text106989.initRotateAngle(0,0,0)
+text106989.initHasOuterShadow(0)
+text106989.initHasTextShadow(0)
+text106989.initHasBorder(0)
+text106989.initHasOutline(0)
+text106989.addIe8Attr(140, 200, 744, 37, 0, 0)
+text106989.addOpacity(100)
+text106989.arrCSSStyles = new Array();
+text106989.arrCSSStyles.push('span.text106989Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text106989.arrCSSStyles.push('span.text106989Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text106989.build()
+
+text106990 = new ObjText('text106990',null,167,245,717,37,1,29,null,'div')
+text106990.initSLine(1)
+text106990.initRotateAngle(0,0,0)
+text106990.initHasOuterShadow(0)
+text106990.initHasTextShadow(0)
+text106990.initHasBorder(0)
+text106990.initHasOutline(0)
+text106990.addIe8Attr(167, 245, 717, 37, 0, 0)
+text106990.addOpacity(100)
+text106990.arrCSSStyles = new Array();
+text106990.arrCSSStyles.push('span.text106990Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text106990.arrCSSStyles.push('span.text106990Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text106990.build()
+
+radio106991 = new ObjInline('radio106991',null,(is.ie?138:137),(is.ie?245:244),null,null,1,30)
+radio106991.arrCSSStyles = new Array();
+radio106991.arrCSSStyles.push('');
+radio106991.build()
+
+text106992 = new ObjText('text106992',null,167,290,717,37,1,31,null,'div')
+text106992.initSLine(1)
+text106992.initRotateAngle(0,0,0)
+text106992.initHasOuterShadow(0)
+text106992.initHasTextShadow(0)
+text106992.initHasBorder(0)
+text106992.initHasOutline(0)
+text106992.addIe8Attr(167, 290, 717, 37, 0, 0)
+text106992.addOpacity(100)
+text106992.arrCSSStyles = new Array();
+text106992.arrCSSStyles.push('span.text106992Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text106992.arrCSSStyles.push('span.text106992Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text106992.build()
+
+radio106993 = new ObjInline('radio106993',null,(is.ie?138:137),(is.ie?290:289),null,null,1,32)
+radio106993.arrCSSStyles = new Array();
+radio106993.arrCSSStyles.push('');
+radio106993.build()
+
+text106994 = new ObjText('text106994',null,167,335,717,37,1,33,null,'div')
+text106994.initSLine(1)
+text106994.initRotateAngle(0,0,0)
+text106994.initHasOuterShadow(0)
+text106994.initHasTextShadow(0)
+text106994.initHasBorder(0)
+text106994.initHasOutline(0)
+text106994.addIe8Attr(167, 335, 717, 37, 0, 0)
+text106994.addOpacity(100)
+text106994.arrCSSStyles = new Array();
+text106994.arrCSSStyles.push('span.text106994Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text106994.arrCSSStyles.push('span.text106994Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text106994.build()
+
+radio106995 = new ObjInline('radio106995',null,(is.ie?138:137),(is.ie?335:334),null,null,1,34)
+radio106995.arrCSSStyles = new Array();
+radio106995.arrCSSStyles.push('');
+radio106995.build()
+
+text106996 = new ObjText('text106996',null,167,380,717,37,1,35,null,'div')
+text106996.initSLine(1)
+text106996.initRotateAngle(0,0,0)
+text106996.initHasOuterShadow(0)
+text106996.initHasTextShadow(0)
+text106996.initHasBorder(0)
+text106996.initHasOutline(0)
+text106996.addIe8Attr(167, 380, 717, 37, 0, 0)
+text106996.addOpacity(100)
+text106996.arrCSSStyles = new Array();
+text106996.arrCSSStyles.push('span.text106996Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text106996.arrCSSStyles.push('span.text106996Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text106996.build()
+
+radio106997 = new ObjInline('radio106997',null,(is.ie?138:137),(is.ie?380:379),null,null,1,36)
+radio106997.arrCSSStyles = new Array();
+radio106997.arrCSSStyles.push('');
+radio106997.build()
+
+qu107444 = new ObjInline('qu107444',null,60,800,431,304,1,0)
+qu107444.isGrp = true
+qu107444.addChild('text107445')
+qu107444.addChild('text107446')
+qu107444.addChild('radio107447')
+qu107444.addChild('text107448')
+qu107444.addChild('radio107449')
+qu107444.addChild('text107450')
+qu107444.addChild('radio107451')
+qu107444.addChild('text107452')
+qu107444.addChild('radio107453')
+qu107444.ansVar=VarQuestion_0004;
+qu107444.build()
+
+text107445 = new ObjText('text107445',null,140,200,744,37,1,37,null,'div')
+text107445.initSLine(0)
+text107445.initRotateAngle(0,0,0)
+text107445.initHasOuterShadow(0)
+text107445.initHasTextShadow(0)
+text107445.initHasBorder(0)
+text107445.initHasOutline(0)
+text107445.addIe8Attr(140, 200, 744, 37, 0, 0)
+text107445.addOpacity(100)
+text107445.arrCSSStyles = new Array();
+text107445.arrCSSStyles.push('span.text107445Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text107445.arrCSSStyles.push('span.text107445Font3 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107445.build()
+
+text107446 = new ObjText('text107446',null,167,245,717,37,1,38,null,'div')
+text107446.initSLine(1)
+text107446.initRotateAngle(0,0,0)
+text107446.initHasOuterShadow(0)
+text107446.initHasTextShadow(0)
+text107446.initHasBorder(0)
+text107446.initHasOutline(0)
+text107446.addIe8Attr(167, 245, 717, 37, 0, 0)
+text107446.addOpacity(100)
+text107446.arrCSSStyles = new Array();
+text107446.arrCSSStyles.push('span.text107446Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107446.arrCSSStyles.push('span.text107446Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107446.build()
+
+radio107447 = new ObjInline('radio107447',null,(is.ie?138:137),(is.ie?245:244),null,null,1,39)
+radio107447.arrCSSStyles = new Array();
+radio107447.arrCSSStyles.push('');
+radio107447.build()
+
+text107448 = new ObjText('text107448',null,167,290,717,37,1,40,null,'div')
+text107448.initSLine(1)
+text107448.initRotateAngle(0,0,0)
+text107448.initHasOuterShadow(0)
+text107448.initHasTextShadow(0)
+text107448.initHasBorder(0)
+text107448.initHasOutline(0)
+text107448.addIe8Attr(167, 290, 717, 37, 0, 0)
+text107448.addOpacity(100)
+text107448.arrCSSStyles = new Array();
+text107448.arrCSSStyles.push('span.text107448Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107448.arrCSSStyles.push('span.text107448Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107448.build()
+
+radio107449 = new ObjInline('radio107449',null,(is.ie?138:137),(is.ie?290:289),null,null,1,41)
+radio107449.arrCSSStyles = new Array();
+radio107449.arrCSSStyles.push('');
+radio107449.build()
+
+text107450 = new ObjText('text107450',null,167,335,717,37,1,42,null,'div')
+text107450.initSLine(1)
+text107450.initRotateAngle(0,0,0)
+text107450.initHasOuterShadow(0)
+text107450.initHasTextShadow(0)
+text107450.initHasBorder(0)
+text107450.initHasOutline(0)
+text107450.addIe8Attr(167, 335, 717, 37, 0, 0)
+text107450.addOpacity(100)
+text107450.arrCSSStyles = new Array();
+text107450.arrCSSStyles.push('span.text107450Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107450.arrCSSStyles.push('span.text107450Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107450.build()
+
+radio107451 = new ObjInline('radio107451',null,(is.ie?138:137),(is.ie?335:334),null,null,1,43)
+radio107451.arrCSSStyles = new Array();
+radio107451.arrCSSStyles.push('');
+radio107451.build()
+
+text107452 = new ObjText('text107452',null,167,380,717,37,1,44,null,'div')
+text107452.initSLine(1)
+text107452.initRotateAngle(0,0,0)
+text107452.initHasOuterShadow(0)
+text107452.initHasTextShadow(0)
+text107452.initHasBorder(0)
+text107452.initHasOutline(0)
+text107452.addIe8Attr(167, 380, 717, 37, 0, 0)
+text107452.addOpacity(100)
+text107452.arrCSSStyles = new Array();
+text107452.arrCSSStyles.push('span.text107452Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107452.arrCSSStyles.push('span.text107452Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107452.build()
+
+radio107453 = new ObjInline('radio107453',null,(is.ie?138:137),(is.ie?380:379),null,null,1,45)
+radio107453.arrCSSStyles = new Array();
+radio107453.arrCSSStyles.push('');
+radio107453.build()
+
+qu107433 = new ObjInline('qu107433',null,60,1110,431,304,1,0)
+qu107433.isGrp = true
+qu107433.addChild('text107434')
+qu107433.addChild('text107435')
+qu107433.addChild('radio107436')
+qu107433.addChild('text107437')
+qu107433.addChild('radio107438')
+qu107433.addChild('text107439')
+qu107433.addChild('radio107440')
+qu107433.addChild('text107441')
+qu107433.addChild('radio107442')
+qu107433.ansVar=VarQuestion_0003;
+qu107433.build()
+
+text107434 = new ObjText('text107434',null,140,200,744,37,1,46,null,'div')
+text107434.initSLine(0)
+text107434.initRotateAngle(0,0,0)
+text107434.initHasOuterShadow(0)
+text107434.initHasTextShadow(0)
+text107434.initHasBorder(0)
+text107434.initHasOutline(0)
+text107434.addIe8Attr(140, 200, 744, 37, 0, 0)
+text107434.addOpacity(100)
+text107434.arrCSSStyles = new Array();
+text107434.arrCSSStyles.push('span.text107434Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text107434.arrCSSStyles.push('span.text107434Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107434.build()
+
+text107435 = new ObjText('text107435',null,167,245,717,37,1,47,null,'div')
+text107435.initSLine(1)
+text107435.initRotateAngle(0,0,0)
+text107435.initHasOuterShadow(0)
+text107435.initHasTextShadow(0)
+text107435.initHasBorder(0)
+text107435.initHasOutline(0)
+text107435.addIe8Attr(167, 245, 717, 37, 0, 0)
+text107435.addOpacity(100)
+text107435.arrCSSStyles = new Array();
+text107435.arrCSSStyles.push('span.text107435Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107435.arrCSSStyles.push('span.text107435Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107435.build()
+
+radio107436 = new ObjInline('radio107436',null,(is.ie?138:137),(is.ie?245:244),null,null,1,48)
+radio107436.arrCSSStyles = new Array();
+radio107436.arrCSSStyles.push('');
+radio107436.build()
+
+text107437 = new ObjText('text107437',null,167,290,717,37,1,49,null,'div')
+text107437.initSLine(1)
+text107437.initRotateAngle(0,0,0)
+text107437.initHasOuterShadow(0)
+text107437.initHasTextShadow(0)
+text107437.initHasBorder(0)
+text107437.initHasOutline(0)
+text107437.addIe8Attr(167, 290, 717, 37, 0, 0)
+text107437.addOpacity(100)
+text107437.arrCSSStyles = new Array();
+text107437.arrCSSStyles.push('span.text107437Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107437.arrCSSStyles.push('span.text107437Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107437.build()
+
+radio107438 = new ObjInline('radio107438',null,(is.ie?138:137),(is.ie?290:289),null,null,1,50)
+radio107438.arrCSSStyles = new Array();
+radio107438.arrCSSStyles.push('');
+radio107438.build()
+
+text107439 = new ObjText('text107439',null,167,335,717,37,1,51,null,'div')
+text107439.initSLine(1)
+text107439.initRotateAngle(0,0,0)
+text107439.initHasOuterShadow(0)
+text107439.initHasTextShadow(0)
+text107439.initHasBorder(0)
+text107439.initHasOutline(0)
+text107439.addIe8Attr(167, 335, 717, 37, 0, 0)
+text107439.addOpacity(100)
+text107439.arrCSSStyles = new Array();
+text107439.arrCSSStyles.push('span.text107439Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107439.arrCSSStyles.push('span.text107439Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107439.build()
+
+radio107440 = new ObjInline('radio107440',null,(is.ie?138:137),(is.ie?335:334),null,null,1,52)
+radio107440.arrCSSStyles = new Array();
+radio107440.arrCSSStyles.push('');
+radio107440.build()
+
+text107441 = new ObjText('text107441',null,167,380,717,37,1,53,null,'div')
+text107441.initSLine(1)
+text107441.initRotateAngle(0,0,0)
+text107441.initHasOuterShadow(0)
+text107441.initHasTextShadow(0)
+text107441.initHasBorder(0)
+text107441.initHasOutline(0)
+text107441.addIe8Attr(167, 380, 717, 37, 0, 0)
+text107441.addOpacity(100)
+text107441.arrCSSStyles = new Array();
+text107441.arrCSSStyles.push('span.text107441Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107441.arrCSSStyles.push('span.text107441Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107441.build()
+
+radio107442 = new ObjInline('radio107442',null,(is.ie?138:137),(is.ie?380:379),null,null,1,54)
+radio107442.arrCSSStyles = new Array();
+radio107442.arrCSSStyles.push('');
+radio107442.build()
+
+qu107646 = new ObjInline('qu107646',null,60,1420,431,304,1,0)
+qu107646.isGrp = true
+qu107646.addChild('text107647')
+qu107646.addChild('text107648')
+qu107646.addChild('radio107649')
+qu107646.addChild('text107650')
+qu107646.addChild('radio107651')
+qu107646.addChild('text107652')
+qu107646.addChild('radio107653')
+qu107646.addChild('text107654')
+qu107646.addChild('radio107655')
+qu107646.ansVar=VarQuestion_0005;
+qu107646.build()
+
+text107647 = new ObjText('text107647',null,140,200,744,37,1,55,null,'div')
+text107647.initSLine(0)
+text107647.initRotateAngle(0,0,0)
+text107647.initHasOuterShadow(0)
+text107647.initHasTextShadow(0)
+text107647.initHasBorder(0)
+text107647.initHasOutline(0)
+text107647.addIe8Attr(140, 200, 744, 37, 0, 0)
+text107647.addOpacity(100)
+text107647.arrCSSStyles = new Array();
+text107647.arrCSSStyles.push('span.text107647Font1 { font-size:24px; font-family:"AvenirNext LT Pro MediumCn", sans-serif; color:#000000;}');
+text107647.arrCSSStyles.push('span.text107647Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107647.build()
+
+text107648 = new ObjText('text107648',null,167,245,717,37,1,56,null,'div')
+text107648.initSLine(1)
+text107648.initRotateAngle(0,0,0)
+text107648.initHasOuterShadow(0)
+text107648.initHasTextShadow(0)
+text107648.initHasBorder(0)
+text107648.initHasOutline(0)
+text107648.addIe8Attr(167, 245, 717, 37, 0, 0)
+text107648.addOpacity(100)
+text107648.arrCSSStyles = new Array();
+text107648.arrCSSStyles.push('span.text107648Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107648.arrCSSStyles.push('span.text107648Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107648.build()
+
+radio107649 = new ObjInline('radio107649',null,(is.ie?138:137),(is.ie?245:244),null,null,1,57)
+radio107649.arrCSSStyles = new Array();
+radio107649.arrCSSStyles.push('');
+radio107649.build()
+
+text107650 = new ObjText('text107650',null,167,290,717,37,1,58,null,'div')
+text107650.initSLine(1)
+text107650.initRotateAngle(0,0,0)
+text107650.initHasOuterShadow(0)
+text107650.initHasTextShadow(0)
+text107650.initHasBorder(0)
+text107650.initHasOutline(0)
+text107650.addIe8Attr(167, 290, 717, 37, 0, 0)
+text107650.addOpacity(100)
+text107650.arrCSSStyles = new Array();
+text107650.arrCSSStyles.push('span.text107650Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107650.arrCSSStyles.push('span.text107650Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107650.build()
+
+radio107651 = new ObjInline('radio107651',null,(is.ie?138:137),(is.ie?290:289),null,null,1,59)
+radio107651.arrCSSStyles = new Array();
+radio107651.arrCSSStyles.push('');
+radio107651.build()
+
+text107652 = new ObjText('text107652',null,167,335,717,37,1,60,null,'div')
+text107652.initSLine(1)
+text107652.initRotateAngle(0,0,0)
+text107652.initHasOuterShadow(0)
+text107652.initHasTextShadow(0)
+text107652.initHasBorder(0)
+text107652.initHasOutline(0)
+text107652.addIe8Attr(167, 335, 717, 37, 0, 0)
+text107652.addOpacity(100)
+text107652.arrCSSStyles = new Array();
+text107652.arrCSSStyles.push('span.text107652Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107652.arrCSSStyles.push('span.text107652Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107652.build()
+
+radio107653 = new ObjInline('radio107653',null,(is.ie?138:137),(is.ie?335:334),null,null,1,61)
+radio107653.arrCSSStyles = new Array();
+radio107653.arrCSSStyles.push('');
+radio107653.build()
+
+text107654 = new ObjText('text107654',null,167,380,717,37,1,62,null,'div')
+text107654.initSLine(1)
+text107654.initRotateAngle(0,0,0)
+text107654.initHasOuterShadow(0)
+text107654.initHasTextShadow(0)
+text107654.initHasBorder(0)
+text107654.initHasOutline(0)
+text107654.addIe8Attr(167, 380, 717, 37, 0, 0)
+text107654.addOpacity(100)
+text107654.arrCSSStyles = new Array();
+text107654.arrCSSStyles.push('span.text107654Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107654.arrCSSStyles.push('span.text107654Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text107654.build()
+
+radio107655 = new ObjInline('radio107655',null,(is.ie?138:137),(is.ie?380:379),null,null,1,63)
+radio107655.arrCSSStyles = new Array();
+radio107655.arrCSSStyles.push('');
+radio107655.build()
+
+var trivQuestionArray=[qu103363,qu106988,qu107444,qu107433,qu107646];
 arObjs.push(button8353);
 arObjs.push(button8514);
+arObjs.push(button104132);
 arObjs.push(button8693);
 arObjs.push(button8776);
 arObjs.push(button73255);
@@ -584,6 +1632,64 @@ arObjs.push(image1972);
 arObjs.push(image6922);
 arObjs.push(text6601);
 arObjs.push(text7096);
+arObjs.push(text108344);
+arObjs.push(text108776);
+arObjs.push(text109178);
+arObjs.push(og110037);
+arObjs.push(text109817);
+arObjs.push(text109872);
+arObjs.push(form109837);
+arObjs.push(entry109839);
+arObjs.push(qu103363);
+arObjs.push(text103365);
+arObjs.push(text103366);
+arObjs.push(radio103367);
+arObjs.push(text103368);
+arObjs.push(radio103369);
+arObjs.push(text103370);
+arObjs.push(radio103371);
+arObjs.push(text106149);
+arObjs.push(radio106150);
+arObjs.push(qu106988);
+arObjs.push(text106989);
+arObjs.push(text106990);
+arObjs.push(radio106991);
+arObjs.push(text106992);
+arObjs.push(radio106993);
+arObjs.push(text106994);
+arObjs.push(radio106995);
+arObjs.push(text106996);
+arObjs.push(radio106997);
+arObjs.push(qu107444);
+arObjs.push(text107445);
+arObjs.push(text107446);
+arObjs.push(radio107447);
+arObjs.push(text107448);
+arObjs.push(radio107449);
+arObjs.push(text107450);
+arObjs.push(radio107451);
+arObjs.push(text107452);
+arObjs.push(radio107453);
+arObjs.push(qu107433);
+arObjs.push(text107434);
+arObjs.push(text107435);
+arObjs.push(radio107436);
+arObjs.push(text107437);
+arObjs.push(radio107438);
+arObjs.push(text107439);
+arObjs.push(radio107440);
+arObjs.push(text107441);
+arObjs.push(radio107442);
+arObjs.push(qu107646);
+arObjs.push(text107647);
+arObjs.push(text107648);
+arObjs.push(radio107649);
+arObjs.push(text107650);
+arObjs.push(radio107651);
+arObjs.push(text107652);
+arObjs.push(radio107653);
+arObjs.push(text107654);
+arObjs.push(radio107655);
 
 
 writeStyleSheets(arObjs);}
@@ -604,16 +1710,11 @@ if( is.min ){
 }
 </script>
 
-<div id="text992"><a id="text992anc" style="display:block;height:0px;width:0px;"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text992Font1"  >device mode?
-</span ></p >
-</div>
-
 <script>
 if( is.min ){
     document.write(button8353.div)
     document.write(button8514.div)
+    document.write(button104132.div)
     document.write(button8693.div)
     document.write(button8776.div)
     document.write(button73255.div)
@@ -636,6 +1737,306 @@ if( is.min ){
 </span ></p >
 </div>
 
+<div id="text108344"><a id="text108344anc" style="display:block;height:0px;width:0px;" href="javascript:text108344.onUp()"></a>
+<div style="cursor:pointer">
+<p  legLH="1.127" style="margin-left:0px;text-indent:0px;line-height:1.080;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text108344Font1"  >Official Terms and Conditions apply. Tap here to read.
+</span ></p >
+</div></div>
+
+<div id="text108776" class="yellowbutton"><a id="text108776anc" style="display:block;height:0px;width:0px;" href="javascript:text108776.onUp()"></a>
+<div style="cursor:pointer">
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text108776Font1"  >SUBMIT</span ><span class="text108776Font2" style="background-color:transparent" >
+</span ></p >
+</div></div>
+
+<div id="text109178"><a id="text109178anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.168" style="margin-left:0px;text-indent:0px;line-height:1.168;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text109178Font1"  >ONE OR MORE ANSWERS ARE WRONG...</span ><span class="text109178Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="og110037"><a id="og110037anc"></a></div>
+<div id="text109817"><a id="text109817anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.168" style="margin-left:0px;text-indent:0px;line-height:1.168;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text109817Font1"  >EXCELLENT! PLEASE PROVIDE YOUR EMAIL AND PRESS SEND:</span ><span class="text109817Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text109872" class="yellowbutton"><a id="text109872anc" style="display:block;height:0px;width:0px;" href="javascript:text109872.onUp()"></a>
+<div style="cursor:pointer">
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text109872Font1"  >SEND</span ><span class="text109872Font2" style="background-color:transparent" >
+</span ></p >
+</div></div>
+
+<fieldset style="border:0;">
+<legend style="font-size:0px; position:absolute; top:-100px;"> Form_1</legend>
+<div id="form109837"><a id="form109837anc"></a></div>
+<div id="entry109839"><a id="entry109839anc"></a>
+<form name="entry109839form" onSubmit="return false;">
+<script>
+document.write('<input class="entry109839" type="text" name="Entry_1" title="Entry_1" id="entry109839id" size="33" maxlength="40" onPropertyChange="if( !VarEntry_0001.equals(this.value) ) { VarEntry_0001.set(this.value); }" onChange="if( !VarEntry_0001.equals(this.value) ) { VarEntry_0001.set(this.value); }" onKeyUp="VarEntry_0001.set(this.value);;" onBlur="" >')
+</script>
+</form>
+</div>
+</fieldset>
+<fieldset style="border:0;">
+<div id="qu103363"><a id="qu103363anc"></a>
+</div>
+<legend><div id="text103365"><a id="text103365anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text103365Font1"  >WHAT STATE IS THE LECTORA DEVELOPMENT TEAM BASED IN?
+</span ></p >
+</div>
+</legend>
+
+<div id="text103366"><a id="text103366anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label103367id" for="radio103367id" onClick="VarQuestion_0001.set('OHIO');Update_qu103363();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text103366Font1"  >OHIO</span ><span class="text103366Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio103367"><a id="radio103367anc"></a>
+<input type="radio" name="qu103363" class="custEle" id="radio103367id" value="OHIO"  >
+&nbsp;<label id="label103367id2" for="radio103367id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0001.set('OHIO');Update_qu103363();"></label>
+</div>
+<div id="text103368"><a id="text103368anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label103369id" for="radio103369id" onClick="VarQuestion_0001.set('FLORIDA');Update_qu103363();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text103368Font1"  >FLORIDA</span ><span class="text103368Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio103369"><a id="radio103369anc"></a>
+<input type="radio" name="qu103363" class="custEle" id="radio103369id" value="FLORIDA"  >
+&nbsp;<label id="label103369id2" for="radio103369id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0001.set('FLORIDA');Update_qu103363();"></label>
+</div>
+<div id="text103370"><a id="text103370anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label103371id" for="radio103371id" onClick="VarQuestion_0001.set('CALIFORNIA');Update_qu103363();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text103370Font1"  >CALIFORNIA</span ><span class="text103370Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio103371"><a id="radio103371anc"></a>
+<input type="radio" name="qu103363" class="custEle" id="radio103371id" value="CALIFORNIA"  >
+&nbsp;<label id="label103371id2" for="radio103371id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0001.set('CALIFORNIA');Update_qu103363();"></label>
+</div>
+<div id="text106149"><a id="text106149anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label106150id" for="radio106150id" onClick="VarQuestion_0001.set('TENNESSEE');Update_qu103363();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106149Font1"  >TENNESSEE
+</span ></p >
+</label></div>
+
+<div id="radio106150"><a id="radio106150anc"></a>
+<input type="radio" name="qu103363" class="custEle" id="radio106150id" value="TENNESSEE"  >
+&nbsp;<label id="label106150id2" for="radio106150id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0001.set('TENNESSEE');Update_qu103363();"></label>
+</div>
+</fieldset>
+<fieldset style="border:0;">
+<div id="qu106988"><a id="qu106988anc"></a>
+</div>
+<legend><div id="text106989"><a id="text106989anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106989Font1"  >REVIEWLINK SUPPORTS CONTENT FROM WHICH TOOLS?</span ><span class="text106989Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+</legend>
+
+<div id="text106990"><a id="text106990anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label106991id" for="radio106991id" onClick="VarQuestion_0002.set('LECTORA INSPIRE / LECTORA ONLINE');Update_qu106988();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106990Font1"  >LECTORA INSPIRE / LECTORA ONLINE</span ><span class="text106990Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio106991"><a id="radio106991anc"></a>
+<input type="radio" name="qu106988" class="custEle" id="radio106991id" value="LECTORA INSPIRE / LECTORA ONLINE"  >
+&nbsp;<label id="label106991id2" for="radio106991id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0002.set('LECTORA INSPIRE / LECTORA ONLINE');Update_qu106988();"></label>
+</div>
+<div id="text106992"><a id="text106992anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label106993id" for="radio106993id" onClick="VarQuestion_0002.set('ADOBE CAPTIVATE ');Update_qu106988();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106992Font1"  >ADOBE CAPTIVATE </span ><span class="text106992Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio106993"><a id="radio106993anc"></a>
+<input type="radio" name="qu106988" class="custEle" id="radio106993id" value="ADOBE CAPTIVATE "  >
+&nbsp;<label id="label106993id2" for="radio106993id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0002.set('ADOBE CAPTIVATE ');Update_qu106988();"></label>
+</div>
+<div id="text106994"><a id="text106994anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label106995id" for="radio106995id" onClick="VarQuestion_0002.set('ARTICULATE STORYLINE');Update_qu106988();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106994Font1"  >ARTICULATE STORYLINE</span ><span class="text106994Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio106995"><a id="radio106995anc"></a>
+<input type="radio" name="qu106988" class="custEle" id="radio106995id" value="ARTICULATE STORYLINE"  >
+&nbsp;<label id="label106995id2" for="radio106995id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0002.set('ARTICULATE STORYLINE');Update_qu106988();"></label>
+</div>
+<div id="text106996"><a id="text106996anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label106997id" for="radio106997id" onClick="VarQuestion_0002.set('ALL OF THE ABOVE');Update_qu106988();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text106996Font1"  >ALL OF THE ABOVE</span ><span class="text106996Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio106997"><a id="radio106997anc"></a>
+<input type="radio" name="qu106988" class="custEle" id="radio106997id" value="ALL OF THE ABOVE"  >
+&nbsp;<label id="label106997id2" for="radio106997id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0002.set('ALL OF THE ABOVE');Update_qu106988();"></label>
+</div>
+</fieldset>
+<fieldset style="border:0;">
+<div id="qu107444"><a id="qu107444anc"></a>
+</div>
+<legend><div id="text107445"><a id="text107445anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107445Font1"  >RESPONSIVE COURSE DESIGN™ WAS FIRST RELEASED IN:</span ><span class="text107445Font3" style="background-color:transparent" >
+</span ></p >
+</div>
+</legend>
+
+<div id="text107446"><a id="text107446anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107447id" for="radio107447id" onClick="VarQuestion_0004.set('COURSEMILL MOBILE');Update_qu107444();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107446Font1"  >COURSEMILL MOBILE</span ><span class="text107446Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107447"><a id="radio107447anc"></a>
+<input type="radio" name="qu107444" class="custEle" id="radio107447id" value="COURSEMILL MOBILE"  >
+&nbsp;<label id="label107447id2" for="radio107447id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0004.set('COURSEMILL MOBILE');Update_qu107444();"></label>
+</div>
+<div id="text107448"><a id="text107448anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107449id" for="radio107449id" onClick="VarQuestion_0004.set('LECTORA 16');Update_qu107444();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107448Font1"  >LECTORA 16</span ><span class="text107448Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107449"><a id="radio107449anc"></a>
+<input type="radio" name="qu107444" class="custEle" id="radio107449id" value="LECTORA 16"  >
+&nbsp;<label id="label107449id2" for="radio107449id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0004.set('LECTORA 16');Update_qu107444();"></label>
+</div>
+<div id="text107450"><a id="text107450anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107451id" for="radio107451id" onClick="VarQuestion_0004.set('LECTORA ONLINE');Update_qu107444();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107450Font1"  >LECTORA ONLINE</span ><span class="text107450Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107451"><a id="radio107451anc"></a>
+<input type="radio" name="qu107444" class="custEle" id="radio107451id" value="LECTORA ONLINE"  >
+&nbsp;<label id="label107451id2" for="radio107451id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0004.set('LECTORA ONLINE');Update_qu107444();"></label>
+</div>
+<div id="text107452"><a id="text107452anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107453id" for="radio107453id" onClick="VarQuestion_0004.set('BRANCHTRACK');Update_qu107444();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107452Font1"  >BRANCHTRACK</span ><span class="text107452Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107453"><a id="radio107453anc"></a>
+<input type="radio" name="qu107444" class="custEle" id="radio107453id" value="BRANCHTRACK"  >
+&nbsp;<label id="label107453id2" for="radio107453id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0004.set('BRANCHTRACK');Update_qu107444();"></label>
+</div>
+</fieldset>
+<fieldset style="border:0;">
+<div id="qu107433"><a id="qu107433anc"></a>
+</div>
+<legend><div id="text107434"><a id="text107434anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107434Font1"  >THIS LUC APP WAS BUILT BY SERGEY SNEGIREV, WHO IS ALSO: </span ><span class="text107434Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+</legend>
+
+<div id="text107435"><a id="text107435anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107436id" for="radio107436id" onClick="VarQuestion_0003.set('FOUNDER OF BRANCHTRACK.COM');Update_qu107433();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107435Font1"  >FOUNDER OF BRANCHTRACK.COM</span ><span class="text107435Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107436"><a id="radio107436anc"></a>
+<input type="radio" name="qu107433" class="custEle" id="radio107436id" value="FOUNDER OF BRANCHTRACK.COM"  >
+&nbsp;<label id="label107436id2" for="radio107436id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0003.set('FOUNDER OF BRANCHTRACK.COM');Update_qu107433();"></label>
+</div>
+<div id="text107437"><a id="text107437anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107438id" for="radio107438id" onClick="VarQuestion_0003.set('E-LEARNING TECHNOLOGIST');Update_qu107433();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107437Font1"  >E-LEARNING TECHNOLOGIST</span ><span class="text107437Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107438"><a id="radio107438anc"></a>
+<input type="radio" name="qu107433" class="custEle" id="radio107438id" value="E-LEARNING TECHNOLOGIST"  >
+&nbsp;<label id="label107438id2" for="radio107438id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0003.set('E-LEARNING TECHNOLOGIST');Update_qu107433();"></label>
+</div>
+<div id="text107439"><a id="text107439anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107440id" for="radio107440id" onClick="VarQuestion_0003.set('AVID LECTORA COMMUNITY USER');Update_qu107433();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107439Font1"  >AVID LECTORA COMMUNITY USER</span ><span class="text107439Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107440"><a id="radio107440anc"></a>
+<input type="radio" name="qu107433" class="custEle" id="radio107440id" value="AVID LECTORA COMMUNITY USER"  >
+&nbsp;<label id="label107440id2" for="radio107440id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0003.set('AVID LECTORA COMMUNITY USER');Update_qu107433();"></label>
+</div>
+<div id="text107441"><a id="text107441anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107442id" for="radio107442id" onClick="VarQuestion_0003.set('ALL OF THE ABOVE');Update_qu107433();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107441Font1"  >ALL OF THE ABOVE</span ><span class="text107441Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107442"><a id="radio107442anc"></a>
+<input type="radio" name="qu107433" class="custEle" id="radio107442id" value="ALL OF THE ABOVE"  >
+&nbsp;<label id="label107442id2" for="radio107442id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0003.set('ALL OF THE ABOVE');Update_qu107433();"></label>
+</div>
+</fieldset>
+<fieldset style="border:0;">
+<div id="qu107646"><a id="qu107646anc"></a>
+</div>
+<legend><div id="text107647"><a id="text107647anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107647Font1"  >REPORTING WITH LIVE EXCEL SPREADSHEETS IS AVAILABLE IN:</span ><span class="text107647Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+</legend>
+
+<div id="text107648"><a id="text107648anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107649id" for="radio107649id" onClick="VarQuestion_0005.set('LECTORA ONLINE');Update_qu107646();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107648Font1"  >LECTORA ONLINE</span ><span class="text107648Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107649"><a id="radio107649anc"></a>
+<input type="radio" name="qu107646" class="custEle" id="radio107649id" value="LECTORA ONLINE"  >
+&nbsp;<label id="label107649id2" for="radio107649id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0005.set('LECTORA ONLINE');Update_qu107646();"></label>
+</div>
+<div id="text107650"><a id="text107650anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107651id" for="radio107651id" onClick="VarQuestion_0005.set('REVIEWLINK');Update_qu107646();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107650Font1"  >REVIEWLINK</span ><span class="text107650Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107651"><a id="radio107651anc"></a>
+<input type="radio" name="qu107646" class="custEle" id="radio107651id" value="REVIEWLINK"  >
+&nbsp;<label id="label107651id2" for="radio107651id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0005.set('REVIEWLINK');Update_qu107646();"></label>
+</div>
+<div id="text107652"><a id="text107652anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107653id" for="radio107653id" onClick="VarQuestion_0005.set('COURSEMILL ADVANCED REPORTS');Update_qu107646();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107652Font1"  >COURSEMILL ADVANCED REPORTS</span ><span class="text107652Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107653"><a id="radio107653anc"></a>
+<input type="radio" name="qu107646" class="custEle" id="radio107653id" value="COURSEMILL ADVANCED REPORTS"  >
+&nbsp;<label id="label107653id2" for="radio107653id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0005.set('COURSEMILL ADVANCED REPORTS');Update_qu107646();"></label>
+</div>
+<div id="text107654"><a id="text107654anc" style="display:block;height:0px;width:0px;"></a>
+<label id="label107655id" for="radio107655id" onClick="VarQuestion_0005.set('LECTORA PUBLISHER');Update_qu107646();"><p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107654Font1"  >LECTORA PUBLISHER</span ><span class="text107654Font2" style="background-color:transparent" >
+</span ></p >
+</label></div>
+
+<div id="radio107655"><a id="radio107655anc"></a>
+<input type="radio" name="qu107646" class="custEle" id="radio107655id" value="LECTORA PUBLISHER"  >
+&nbsp;<label id="label107655id2" for="radio107655id" class="custRadio" style="width: 28px;" onClick="VarQuestion_0005.set('LECTORA PUBLISHER');Update_qu107646();"></label>
+</div>
+</fieldset>
 
 <script>
 if( is.min ){

@@ -113,7 +113,7 @@ function ReFlow() {
 VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
 TrivCurrRespView = VarCurrentView;
 if(is.awesomium);
-  TrivCurrRespView.set('TabletPortrait');
+  TrivCurrRespView.set('PhonePortrait');
 VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'luc2016rcd' )
 VarCurrentPageName.set( 'SCHEDULE' )
 Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
@@ -143,9 +143,9 @@ function init() {
     setTimeout( "preload(GetDevicePreload())",0)
     detect();
     pageLayer.show();
-    text992.init()
     button8353.init()
     button8514.init()
+    button104132.init()
     button8693.init()
     button8776.init()
     button73255.init()
@@ -211,9 +211,9 @@ function init() {
     text65196.init()
     text4409.init()
     text4408.init()
-    text992.activate()
     button8353.activate()
     button8514.activate()
+    button104132.activate()
     button8693.activate()
     button8776.activate()
     button73255.activate()
@@ -370,29 +370,33 @@ function trivResetEntry(entFld) {
 }
 
 function OnDeviceRotate() {
-action1017();action1963();
+action1963();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079(fn){
+    if(VarCurrentView.contains('xyz'))
+    {
+    }else{ action100079else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action1681(fn){
     AdjustScreen('init');
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function action990(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function action1017(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function text992actionShow() {
-  setTimeout("if(!text992.isVisible()) { text992.objLyr.moveTo(text992.x, text992.y);text992.onShow();action990(); }", 1 )
 }
 
 function action20620(fn){
@@ -405,6 +409,10 @@ function action8358(fn){
     ObjLayerActionGoTo('#top');
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8353onOver() {
+  action100079();
 }
 
 function button8353onUp() {
@@ -425,6 +433,22 @@ function action8515(fn){
 
 function button8514onUp() {
   action20673();action8515();
+}
+
+function action104133(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action104134(fn){
+    trivExitPage('quiz.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button104132onUp() {
+  action104133();action104134();
 }
 
 function action20739(fn){
@@ -466,7 +490,7 @@ function action73256(fn){
 }
 
 function action73257(fn){
-    trivExitPage('venue.html',true);
+    trivExitPage('sponsors.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -878,7 +902,7 @@ function action81798(fn){
         text4410.eatOnUp=false;
         return;
     }
-    trivExitPage('sessions_day_2_session_3_healy_and_massey.html',true);
+    trivExitPage('sessions_day_2_session_3_healy_and_groe.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -908,21 +932,7 @@ function action1963(fn){
 }
 
 if( is.min ){
-text992 = new ObjText('text992',null,429,18,481,34,1,79,null,'div')
-text992.initSLine(0)
-text992.initRotateAngle(0,0,0)
-text992.initHasOuterShadow(0)
-text992.initHasTextShadow(0)
-text992.initHasBorder(0)
-text992.initHasOutline(0)
-text992.addIe8Attr(429, 18, 481, 34, 0, 0)
-text992.addOpacity(100)
-text992.actionShow = text992actionShow
-text992.arrCSSStyles = new Array();
-text992.arrCSSStyles.push('span.text992Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text992.build()
-
-button8353 = new ObjButton('button8353', null,-4,63,267,48,1,80,'div','topfixed menu',1,'')
+button8353 = new ObjButton('button8353', null,-4,63,267,48,1,79,'div','topfixed menu',1,'')
 button8353.setFillStyle(1)
 button8353.initRotateAngle(0,0,0,-2,-2,263,44)
 button8353.initHasShadow(0)
@@ -932,12 +942,13 @@ button8353.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
 button8353.addIe8Attr(-2, 63, 267, 48, -3, 0)
 button8353.addOpacity(0)
 button8353.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8353.onOver = button8353onOver
 button8353.onUp = button8353onUp
 button8353.hasOnUp = true
-button8353.capture=4
+button8353.capture=5
 button8353.build()
 
-button8514 = new ObjButton('button8514', null,-4,110,267,48,1,81,'div','topfixed menu',1,'')
+button8514 = new ObjButton('button8514', null,-4,110,267,48,1,80,'div','topfixed menu',1,'')
 button8514.setFillStyle(1)
 button8514.initRotateAngle(0,0,0,-2,-2,263,44)
 button8514.initHasShadow(0)
@@ -951,6 +962,21 @@ button8514.onUp = button8514onUp
 button8514.hasOnUp = true
 button8514.capture=4
 button8514.build()
+
+button104132 = new ObjButton('button104132', null,-4,110,267,48,1,81,'div','topfixed menu',1,'')
+button104132.setFillStyle(1)
+button104132.initRotateAngle(0,0,0,-2,-2,263,44)
+button104132.initHasShadow(0)
+button104132.initHasReflection(0)
+button104132.setImages('images/transbtn.gif', '', '','');
+button104132.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button104132.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button104132.addOpacity(0)
+button104132.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button104132.onUp = button104132onUp
+button104132.hasOnUp = true
+button104132.capture=4
+button104132.build()
 
 button8693 = new ObjButton('button8693', null,-10,161,267,48,1,82,'div','topfixed menu',1,'')
 button8693.setFillStyle(1)
@@ -1101,7 +1127,7 @@ text7096.arrCSSStyles.push('span.text7096Font2 { font-size:16px; font-family:"Ar
 text7096.build()
 
 text12677 = new ObjText('text12677',null,-375,121,36,40,1,15,null,'div')
-text12677.initSLine(1)
+text12677.initSLine(0)
 text12677.initRotateAngle(0,0,0)
 text12677.initHasOuterShadow(0)
 text12677.initHasTextShadow(0)
@@ -1114,7 +1140,7 @@ text12677.arrCSSStyles.push('span.text12677Font1 { font-size:24px; font-family:"
 text12677.build()
 
 text12676 = new ObjText('text12676',null,-106,121,33,40,1,16,null,'div')
-text12676.initSLine(1)
+text12676.initSLine(0)
 text12676.initRotateAngle(0,0,0)
 text12676.initHasOuterShadow(0)
 text12676.initHasTextShadow(0)
@@ -2029,9 +2055,9 @@ text4408.arrCSSStyles.push('span.text4408Font3 { font-size:19px; font-family:"Av
 text4408.arrCSSStyles.push('span.text4408Font4 { font-size:12px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
 text4408.build()
 
-arObjs.push(text992);
 arObjs.push(button8353);
 arObjs.push(button8514);
+arObjs.push(button104132);
 arObjs.push(button8693);
 arObjs.push(button8776);
 arObjs.push(button73255);
@@ -2117,16 +2143,11 @@ if( is.min ){
 }
 </script>
 
-<div id="text992"><a id="text992anc" style="display:block;height:0px;width:0px;"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text992Font1"  >device mode?
-</span ></p >
-</div>
-
 <script>
 if( is.min ){
     document.write(button8353.div)
     document.write(button8514.div)
+    document.write(button104132.div)
     document.write(button8693.div)
     document.write(button8776.div)
     document.write(button73255.div)
@@ -2557,7 +2578,7 @@ if( is.min ){
 <div id="text4420" class="three-line-fix"><a id="text4420anc" style="display:block;height:0px;width:0px;" href="javascript:text4420.onUp()"></a>
 <div style="cursor:pointer">
 <p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text4420Font1"  >1:00-3:15 PM</span ><span class="text4420Font2" style="background-color:transparent" >
+<span class="text4420Font1"  >1:00-3:45 PM</span ><span class="text4420Font2" style="background-color:transparent" >
 </span ></p >
 <p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:center;" >
 <span class="text4420Font3"  >Workshop: Working Smarter, not Harder by Modifying Templates <br />to Gamify Your eLearning<br /></span ><span class="text4420Font4"  >LAS OLAS V

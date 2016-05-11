@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1024" />
+<title>QUIZ RULES</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<link rel="stylesheet" type="text/css" href="font/webfont.css">
+<link rel="stylesheet" type="text/css" href="js/custom.css">
+<script src=js/jquery-2.2.3.min.js></script>
+<script src="cordova.js"></script>
+<script src=js/fastclick.js></script>
+<script src=js/custom.js></script>
+
+<link rel="stylesheet" href="trivantis.css" type="text/css" />
+<style type="text/css">
+</style>
+
+<!--[if lt IE 7]>
+<style type="text/css">
+    #image6922 img { filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); }
+    #image6922 { filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/luc16logo.png',sizingMethod='scale'); }
+</style>
+<![endif]-->
+
+<!--[if lte IE 9]>
+<script>
+document.namespaces.add('v', 'urn:schemas-microsoft-com:vml', "#default#VML")
+</script>
+<![endif]-->
+
+<script src="trivantis.js"></script>
+<script src="trivantis-timedate.js"></script>
+<script src="trivantis-cookie.js"></script>
+<script src="trivantis-button.js"></script>
+<script src="trivantis-image.js"></script>
+<script src="trivantis-inline.js"></script>
+<script src="trivantis-text.js"></script>
+<script src="trivantis-pagetracking.js"></script>
+<script src="hammer.js"></script>
+<script>
+
+<!--
+
+var hmr = null;
+function initGEV(){
+   hmr = new Hammer(document.getElementById('pageDIV'));
+}
+
+trivWeb20Popups = true;
+
+var arObjs = [];
+
+var bTrivResponsive = true;
+
+setTimeout(function(){loadResponsiveData();},100);
+if( !is.min )
+  document.write( 'Your browser does not support dynamic html. Please download a current version of either <a href="http://www.microsoft.com/ie/">Microsoft Internet Explorer</a> or <a href="http://www.mozilla.com/en-US/firefox/">Mozilla Firefox </a> and try visiting our site again.  Thank You.<br /><br />' )
+
+var pageLayer = null
+var winW = screen.width
+var winH = screen.height
+var transformScale = 1
+
+function findWH(){	//echo LD-769
+	if (is.ie) {
+   winW = Math.max(Math.max(document.body.scrollWidth, document.documentElement.scrollWidth)-16,
+					  Math.max(document.body.offsetWidth, document.documentElement.offsetWidth)-16,
+					  Math.max(document.body.clientWidth, document.documentElement.clientWidth)-16 );
+   winH = Math.max(Math.max(document.body.scrollHeight, document.documentElement.scrollHeight)-16,
+					  Math.max(document.body.offsetHeight, document.documentElement.offsetHeight)-16,
+					  Math.max(document.body.clientHeight, document.documentElement.clientHeight)-16 );
+	}
+	else
+	{
+   winW =  document.documentElement.clientWidth ? document.documentElement.clientWidth : document.body.clientWidth;
+   if(is.iOS && (navigator.userAgent.indexOf('CellCast-iPad') != -1 || navigator.userAgent.indexOf('CellCast-iPhone') != -1) )
+		 winW =  getScreenWidth();
+   winH =  document.documentElement.clientHeight ? document.documentElement.clientHeight : document.body.clientHeight;
+	}
+}
+
+function ReFlow() {
+  findWH()
+  if (pageLayer)
+  {
+    var left = (winW > pageLayer.ele.clientWidth) ? (winW-pageLayer.ele.clientWidth)/2 : 0
+    transformScale = (winW > pageLayer.ele.clientWidth) ? 1 : (winW/pageLayer.ele.clientWidth)
+    if(is.iOS && isInIframe( window , 0))
+    {
+			left = 0
+			transformScale = (getScreenWidth() > pageLayer.ele.clientWidth) ? 1 : (getScreenWidth()/pageLayer.ele.clientWidth)
+    }
+    pageLayer.moveTo( left, 0 );
+    pageLayer.hasMoved = true;
+    pageLayer.newX = left;
+    pageLayer.newY = 0;
+    if(CanScale())
+       pageLayer.styObj.transform =  'scale('+ transformScale +')';
+    else
+       transformScale = 1;
+    pageLayer.styObj.transformOrigin =  '0 0';
+  }
+}
+
+
+VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
+TrivCurrRespView = VarCurrentView;
+if(is.awesomium);
+  TrivCurrRespView.set('PhonePortrait');
+VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'luc2016rcd' )
+VarCurrentPageName.set( 'QUIZ RULES' )
+Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
+
+onload = responsiveInit
+detect();
+if( is.webkit && !is.iOSSafari )
+  onbeforeunload = finish
+else
+  onunload = finish
+
+function responsiveInit() {
+  if(is.jsonData == null && !is.ie8){
+    setTimeout(function(){responsiveInit();},500);
+  }
+  else{
+    pageLayer = new ObjLayer('pageDIV');
+    SaveStyles();
+    init();
+  }
+}
+
+function init() {
+  findWH()
+  if( is.min ){
+    trivPageTracking.InitPageTracking();
+    setTimeout( "preload(GetDevicePreload())",0)
+    detect();
+    pageLayer.show();
+    button8353.init()
+    button8514.init()
+    button104132.init()
+    button8693.init()
+    button8776.init()
+    button73255.init()
+    button7705.init()
+    image2047.init()
+    image1972.init()
+    image6922.init()
+    text6601.init()
+    text7096.init()
+    text107976.init()
+    text107975.init()
+    text107974.init()
+    button8353.activate()
+    button8514.activate()
+    button104132.activate()
+    button8693.activate()
+    button8776.activate()
+    button73255.activate()
+    button7705.activate()
+    image2047.activate()
+    image1972.activate()
+    image6922.activate()
+    text6601.activate()
+    text7096.activate()
+    text107976.activate()
+    text107975.activate()
+    text107974.activate()
+    rebuildLayout();
+    ReFlow();
+    window.scrollTo(0, 1);
+    action1681(  );
+
+    if ( trivPageTracking.GetRangeStatus(107959) == 'notstarted' ) trivPageTracking.SetRangeStatus(107959,2);
+    if( location.hash )
+    {
+      var newHash
+      if( location.hash.charAt(0) == '#' )
+        newHash = location.hash.slice( 1 )
+      else
+        newHash = location.hash
+      location.hash = newHash
+    }
+    setTimeout( 'trivUpdateTOC( 1 )', 100 )
+  }
+  try {initGEV();} catch(e){}
+}
+
+var trivGoToPage = null
+var trivCompleteCnt = 1;
+var hasProcessedExitActions = false;
+var trivActFBCnt = 0;
+var currFeedbackIdx = 0;
+var trivPageExited = false;
+
+function finish() {
+}
+
+function trivOnFocus() {
+    if( trivPageExited ) return
+}
+
+function checkLeavePage() {
+    if( trivPageExited ) return
+    if( trivActFBCnt == 0 )
+    {
+        currFeedbackIdx++;
+        if( currFeedbackIdx > -1)
+        {
+            trivLeavePage();
+          return;
+        }
+        else if( !checkQuestions( true ))
+          return;
+    }
+    setTimeout( 'checkLeavePage()', 100)
+}
+
+function trivExitPage( newPage, bFeedback ) {
+    if( newPage.indexOf( "ObjLayerAction" ) >= 0 || newPage.indexOf( "javascript:app." ) >= 0 || newPage.indexOf( ".action" ) >= 0 || newPage.indexOf( "history.back()" ) >= 0) trivGoToPage = newPage
+    else trivGoToPage = 'ObjLayerActionGoTo("' + newPage + '")'
+    if( !hasProcessedExitActions ) {
+        findWH()
+        hasProcessedExitActions = true
+        setTimeout( 'checkLeavePage()', 100)
+    }
+}
+
+function trivLeavePage() {
+    trivCompleteCnt--
+    if( trivCompleteCnt <= 0 ) {
+        hasProcessedExitActions = false
+        if( trivGoToPage != null )
+        {
+			eval( trivGoToPage )
+			trivGoToPage = null;
+			if( window.closed ) trivPageExited = true;
+        }
+    }
+}
+
+function trivPrevPage() {
+    trivExitPage( 'quiz.html', true )
+}
+
+function trivNextPage() {
+    trivExitPage( 'sessions_keynote.html', true )
+}
+
+function trivUpdateTOC( bRecurse ) {
+    var i
+}
+
+function trivUpdateEntry() {
+}
+
+function trivResetEntry(entFld) {
+}
+
+function OnDeviceRotate() {
+action1963();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079(fn){
+    if(VarCurrentView.contains('xyz'))
+    {
+    }else{ action100079else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action1681(fn){
+    AdjustScreen('init');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action20620(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8358(fn){
+    trivExitPage('index.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8353onOver() {
+  action100079();
+}
+
+function button8353onUp() {
+  action20620();action8358();
+}
+
+function action20673(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8515(fn){
+    trivExitPage('speakers.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8514onUp() {
+  action20673();action8515();
+}
+
+function action104133(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action104134(fn){
+    trivExitPage('quiz.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button104132onUp() {
+  action104133();action104134();
+}
+
+function action20739(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8694(fn){
+    trivExitPage('trivantis_team.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8693onUp() {
+  action20739();action8694();
+}
+
+function action20772(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8777(fn){
+    trivExitPage('venue.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8776onUp() {
+  action20772();action8777();
+}
+
+function action73256(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action73257(fn){
+    trivExitPage('sponsors.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button73255onUp() {
+  action73256();action73257();
+}
+
+function action8341else(fn){
+    animateMenu('out');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8341(fn){
+    if(Var_menuState.equals('off'))
+    {animateMenu('in');
+    }else{ action8341else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8340else(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action8340(fn){
+    if(Var_menuState.contains('off'))
+    {Var_menuState.set('on');
+    }else{ action8340else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button7705onUp() {
+  action8341();action8340();
+}
+
+function action7138(fn){
+    text7096.actionChangeContents(VarCurrentPageName.getValue(),'aligncenter','1');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function text7096actionShow() {
+  setTimeout("if(!text7096.isVisible()) { text7096.objLyr.moveTo(text7096.x, text7096.y);text7096.onShow();action7138(); }", 1 )
+}
+
+function action1963(fn){
+    AdjustScreen('rotate');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+if( is.min ){
+button8353 = new ObjButton('button8353', null,-4,63,267,48,1,26,'div','topfixed menu',1,'')
+button8353.setFillStyle(1)
+button8353.initRotateAngle(0,0,0,-2,-2,263,44)
+button8353.initHasShadow(0)
+button8353.initHasReflection(0)
+button8353.setImages('images/transbtn.gif', '', '','');
+button8353.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8353.addIe8Attr(-2, 63, 267, 48, -3, 0)
+button8353.addOpacity(0)
+button8353.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8353.onOver = button8353onOver
+button8353.onUp = button8353onUp
+button8353.hasOnUp = true
+button8353.capture=5
+button8353.build()
+
+button8514 = new ObjButton('button8514', null,-4,110,267,48,1,27,'div','topfixed menu',1,'')
+button8514.setFillStyle(1)
+button8514.initRotateAngle(0,0,0,-2,-2,263,44)
+button8514.initHasShadow(0)
+button8514.initHasReflection(0)
+button8514.setImages('images/transbtn.gif', '', '','');
+button8514.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8514.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button8514.addOpacity(0)
+button8514.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8514.onUp = button8514onUp
+button8514.hasOnUp = true
+button8514.capture=4
+button8514.build()
+
+button104132 = new ObjButton('button104132', null,-4,110,267,48,1,28,'div','topfixed menu',1,'')
+button104132.setFillStyle(1)
+button104132.initRotateAngle(0,0,0,-2,-2,263,44)
+button104132.initHasShadow(0)
+button104132.initHasReflection(0)
+button104132.setImages('images/transbtn.gif', '', '','');
+button104132.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button104132.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button104132.addOpacity(0)
+button104132.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button104132.onUp = button104132onUp
+button104132.hasOnUp = true
+button104132.capture=4
+button104132.build()
+
+button8693 = new ObjButton('button8693', null,-10,161,267,48,1,29,'div','topfixed menu',1,'')
+button8693.setFillStyle(1)
+button8693.initRotateAngle(0,0,0,-2,-2,263,44)
+button8693.initHasShadow(0)
+button8693.initHasReflection(0)
+button8693.setImages('images/transbtn.gif', '', '','');
+button8693.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8693.addIe8Attr(-8, 161, 267, 48, -3, 0)
+button8693.addOpacity(0)
+button8693.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8693.onUp = button8693onUp
+button8693.hasOnUp = true
+button8693.capture=4
+button8693.build()
+
+button8776 = new ObjButton('button8776', null,-4,206,267,48,1,30,'div','topfixed menu',1,'')
+button8776.setFillStyle(1)
+button8776.initRotateAngle(0,0,0,-2,-2,263,44)
+button8776.initHasShadow(0)
+button8776.initHasReflection(0)
+button8776.setImages('images/transbtn.gif', '', '','');
+button8776.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button8776.addIe8Attr(-2, 206, 267, 48, -3, 0)
+button8776.addOpacity(0)
+button8776.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8776.onUp = button8776onUp
+button8776.hasOnUp = true
+button8776.capture=4
+button8776.build()
+
+button73255 = new ObjButton('button73255', null,-10,260,267,90,1,31,'div','topfixed menu',1,'')
+button73255.setFillStyle(1)
+button73255.initRotateAngle(0,0,0,-2,-2,263,86)
+button73255.initHasShadow(0)
+button73255.initHasReflection(0)
+button73255.setImages('images/transbtn.gif', '', '','');
+button73255.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button73255.addIe8Attr(-8, 260, 267, 90, -3, 0)
+button73255.addOpacity(0)
+button73255.initImageMap('23,2,244,2,248,2,252,4,256,6,259,8,261,11,263,15,265,19,265,23,265,67,265,71,263,75,261,79,259,82,256,84,252,86,248,88,244,88,23,88,19,88,15,86,11,85,8,82,6,79,4,75,2,71,2,67,2,23,2,19,4,15,6,11,8,8,11,6,15,4,19,2,23,2','M 23 2 L 244 2 L 248 2 L 252 4 L 256 6 L 259 8 L 261 11 L 263 15 L 265 19 L 265 23 L 265 67 L 265 71 L 263 75 L 261 79 L 259 82 L 256 84 L 252 86 L 248 88 L 244 88 L 23 88 L 19 88 L 15 86 L 11 85 L 8 82 L 6 79 L 4 75 L 2 71 L 2 67 L 2 23 L 2 19 L 4 15 L 6 11 L 8 8 L 11 6 L 15 4 L 19 2 L 23 2 z')
+button73255.onUp = button73255onUp
+button73255.hasOnUp = true
+button73255.capture=4
+button73255.build()
+
+button7705 = new ObjButton('button7705', null,-155,-2,132,44,1,32,'div','topfixed keepontransition',1,'')
+button7705.setFillStyle(1)
+button7705.initRotateAngle(0,0,0,-2,-2,128,40)
+button7705.initHasShadow(0)
+button7705.initHasReflection(0)
+button7705.setImages('images/transbtn.gif', '', '','');
+button7705.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button7705.addIe8Attr(-153, -2, 132, 44, -3, -1)
+button7705.addOpacity(0)
+button7705.initImageMap('12,2,120,2,124,3,127,5,129,8,130,12,130,32,129,36,127,39,124,41,120,42,12,42,8,41,5,39,3,36,2,32,2,12,3,8,5,5,8,3,12,2','M 12 2 L 120 2 L 124 3 L 127 5 L 129 8 L 130 12 L 130 32 L 129 36 L 127 39 L 124 41 L 120 42 L 12 42 L 8 41 L 5 39 L 3 36 L 2 32 L 2 12 L 3 8 L 5 5 L 8 3 L 12 2 z')
+button7705.onUp = button7705onUp
+button7705.hasOnUp = true
+button7705.capture=4
+button7705.build()
+
+image2047 = new ObjImage('image2047','images/menu-bg.jpg',null,0,64,263,733,1,8,'div',null,'topfixed menu')
+image2047.initRotateAngle(0,0,0,0,0,0,0)
+image2047.initHasShadow(0)
+image2047.initHasReflection(0)
+image2047.addIe8Attr(0, 64, 263, 733, 0, 0)
+image2047.initImageMap(1,'0,0,263,0,263,733,0,733,0,0','M 0 0 L 263 0 L 263 733 L 0 733 L 0 0 z')
+image2047.addBorder(0)
+image2047.addOpacity(100)
+image2047.build()
+
+image1972 = new ObjImage('image1972','images/menu-top-tablet.jpg',null,0,0,1024,64,1,9,'div',null,'topfixed')
+image1972.initRotateAngle(0,0,0,0,0,0,0)
+image1972.initHasShadow(0)
+image1972.initHasReflection(0)
+image1972.addIe8Attr(0, 0, 1024, 64, 0, 0)
+image1972.initImageMap(1,'0,0,1024,0,1024,64,0,64,0,0','M 0 0 L 1024 0 L 1024 64 L 0 64 L 0 0 z')
+image1972.addBorder(0)
+image1972.addOpacity(100)
+image1972.build()
+
+image6922 = new ObjImage('image6922','images/luc16logo.png',null,927,18,88,24,1,10,'div',null,'topfixed')
+image6922.initRotateAngle(0,0,0,0,0,0,0)
+image6922.initHasShadow(0)
+image6922.initHasReflection(0)
+image6922.addIe8Attr(927, 18, 88, 24, 0, 0)
+image6922.initImageMap(1,'0,0,88,0,88,24,0,24,0,0','M 0 0 L 88 0 L 88 24 L 0 24 L 0 0 z')
+image6922.addBorder(0)
+image6922.addOpacity(100)
+image6922.build()
+
+text6601 = new ObjText('text6601',null,-65,12,25,25,1,11,null,'div','topfixed keepontransition')
+text6601.initSLine(0)
+text6601.initRotateAngle(0,0,0)
+text6601.initHasOuterShadow(0)
+text6601.initHasTextShadow(0)
+text6601.initHasBorder(0)
+text6601.initHasOutline(0)
+text6601.addIe8Attr(-65, 12, 25, 25, 0, 0)
+text6601.addOpacity(100)
+text6601.arrCSSStyles = new Array();
+text6601.arrCSSStyles.push('span.text6601Font1 { font-size:24px; font-family:"FontAwesome"; color:#ffffff;}');
+text6601.build()
+
+text7096 = new ObjText('text7096',null,553,20,173,40,1,12,null,'div','topfixed keepontransition')
+text7096.initSLine(0)
+text7096.initRotateAngle(0,0,0)
+text7096.initHasOuterShadow(0)
+text7096.initHasTextShadow(0)
+text7096.initHasBorder(0)
+text7096.initHasOutline(0)
+text7096.addIe8Attr(553, 20, 173, 40, 0, 0)
+text7096.addOpacity(100)
+text7096.actionShow = text7096actionShow
+text7096.arrCSSStyles = new Array();
+text7096.arrCSSStyles.push('span.text7096Font1 { font-size:24px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#ffffff;}');
+text7096.arrCSSStyles.push('span.text7096Font2 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
+text7096.build()
+
+text107976 = new ObjText('text107976',null,15,85,290,22,1,13,null,'div')
+text107976.initSLine(0)
+text107976.initRotateAngle(0,0,0)
+text107976.initHasOuterShadow(0)
+text107976.initHasTextShadow(0)
+text107976.initHasBorder(0)
+text107976.initHasOutline(0)
+text107976.addIe8Attr(15, 85, 290, 22, 0, 0)
+text107976.addOpacity(100)
+text107976.arrCSSStyles = new Array();
+text107976.arrCSSStyles.push('span.text107976Font1 { font-size:19px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107976.arrCSSStyles.push('span.text107976Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
+text107976.build()
+
+text107975 = new ObjText('text107975',null,15,105,290,39,1,14,null,'div')
+text107975.initSLine(0)
+text107975.initRotateAngle(0,0,0)
+text107975.initHasOuterShadow(0)
+text107975.initHasTextShadow(0)
+text107975.initHasBorder(0)
+text107975.initHasOutline(0)
+text107975.addIe8Attr(15, 105, 290, 39, 0, 0)
+text107975.addOpacity(100)
+text107975.arrCSSStyles = new Array();
+text107975.arrCSSStyles.push('span.text107975Font1 { font-size:13px; font-family:"AvenirNext LT Pro Cn", sans-serif; color:#000000;}');
+text107975.arrCSSStyles.push('span.text107975Font2 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
+text107975.build()
+
+text107974 = new ObjText('text107974',null,15,135,290,4155,1,15,null,'div')
+text107974.initSLine(0)
+text107974.initRotateAngle(0,0,0)
+text107974.initHasOuterShadow(0)
+text107974.initHasTextShadow(0)
+text107974.initHasBorder(0)
+text107974.initHasOutline(0)
+text107974.addIe8Attr(15, 135, 290, 4155, 0, 0)
+text107974.addOpacity(100)
+text107974.arrCSSStyles = new Array();
+text107974.arrCSSStyles.push('span.text107974Font1 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
+text107974.arrCSSStyles.push('span.text107974Font3 { font-size:13px; font-family:"Arial", sans-serif; color:#010101;}');
+text107974.build()
+
+arObjs.push(button8353);
+arObjs.push(button8514);
+arObjs.push(button104132);
+arObjs.push(button8693);
+arObjs.push(button8776);
+arObjs.push(button73255);
+arObjs.push(button7705);
+arObjs.push(image2047);
+arObjs.push(image1972);
+arObjs.push(image6922);
+arObjs.push(text6601);
+arObjs.push(text7096);
+arObjs.push(text107976);
+arObjs.push(text107975);
+arObjs.push(text107974);
+
+
+writeStyleSheets(arObjs);}
+// -->
+
+</script>
+</head>
+
+<body onfocus="trivOnFocus()" onResize="ReFlow()">
+
+<script>
+if( is.min ){
+    findWH()
+    var left = (winW > 1024) ? (winW-1024)/2 : 0
+    document.write('<style type="text/css">#pageDIV { position: absolute; top:0px; left: ' + left + 'px; width:1024px; height:768px; clip:rect(0px 1024px 768px 0px); overflow:hidden;' )
+    document.write('} </style>')
+    document.write('<DIV style="visibility:hidden;" id=\"pageDIV\">')
+}
+</script>
+
+<script>
+if( is.min ){
+    document.write(button8353.div)
+    document.write(button8514.div)
+    document.write(button104132.div)
+    document.write(button8693.div)
+    document.write(button8776.div)
+    document.write(button73255.div)
+    document.write(button7705.div)
+    document.write(image2047.div)
+    document.write(image1972.div)
+    document.write(image6922.div)
+}
+</script>
+
+<div id="text6601" class="topfixed keepontransition"><a id="text6601anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text6601Font1"  >
+</span ></p >
+</div>
+
+<div id="text7096" class="topfixed keepontransition"><a id="text7096anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text7096Font1"  >SCHEDULE</span ><span class="text7096Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text107976"><a id="text107976anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text107976Font1"  >OFFICIAL RULES</span ><span class="text107976Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text107975"><a id="text107975anc" style="display:block;height:0px;width:0px;"></a>
+<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
+<span class="text107975Font1"  >BY USING THE APP, YOU AGREE TO THE RULES BELOW</span ><span class="text107975Font2" style="background-color:transparent" >
+</span ></p >
+</div>
+
+<div id="text107974"><a id="text107974anc" style="display:block;height:0px;width:0px;"></a>
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >Contest Rules
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >NO PURCHASE NECESSARY. A PURCHASE OR PAYMENT OF ANY KIND WILL NOT INCREASE YOUR CHANCES OF WINNING.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >OVERVIEW: Trivantis Corporation Inc. (“The Developer”) is the developer of LUC</span ><span class="text107974Font3"  > </span ><span class="text107974Font1"  >201</span ><span class="text107974Font3"  >6</span ><span class="text107974Font1"  > application (“The App”), that is downloadable without cost. The application allows users to enter a sweepstakes contest (“Sweepstakes”) with a chance to win a prize or prizes.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >APPLE INC. IS NOT A SPONSOR OR INVOLVED IN THE ACTIVITY IN ANY MANNER. THE PRIZES ARE NOT APPLE PRODUCTS. THE PRIZES ARE NOT CASH OR REAL MONEY.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >The App Sweepstakes is subject to all applicable federal, state, and local laws, and void where prohibited. Winning individuals will be responsible for all taxes related to the award of any prize. The Sweepstakes begins at the time the App is made available to participants, and ends at 5:00 PM EST on </span ><span class="text107974Font3"  >May 19</span ><span class="text107974Font1"  >, 201</span ><span class="text107974Font3"  >6</span ><span class="text107974Font1"  >.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >ELIGIBILITY: The App Sweepstakes is open to legal residents of all fifty (50) States in the United States as well as the District of Columbia, who are at least 18 years of age at the time of entry. Employees, officers and directors of The Developer, its parents, subsidiaries, affiliates, representatives and agencies, and members of their immediate families (spouses, parents, siblings and children, regardless of where they live) and those living in the same household are not eligible to enter or win. By entering a Sweepstakes, entrants agree to be bound by these official rules and disclaimers (these "Official Rules"), and the decisions of The Developer regarding the App Sweepstakes are final and binding in all respects.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >TO ENTER: All entries will be received online through the App. Any eligible person who electronically logs into the App may access the App Sweepstakes. Sweepstakes will require an entrant to undertake a nominal action (e.g., scan a QR code or enter a code word) prior to entering a Sweepstakes. Following this action (which will be prompted by the App) the entrant will click and be entered in that Sweepstakes. Entrants may not enter a Sweepstakes more than once. Entrant will have to supply a contact email address to be contacted in case of winning.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >SELECTION OF WINNERS: Developer will conduct a random drawing from among all eligible entries received during the Sweepstakes Period. The odds of winning are based on the number of eligible entries received for a Sweepstakes. App Sweepstakes prize winners will be notified by e-mail (to the e-mail address provided by the entrant) of the prize which they have been awarded (the "Award Notification"). If the selected prize winner does not respond within five (5) days after Award Notification is given, then that selected prize winner will be deemed to have forfeited his/her prize. Forfeited prizes will be re-awarded by The Developer by random drawing to another eligible entrant in the Sweepstakes. Except to the extent prohibited by law, any Sweepstakes selected prize winner will be required to complete and return an affidavit of eligibility and liability/publicity release (the "Affidavit/Release"). If the selected Sweepstakes prize winner fails to sign and return the Affidavit/Release within the required time period, except to the extent prohibited by law, that selected Sweepstakes prize winner will be deemed to have forfeited his/her prize. EACH SWEEPSTAKES APP PRIZE WINNER IS SUBJECT TO VERIFICATION BY THE DEVELOPER, WHOSE DECISIONS ARE FINAL AND BINDING IN ALL MATTERS RELATED TO THE APP SWEEPSTAKES.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >PRIZES: Sweepstakes shall have only a single prize. The prize shall consist of an item(s) of retail merchandise or retail services, or a gift card redeemable for certain item(s) of retail merchandise or services. All gift cards are redeemable with the specific businesses issuing such cards. There will be no substitutions, exchanges or variations made to prizes or gift cards that are awarded, or prizes which are redeemed with gift cards. It is the responsibility of each prize winner to redeem any gift card received as a prize. MERCHANDISE OR SERVICES RECEIVED AS A PRIZE, OR OBTAINED WITH GIFT CARDS RECEIVED AS A PRIZE, ARE RECEIVED WITHOUT WARRANTY BY THE DEVELOPER OF ANY KIND, EXPRESS OR IMPLIED. Prizes for the App Sweepstakes will have values generally between $25 - $200.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >PRIZE RESTRICTIONS: Any and all applicable federal, state, and local taxes are the sole responsibility of the individual Sweepstakes prize winner. Prizes, gift cards received as prizes, and the merchandise or retail services for which such gift cards may be redeemed cannot be substituted, assigned, transferred, or redeemed for cash. The Developer will not replace any gift card prize that is lost or stolen once any gift card is delivered to a Sweepstakes prize winner. Gift cards may not be useable in conjunction with any other promotions or offers. Gift cards shall be redeemable as set forth thereon, and in accordance with applicable law.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >GENERAL CONDITIONS: The Developer’s failure to enforce any term of these Official Rules shall not constitute a waiver thereof. Neither The Developer nor anyone acting on its behalf will enter into any communications with any entrant regarding the App Sweepstakes, except as expressly set forth in these Official Rules. The Developer reserves the right at its sole discretion to disqualify any individual it finds to be attempting to tamper with or undermine the entry process, the App, and/or the legitimate operation of the App Sweepstakes; to violate these Official Rules; or to act in a disruptive manner or with the intent to annoy, abuse, threaten, or harass any other person with respect to the App Sweepstakes. The Developer may, in its sole discretion, void any suspect entries and (a) cancel or terminate the App Sweepstakes (or any Sweepstakes a portion thereof); (b) modify the App Sweepstakes or suspend the App Sweepstakes (or any Sweepstakes a portion thereof) to address the impairment and then resume the App Sweepstakes (or any Sweepstakes a portion thereof) in a manner that best conforms to the intent of these Official Rules; or (c) award the prize at random from among the eligible, non-suspect entries received up to the time of the impairment. The Privacy Policy of The Developer shall apply to all aspects of the App Sweepstakes.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >MOBILE APPLICATION AND INTERNET CONDITIONS: The Developer shall not be responsible for any entries in the App Sweepstakes that are not properly entered due to data corruption or otherwise not received correctly, or for any problems or technical malfunction of any telephone network or lines, computer on-line systems, servers or providers, computer equipment, software, failure of e-mail, or on account of technical problems or traffic congestion on the internet, with respect to the App or at any website or combination thereof, including injury or damage to entrant's mobile device related to or resulting from participating in the App Sweepstakes (or any Sweepstakes a portion thereof). The Developer shall not be responsible for any lost, misdirected or late entries into any Sweepstakes. The Developer reserves the right to cancel, terminate, modify or suspend the App Sweepstakes in the event that the App Sweepstakes (or any Sweepstakes a portion thereof) is not capable of running as planned, including because of infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures or any other causes beyond the control of The Developer which corrupts or affects the administration, security fairness, integrity or proper conduct of the App Sweepstakes (or any portion thereof).
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >RELEASE AND LIMITATIONS OF LIABILITY: BY PARTICIPATING IN ANY SWEEPSTAKES, ENTRANTS AGREE THAT THE DEVELOPER AND ANY OTHER APPLICABLE SPONSOR, AND ITS PARENTS, AFFILIATES, SUBSIDIARIES, REPRESENTATIVES, CONSULTANTS, CONTRACTORS, LEGAL COUNSEL, ADVERTISING, PUBLIC RELATIONS, PROMOTIONAL, FULFILLMENT AND MARKETING, WEB SITE PROVIDERS, WEB MASTERS, APP STORES AND THEIR RESPECTIVE OFFICERS, DIRECTORS, EMPLOYEES, REPRESENTATIVES, AND AGENTS (THE "RELEASED ENTITIES"), WILL HAVE NO LIABILITY WHATSOEVER FOR, AND SHALL BE HELD HARMLESS BY ENTRANTS AGAINST, ANY LIABILITY FOR ANY INJURIES, LOSSES OR DAMAGES OF ANY KIND TO PERSONS, INCLUDING PERSONAL INJURY OR DEATH, OR PROPERTY RESULTING IN WHOLE OR IN PART, DIRECTLY OR INDIRECTLY, FROM ACCEPTANCE, POSSESSION, MISUSE, OR USE OF A PRIZE, ENTRY, OR PARTICIPATION IN ANY SWEEPSTAKES OR IN ANY APP SWEEPSTAKES RELATED ACTIVITY, OR ANY CLAIMS BASED ON PUBLICITY RIGHTS, DEFAMATION OR INVASION OF PRIVACY, OR MERCHANDISE DELIVERY. THE RELEASED ENTITIES ARE NOT RESPONSIBLE IF ANY PRIZE CANNOT BE AWARDED DUE TO ACTS OF GOD, ACTS OF WAR, NATURAL DISASTERS, WEATHER, BANKRUPTCY OR TERRORISM. BY PARTICIPATING IN ANY SWEEPSTAKES, PARTICIPANTS AGREE THAT THE RELEASED ENTITIES WILL NOT BE RESPONSIBLE OR LIABLE FOR ANY INJURIES, DAMAGES, OR LOSSES OF ANY KIND, INCLUDING DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES TO PERSONS, INCLUDING DEATH, OR TO PROPERTY ARISING OUT OF ACCESS TO AND USE OF THE APP. EXCEPT WHERE PROHIBITED BY LAW, PARTICIPATION IN ANY SWEEPSTAKES CONSTITUTES WINNER'S CONSENT AND PERMISSION TO PRINT, PUBLISH, BROADCAST, AND USE, WORLDWIDE IN ANY MEDIA NOW KNOWN OR HEREAFTER DEVELOPED AT ANY TIME OR TIMES, EACH WINNER'S NAME, PORTRAIT, PICTURE, VOICE, LIKENESS AND BIOGRAPHICAL INFORMATION (INCLUDING BUT NOT LIMITED TO HOMETOWN AND STATE) FOR ADVERTISING, TRADE, AND PROMOTIONAL PURPOSES (INCLUDING THE ANNOUNCEMENT OF HIS OR HER NAME IN BROADCAST) WITHOUT ADDITIONAL CONSIDERATION, COMPENSATION, PERMISSION, OR NOTIFICATION. WITHOUT LIMITING THE FOREGOING, EVERYTHING REGARDING THE APP SWEEPSTAKES, INCLUDING THE APP AND THE PRIZES, ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED.
+</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1" style="background-color:transparent" >
+&nbsp;</span ></p >
+<p  legLH="1.156" style="margin-left:0px;text-indent:0px;line-height:0.938;margin-top:0px;margin-bottom:0px;text-align:left;" >
+<span class="text107974Font1"  >DISPUTES: Except where prohibited, entrant agrees that: (a) any and all disputes, claims and causes of action arising out of or connected with the App Sweepstakes or the prize(s) awarded shall be resolved individually, without resort to any form of class action, and exclusively by the United States District Court for the Hamilton County, Ohio, or the appropriate state court having jurisdiction in and over Cincinnati, Ohio; (b) any and all claims, judgment, and awards shall be limited to actual out-of-pocket costs incurred, including costs associated with entering the Sweepstakes, but in no event attorneys' fees; (c) under no circumstances will entrant be permitted to obtain awards for, and entrant hereby waives all rights to claim, indirect, punitive, incidental and consequential damages and any other damages, other than for actual out-of-pocket expenses, any and all rights to have damages multiplied or otherwise increased. All issues and questions concerning the construction, validity, interpretation and enforceability of these Official Rules, or the rights and obligations of the entrant and The Developer in connection with the Sweepstakes, shall be governed by, and construed in accordance with, the laws of the State of Ohio, without giving effect to any choice of law or conflict of laws rules (whether of the State of Ohio or any other jurisdiction), which would cause the application of the laws of any jurisdiction other than the State of Ohio.
+</span ></p >
+</div>
+
+
+<script>
+if( is.min ){
+    document.write("</DIV>")
+}
+</script>
+
+</body>
+</html>

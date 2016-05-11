@@ -1,11 +1,11 @@
 DesktopResponsive={"1009":{
 "pageLayer":{"w":1024,"h":768,"bgColor":"#ffffff"}
 ,
-"text992":{"x":429,"y":18,"w":481,"h":34,"txtscale":100}
-,
 "button8353":{"x":-4,"y":63,"w":267,"h":48,"stylemods":[{"sel":"div.button8353Text","decl":" { position:absolute; left:4px; top:2px; width:255px; height:40px;}"},{"sel":"span.button8353Text","decl":" { display:table-cell; position:relative; width:255px; height:40px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
 ,
 "button8514":{"x":-4,"y":110,"w":267,"h":48,"stylemods":[{"sel":"div.button8514Text","decl":" { position:absolute; left:4px; top:2px; width:255px; height:40px;}"},{"sel":"span.button8514Text","decl":" { display:table-cell; position:relative; width:255px; height:40px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
+,
+"button104132":{"x":-4,"y":110,"w":267,"h":48,"stylemods":[{"sel":"div.button104132Text","decl":" { position:absolute; left:4px; top:2px; width:255px; height:40px;}"},{"sel":"span.button104132Text","decl":" { display:table-cell; position:relative; width:255px; height:40px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
 ,
 "button8693":{"x":-10,"y":161,"w":267,"h":48,"stylemods":[{"sel":"div.button8693Text","decl":" { position:absolute; left:4px; top:2px; width:255px; height:40px;}"},{"sel":"span.button8693Text","decl":" { display:table-cell; position:relative; width:255px; height:40px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
 ,
@@ -13,7 +13,7 @@ DesktopResponsive={"1009":{
 ,
 "button73255":{"x":-10,"y":260,"w":267,"h":90,"stylemods":[{"sel":"div.button73255Text","decl":" { position:absolute; left:7px; top:2px; width:249px; height:82px;}"},{"sel":"span.button73255Text","decl":" { display:table-cell; position:relative; width:249px; height:82px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
 ,
-"button7705":{"x":-155,"y":-2,"w":132,"h":44,"stylemods":[{"sel":"div.button7705Text","decl":" { position:absolute; left:4px; top:2px; width:120px; height:36px;}"},{"sel":"span.button7705Text","decl":" { display:table-cell; position:relative; width:120px; height:36px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
+"button89564":{"x":-155,"y":-2,"w":132,"h":44,"stylemods":[{"sel":"div.button89564Text","decl":" { position:absolute; left:4px; top:2px; width:120px; height:36px;}"},{"sel":"span.button89564Text","decl":" { display:table-cell; position:relative; width:120px; height:36px; vertical-align:middle; text-align:center; line-height:16px; font-size:16px; font-family:\"Lucida Sans Unicode\"; color:#ffffff;}"}]}
 ,
 "":{"x":10,"y":184,"w":300,"h":200}
 ,
@@ -23,9 +23,9 @@ DesktopResponsive={"1009":{
 ,
 "image6922":{"x":927,"y":18,"w":88,"h":24,"i":"images/luc16logo.png"}
 ,
-"text6601":{"x":-65,"y":12,"w":25,"h":25,"txtscale":100}
-,
 "text50274":{"x":553,"y":20,"w":173,"h":40,"txtscale":100}
+,
+"text89567":{"x":-65,"y":12,"w":25,"h":25,"txtscale":100}
 ,
 "image64229":{"x":919,"y":2797,"w":100,"h":100,"i":"images/williford.jpg"}
 ,

@@ -6,6 +6,11 @@ body {
   -webkit-user-select: none; /*prevent selection on long press */
 }
 
+.selectable {
+    -webkit-user-select: auto;
+}
+
+
 .allcaps {
   text-transform: uppercase !important;
 }
@@ -21,6 +26,11 @@ body {
 .three-line-fix p:first-of-type {
   margin-top: 6px !important;
 }
+
+.yellowbutton p:first-of-type {
+  margin-top: 6px !important;
+}
+
 .breakout p:first-of-type {
   margin-top: 10px !important;
 }

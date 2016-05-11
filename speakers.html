@@ -120,7 +120,7 @@ function ReFlow() {
 VarCurrentView = new Variable( 'VarCurrentView', null, 0, 0, null, null, 'luc2016rcd' )
 TrivCurrRespView = VarCurrentView;
 if(is.awesomium);
-  TrivCurrRespView.set('TabletPortrait');
+  TrivCurrRespView.set('PhonePortrait');
 VarCurrentPageName = new Variable( 'VarCurrentPageName', null, 0, 0, null, null, 'luc2016rcd' )
 VarCurrentPageName.set( 'SPEAKERS' )
 Var_menuState = new Variable( 'Var_menuState', 'off', 0, 0, null, null, 'luc2016rcd', false )
@@ -150,9 +150,9 @@ function init() {
     setTimeout( "preload(GetDevicePreload())",0)
     detect();
     pageLayer.show();
-    text992.init()
     button8353.init()
     button8514.init()
+    button104132.init()
     button8693.init()
     button8776.init()
     button73255.init()
@@ -168,13 +168,13 @@ function init() {
     button82695.init()
     button82750.init()
     button82805.init()
+    button83190.init()
     button82860.init()
     button82915.init()
     button82970.init()
     button83025.init()
     button83080.init()
     button83135.init()
-    button83190.init()
     button83245.init()
     button83300.init()
     button83355.init()
@@ -360,9 +360,9 @@ function init() {
     text25662.init()
     text25663.init()
     text25664.init()
-    text992.activate()
     button8353.activate()
     button8514.activate()
+    button104132.activate()
     button8693.activate()
     button8776.activate()
     button73255.activate()
@@ -378,13 +378,13 @@ function init() {
     button82695.activate()
     button82750.activate()
     button82805.activate()
+    button83190.activate()
     button82860.activate()
     button82915.activate()
     button82970.activate()
     button83025.activate()
     button83080.activate()
     button83135.activate()
-    button83190.activate()
     button83245.activate()
     button83300.activate()
     button83355.activate()
@@ -662,29 +662,33 @@ function trivResetEntry(entFld) {
 }
 
 function OnDeviceRotate() {
-action1017();action1963();
+action1963();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079else(fn){
+
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action100079(fn){
+    if(VarCurrentView.contains('xyz'))
+    {
+    }else{ action100079else();}
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
 }
 
 function action1681(fn){
     AdjustScreen('init');
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function action990(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function action1017(fn){
-    text992.actionChangeContents( "" +  VarCurrentView.getValue() + "","aligncenter","1" );
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function text992actionShow() {
-  setTimeout("if(!text992.isVisible()) { text992.objLyr.moveTo(text992.x, text992.y);text992.onShow();action990(); }", 1 )
 }
 
 function action20620(fn){
@@ -697,6 +701,10 @@ function action8358(fn){
     trivExitPage('index.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button8353onOver() {
+  action100079();
 }
 
 function button8353onUp() {
@@ -717,6 +725,22 @@ function action8515(fn){
 
 function button8514onUp() {
   action20673();action8515();
+}
+
+function action104133(fn){
+    Var_menuState.set('off');
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function action104134(fn){
+    trivExitPage('quiz.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button104132onUp() {
+  action104133();action104134();
 }
 
 function action20739(fn){
@@ -758,7 +782,7 @@ function action73256(fn){
 }
 
 function action73257(fn){
-    trivExitPage('venue.html',true);
+    trivExitPage('sponsors.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -909,6 +933,16 @@ function button82805onUp() {
   action82806();
 }
 
+function action83191(fn){
+    trivExitPage('sessions_day_2_session_3_healy_and_groe.html',true);
+    if(fn && typeof(fn) == 'string' ) eval(fn);
+    else if(fn && typeof(fn) == 'function' ) fn();
+}
+
+function button83190onUp() {
+  action83191();
+}
+
 function action82861(fn){
     trivExitPage('sessions_day_1_session_2_fredrik_christianson.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
@@ -920,7 +954,7 @@ function button82860onUp() {
 }
 
 function action82916(fn){
-    trivExitPage('sessions_day_2_session_3_healy_and_massey.html',true);
+    trivExitPage('sessions_day_2_session_3_healy_and_groe.html',true);
     if(fn && typeof(fn) == 'string' ) eval(fn);
     else if(fn && typeof(fn) == 'function' ) fn();
 }
@@ -967,16 +1001,6 @@ function action83136(fn){
 
 function button83135onUp() {
   action83136();
-}
-
-function action83191(fn){
-    trivExitPage('sessions_day_2_session_3_healy_and_massey.html',true);
-    if(fn && typeof(fn) == 'string' ) eval(fn);
-    else if(fn && typeof(fn) == 'function' ) fn();
-}
-
-function button83190onUp() {
-  action83191();
 }
 
 function action83246(fn){
@@ -1136,21 +1160,7 @@ function action1963(fn){
 }
 
 if( is.min ){
-text992 = new ObjText('text992',null,429,18,481,34,1,221,null,'div')
-text992.initSLine(0)
-text992.initRotateAngle(0,0,0)
-text992.initHasOuterShadow(0)
-text992.initHasTextShadow(0)
-text992.initHasBorder(0)
-text992.initHasOutline(0)
-text992.addIe8Attr(429, 18, 481, 34, 0, 0)
-text992.addOpacity(100)
-text992.actionShow = text992actionShow
-text992.arrCSSStyles = new Array();
-text992.arrCSSStyles.push('span.text992Font1 { font-size:16px; font-family:"Arial", sans-serif; color:#010101;}');
-text992.build()
-
-button8353 = new ObjButton('button8353', null,-4,63,267,48,1,222,'div','topfixed menu',1,'')
+button8353 = new ObjButton('button8353', null,-4,63,267,48,1,221,'div','topfixed menu',1,'')
 button8353.setFillStyle(1)
 button8353.initRotateAngle(0,0,0,-2,-2,263,44)
 button8353.initHasShadow(0)
@@ -1160,12 +1170,13 @@ button8353.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
 button8353.addIe8Attr(-2, 63, 267, 48, -3, 0)
 button8353.addOpacity(0)
 button8353.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button8353.onOver = button8353onOver
 button8353.onUp = button8353onUp
 button8353.hasOnUp = true
-button8353.capture=4
+button8353.capture=5
 button8353.build()
 
-button8514 = new ObjButton('button8514', null,-4,110,267,48,1,223,'div','topfixed menu',1,'')
+button8514 = new ObjButton('button8514', null,-4,110,267,48,1,222,'div','topfixed menu',1,'')
 button8514.setFillStyle(1)
 button8514.initRotateAngle(0,0,0,-2,-2,263,44)
 button8514.initHasShadow(0)
@@ -1179,6 +1190,21 @@ button8514.onUp = button8514onUp
 button8514.hasOnUp = true
 button8514.capture=4
 button8514.build()
+
+button104132 = new ObjButton('button104132', null,-4,110,267,48,1,223,'div','topfixed menu',1,'')
+button104132.setFillStyle(1)
+button104132.initRotateAngle(0,0,0,-2,-2,263,44)
+button104132.initHasShadow(0)
+button104132.initHasReflection(0)
+button104132.setImages('images/transbtn.gif', '', '','');
+button104132.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button104132.addIe8Attr(-2, 110, 267, 48, -3, 0)
+button104132.addOpacity(0)
+button104132.initImageMap('13,2,254,2,256,2,258,3,262,5,264,9,265,11,265,13,265,35,265,37,264,39,262,43,258,45,256,46,254,46,13,46,9,45,5,43,3,39,2,35,2,13,2,11,3,9,5,5,9,3,11,2,13,2','M 13 2 L 254 2 L 256 2 L 258 3 L 262 5 L 264 9 L 265 11 L 265 13 L 265 35 L 265 37 L 264 39 L 262 43 L 258 45 L 256 46 L 254 46 L 13 46 L 9 45 L 5 43 L 3 39 L 2 35 L 2 13 L 2 11 L 3 9 L 5 5 L 9 3 L 11 2 L 13 2 z')
+button104132.onUp = button104132onUp
+button104132.hasOnUp = true
+button104132.capture=4
+button104132.build()
 
 button8693 = new ObjButton('button8693', null,-10,161,267,48,1,224,'div','topfixed menu',1,'')
 button8693.setFillStyle(1)
@@ -1405,7 +1431,22 @@ button82805.hasOnUp = true
 button82805.capture=4
 button82805.build()
 
-button82860 = new ObjButton('button82860', null,365,498,267,90,1,239,'div','',1,'')
+button83190 = new ObjButton('button83190', null,365,498,267,90,1,239,'div','',1,'')
+button83190.setFillStyle(1)
+button83190.initRotateAngle(0,0,0,-2,-2,263,86)
+button83190.initHasShadow(0)
+button83190.initHasReflection(0)
+button83190.setImages('images/transbtn.gif', '', '','');
+button83190.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
+button83190.addIe8Attr(367, 498, 267, 90, -2, 0)
+button83190.addOpacity(0)
+button83190.initImageMap('23,2,244,2,248,2,252,4,256,6,259,8,261,11,263,15,265,19,265,23,265,67,265,71,263,75,261,79,259,82,256,84,252,86,248,88,244,88,23,88,19,88,15,86,11,85,8,82,6,79,4,75,2,71,2,67,2,23,2,19,4,15,6,11,8,8,11,6,15,4,19,2,23,2','M 23 2 L 244 2 L 248 2 L 252 4 L 256 6 L 259 8 L 261 11 L 263 15 L 265 19 L 265 23 L 265 67 L 265 71 L 263 75 L 261 79 L 259 82 L 256 84 L 252 86 L 248 88 L 244 88 L 23 88 L 19 88 L 15 86 L 11 85 L 8 82 L 6 79 L 4 75 L 2 71 L 2 67 L 2 23 L 2 19 L 4 15 L 6 11 L 8 8 L 11 6 L 15 4 L 19 2 L 23 2 z')
+button83190.onUp = button83190onUp
+button83190.hasOnUp = true
+button83190.capture=4
+button83190.build()
+
+button82860 = new ObjButton('button82860', null,365,498,267,90,1,240,'div','',1,'')
 button82860.setFillStyle(1)
 button82860.initRotateAngle(0,0,0,-2,-2,263,86)
 button82860.initHasShadow(0)
@@ -1420,7 +1461,7 @@ button82860.hasOnUp = true
 button82860.capture=4
 button82860.build()
 
-button82915 = new ObjButton('button82915', null,365,498,267,90,1,240,'div','',1,'')
+button82915 = new ObjButton('button82915', null,365,498,267,90,1,241,'div','',1,'')
 button82915.setFillStyle(1)
 button82915.initRotateAngle(0,0,0,-2,-2,263,86)
 button82915.initHasShadow(0)
@@ -1435,7 +1476,7 @@ button82915.hasOnUp = true
 button82915.capture=4
 button82915.build()
 
-button82970 = new ObjButton('button82970', null,365,498,267,90,1,241,'div','',1,'')
+button82970 = new ObjButton('button82970', null,365,498,267,90,1,242,'div','',1,'')
 button82970.setFillStyle(1)
 button82970.initRotateAngle(0,0,0,-2,-2,263,86)
 button82970.initHasShadow(0)
@@ -1450,7 +1491,7 @@ button82970.hasOnUp = true
 button82970.capture=4
 button82970.build()
 
-button83025 = new ObjButton('button83025', null,365,498,267,90,1,242,'div','',1,'')
+button83025 = new ObjButton('button83025', null,365,498,267,90,1,243,'div','',1,'')
 button83025.setFillStyle(1)
 button83025.initRotateAngle(0,0,0,-2,-2,263,86)
 button83025.initHasShadow(0)
@@ -1465,7 +1506,7 @@ button83025.hasOnUp = true
 button83025.capture=4
 button83025.build()
 
-button83080 = new ObjButton('button83080', null,365,498,267,90,1,243,'div','',1,'')
+button83080 = new ObjButton('button83080', null,365,498,267,90,1,244,'div','',1,'')
 button83080.setFillStyle(1)
 button83080.initRotateAngle(0,0,0,-2,-2,263,86)
 button83080.initHasShadow(0)
@@ -1480,7 +1521,7 @@ button83080.hasOnUp = true
 button83080.capture=4
 button83080.build()
 
-button83135 = new ObjButton('button83135', null,365,498,267,90,1,244,'div','',1,'')
+button83135 = new ObjButton('button83135', null,365,498,267,90,1,245,'div','',1,'')
 button83135.setFillStyle(1)
 button83135.initRotateAngle(0,0,0,-2,-2,263,86)
 button83135.initHasShadow(0)
@@ -1494,21 +1535,6 @@ button83135.onUp = button83135onUp
 button83135.hasOnUp = true
 button83135.capture=4
 button83135.build()
-
-button83190 = new ObjButton('button83190', null,365,498,267,90,1,245,'div','',1,'')
-button83190.setFillStyle(1)
-button83190.initRotateAngle(0,0,0,-2,-2,263,86)
-button83190.initHasShadow(0)
-button83190.initHasReflection(0)
-button83190.setImages('images/transbtn.gif', '', '','');
-button83190.setStateOpacity( 0.00, 0.00, 0.00, 0.00 );
-button83190.addIe8Attr(367, 498, 267, 90, -2, 0)
-button83190.addOpacity(0)
-button83190.initImageMap('23,2,244,2,248,2,252,4,256,6,259,8,261,11,263,15,265,19,265,23,265,67,265,71,263,75,261,79,259,82,256,84,252,86,248,88,244,88,23,88,19,88,15,86,11,85,8,82,6,79,4,75,2,71,2,67,2,23,2,19,4,15,6,11,8,8,11,6,15,4,19,2,23,2','M 23 2 L 244 2 L 248 2 L 252 4 L 256 6 L 259 8 L 261 11 L 263 15 L 265 19 L 265 23 L 265 67 L 265 71 L 263 75 L 261 79 L 259 82 L 256 84 L 252 86 L 248 88 L 244 88 L 23 88 L 19 88 L 15 86 L 11 85 L 8 82 L 6 79 L 4 75 L 2 71 L 2 67 L 2 23 L 2 19 L 4 15 L 6 11 L 8 8 L 11 6 L 15 4 L 19 2 L 23 2 z')
-button83190.onUp = button83190onUp
-button83190.hasOnUp = true
-button83190.capture=4
-button83190.build()
 
 button83245 = new ObjButton('button83245', null,365,498,267,90,1,246,'div','',1,'')
 button83245.setFillStyle(1)
@@ -2317,7 +2343,7 @@ text24600.arrCSSStyles.push('span.text24600Font2 { font-size:13px; font-family:"
 text24600.build()
 
 text24601 = new ObjText('text24601',null,349,189,30,30,1,89,null,'div')
-text24601.initSLine(1)
+text24601.initSLine(0)
 text24601.initRotateAngle(0,0,0)
 text24601.initHasOuterShadow(0)
 text24601.initHasTextShadow(0)
@@ -2366,7 +2392,7 @@ text24676.arrCSSStyles.push('span.text24676Font2 { font-size:13px; font-family:"
 text24676.build()
 
 text24677 = new ObjText('text24677',null,349,262,30,30,1,92,null,'div')
-text24677.initSLine(1)
+text24677.initSLine(0)
 text24677.initRotateAngle(0,0,0)
 text24677.initHasOuterShadow(0)
 text24677.initHasTextShadow(0)
@@ -2415,7 +2441,7 @@ text24735.arrCSSStyles.push('span.text24735Font2 { font-size:13px; font-family:"
 text24735.build()
 
 text24736 = new ObjText('text24736',null,349,350,30,30,1,95,null,'div')
-text24736.initSLine(1)
+text24736.initSLine(0)
 text24736.initRotateAngle(0,0,0)
 text24736.initHasOuterShadow(0)
 text24736.initHasTextShadow(0)
@@ -2709,7 +2735,7 @@ text24820.arrCSSStyles.push('span.text24820Font2 { font-size:13px; font-family:"
 text24820.build()
 
 text24821 = new ObjText('text24821',null,349,749,30,30,1,113,null,'div')
-text24821.initSLine(1)
+text24821.initSLine(0)
 text24821.initRotateAngle(0,0,0)
 text24821.initHasOuterShadow(0)
 text24821.initHasTextShadow(0)
@@ -2940,7 +2966,7 @@ text25435.arrCSSStyles.push('span.text25435Font3 { font-size:16px; font-family:"
 text25435.build()
 
 text25436 = new ObjText('text25436',null,379,1063,190,30,1,127,null,'div')
-text25436.initSLine(1)
+text25436.initSLine(0)
 text25436.initRotateAngle(0,0,0)
 text25436.initHasOuterShadow(0)
 text25436.initHasTextShadow(0)
@@ -3185,7 +3211,7 @@ text25415.arrCSSStyles.push('span.text25415Font3 { font-size:16px; font-family:"
 text25415.build()
 
 text25416 = new ObjText('text25416',null,379,1469,190,30,1,142,null,'div')
-text25416.initSLine(1)
+text25416.initSLine(0)
 text25416.initRotateAngle(0,0,0)
 text25416.initHasOuterShadow(0)
 text25416.initHasTextShadow(0)
@@ -3626,7 +3652,7 @@ text27313.arrCSSStyles.push('span.text27313Font3 { font-size:16px; font-family:"
 text27313.build()
 
 text27314 = new ObjText('text27314',null,379,2089,190,30,1,169,null,'div')
-text27314.initSLine(1)
+text27314.initSLine(0)
 text27314.initRotateAngle(0,0,0)
 text27314.initHasOuterShadow(0)
 text27314.initHasTextShadow(0)
@@ -3675,7 +3701,7 @@ text25666.arrCSSStyles.push('span.text25666Font3 { font-size:16px; font-family:"
 text25666.build()
 
 text25667 = new ObjText('text25667',null,378,2181,190,30,1,172,null,'div')
-text25667.initSLine(1)
+text25667.initSLine(0)
 text25667.initRotateAngle(0,0,0)
 text25667.initHasOuterShadow(0)
 text25667.initHasTextShadow(0)
@@ -3750,9 +3776,9 @@ text25664.arrCSSStyles = new Array();
 text25664.arrCSSStyles.push('span.text25664Font1 { font-size:17px; font-family:"FontAwesome"; color:#fdc70c;}');
 text25664.build()
 
-arObjs.push(text992);
 arObjs.push(button8353);
 arObjs.push(button8514);
+arObjs.push(button104132);
 arObjs.push(button8693);
 arObjs.push(button8776);
 arObjs.push(button73255);
@@ -3768,13 +3794,13 @@ arObjs.push(button82640);
 arObjs.push(button82695);
 arObjs.push(button82750);
 arObjs.push(button82805);
+arObjs.push(button83190);
 arObjs.push(button82860);
 arObjs.push(button82915);
 arObjs.push(button82970);
 arObjs.push(button83025);
 arObjs.push(button83080);
 arObjs.push(button83135);
-arObjs.push(button83190);
 arObjs.push(button83245);
 arObjs.push(button83300);
 arObjs.push(button83355);
@@ -3980,16 +4006,11 @@ if( is.min ){
 }
 </script>
 
-<div id="text992"><a id="text992anc" style="display:block;height:0px;width:0px;"></a>
-<p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:center;" >
-<span class="text992Font1"  >device mode?
-</span ></p >
-</div>
-
 <script>
 if( is.min ){
     document.write(button8353.div)
     document.write(button8514.div)
+    document.write(button104132.div)
     document.write(button8693.div)
     document.write(button8776.div)
     document.write(button73255.div)
@@ -4005,13 +4026,13 @@ if( is.min ){
     document.write(button82695.div)
     document.write(button82750.div)
     document.write(button82805.div)
+    document.write(button83190.div)
     document.write(button82860.div)
     document.write(button82915.div)
     document.write(button82970.div)
     document.write(button83025.div)
     document.write(button83080.div)
     document.write(button83135.div)
-    document.write(button83190.div)
     document.write(button83245.div)
     document.write(button83300.div)
     document.write(button83355.div)
@@ -4490,10 +4511,10 @@ if( is.min ){
 <div id="og25426"><a id="og25426anc"></a></div>
 <div id="text25427"><a id="text25427anc" style="display:block;height:0px;width:0px;"></a>
 <p  legLH="1.107" style="margin-left:0px;text-indent:0px;line-height:1.107;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text25427Font1"  >LYNDSAY MASSEY-GROE
+<span class="text25427Font1"  >IVAN GROE
 </span ></p >
 <p  legLH="1.164" style="margin-left:0px;text-indent:0px;line-height:0.850;margin-top:0px;margin-bottom:0px;text-align:left;" >
-<span class="text25427Font2"  >LEARNING AND DEVELOPMENT MANAGER
+<span class="text25427Font2"  >MANAGER, TECHNOLOGY TRAINING
 </span ></p >
 <p  style="margin-left:0px;text-indent:0px;margin-top:0px;margin-bottom:0px;text-align:left;" >
 <span class="text25427Font2"  >TORONTO 2015 ORGANIZING COMMITTEE</span ><span class="text25427Font3" style="background-color:transparent" >
